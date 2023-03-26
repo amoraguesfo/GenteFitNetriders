@@ -28,9 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
             this.textUser = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textPassword = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,12 +43,12 @@
             this.textUser.Size = new System.Drawing.Size(174, 20);
             this.textUser.TabIndex = 0;
             // 
-            // textBox2
+            // textPassword
             // 
-            this.textBox2.Location = new System.Drawing.Point(247, 152);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(174, 20);
-            this.textBox2.TabIndex = 1;
+            this.textPassword.Location = new System.Drawing.Point(247, 152);
+            this.textPassword.Name = "textPassword";
+            this.textPassword.Size = new System.Drawing.Size(174, 20);
+            this.textPassword.TabIndex = 1;
             // 
             // label1
             // 
@@ -101,14 +100,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::GenteFitNetriders.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(588, 324);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textPassword);
             this.Controls.Add(this.textUser);
             this.DoubleBuffered = true;
             this.Name = "FormLogin";
@@ -122,7 +121,7 @@
         #endregion
 
         private System.Windows.Forms.TextBox textUser;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textPassword;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
