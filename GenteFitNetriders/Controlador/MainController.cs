@@ -1,15 +1,7 @@
 ﻿using GenteFitNetriders.Modelo;
-using GenteFitNetriders.Vista;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Data.Entity.Core;
-using System.Diagnostics;
 using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace GenteFitNetriders.Controlador
 {
@@ -41,8 +33,26 @@ namespace GenteFitNetriders.Controlador
         public Usuarios GetUserLogged()
         {
             return userLogged;
-        }        
-
+        }     
+        
+        public IEnumerable<Modelo.UserViewModel> getUsers() {
+            using (Modelo.NetridersEntities db = new Modelo.NetridersEntities())
+            {
+                 IEnumerable<Modelo.UserViewModel> usuarios = (from u in db.Usuarios
+                                                        select new Modelo.UserViewModel
+                                                        {
+                                                            id=u.id,
+                                                            nombre=u.nombre,
+                                                            email=u.email,
+                                                            sexo=u.sexo,
+                                                            edad=u.edad,
+                                                            num_telefono=u.num_telefono,
+                                                            tipo=u.tipo
+                                                        }
+                                                        ).ToList();
+                return usuarios;
+            }
+        }
     }
 
 }

@@ -42,13 +42,16 @@
             this.textUser.Name = "textUser";
             this.textUser.Size = new System.Drawing.Size(174, 20);
             this.textUser.TabIndex = 0;
+            this.textUser.Text = "admin@gentefit.com";
             // 
             // textPassword
             // 
             this.textPassword.Location = new System.Drawing.Point(247, 152);
             this.textPassword.Name = "textPassword";
+            this.textPassword.PasswordChar = '*';
             this.textPassword.Size = new System.Drawing.Size(174, 20);
             this.textPassword.TabIndex = 1;
+            this.textPassword.Text = "1234";
             // 
             // label1
             // 

@@ -15,8 +15,12 @@ namespace GenteFitNetriders.Vista
         {
             this.controller = controller;
         }
+        
+        private void FormAdminPanel_Load(object sender, System.EventArgs e)
+        {
+            dataGridUsers.DataSource =  controller.getUsers();
+        }
 
-
-
+        
     }
 }
