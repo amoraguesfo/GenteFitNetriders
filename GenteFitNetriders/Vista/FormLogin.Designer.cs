@@ -93,7 +93,7 @@
             this.btnLogin.TabIndex = 5;
             this.btnLogin.Text = "Entrar";
             this.btnLogin.UseVisualStyleBackColor = false;
-            this.btnLogin.Click += new System.EventHandler(this.button1_Click);
+            this.btnLogin.Click += new System.EventHandler(this.buttonLogin_Click);
             // 
             // FormLogin
             // 
