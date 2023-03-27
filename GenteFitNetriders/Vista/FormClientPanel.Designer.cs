@@ -36,7 +36,7 @@
             // 
             this.labelUserName.AutoSize = true;
             this.labelUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.labelUserName.Location = new System.Drawing.Point(247, 120);
+            this.labelUserName.Location = new System.Drawing.Point(12, 11);
             this.labelUserName.Name = "labelUserName";
             this.labelUserName.Size = new System.Drawing.Size(130, 31);
             this.labelUserName.TabIndex = 0;
@@ -58,6 +58,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.labelUserName);
             this.Name = "FormClientPanel";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.FormClientPanel_Load);
             this.ResumeLayout(false);
