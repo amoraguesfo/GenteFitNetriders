@@ -32,13 +32,12 @@
             this.textPassword = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textUser
             // 
-            this.textUser.Location = new System.Drawing.Point(247, 112);
+            this.textUser.Location = new System.Drawing.Point(353, 150);
             this.textUser.Name = "textUser";
             this.textUser.Size = new System.Drawing.Size(174, 20);
             this.textUser.TabIndex = 0;
@@ -46,7 +45,7 @@
             // 
             // textPassword
             // 
-            this.textPassword.Location = new System.Drawing.Point(247, 152);
+            this.textPassword.Location = new System.Drawing.Point(353, 190);
             this.textPassword.Name = "textPassword";
             this.textPassword.PasswordChar = '*';
             this.textPassword.Size = new System.Drawing.Size(174, 20);
@@ -58,7 +57,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(167, 115);
+            this.label1.Location = new System.Drawing.Point(273, 153);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(32, 13);
             this.label1.TabIndex = 2;
@@ -69,28 +68,16 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(167, 155);
+            this.label2.Location = new System.Drawing.Point(273, 193);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "Contrasseña";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.label3.ForeColor = System.Drawing.Color.LawnGreen;
-            this.label3.Location = new System.Drawing.Point(12, 9);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(119, 31);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "GenteFit";
-            // 
             // btnLogin
             // 
             this.btnLogin.BackColor = System.Drawing.Color.YellowGreen;
-            this.btnLogin.Location = new System.Drawing.Point(346, 190);
+            this.btnLogin.Location = new System.Drawing.Point(452, 228);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(75, 23);
             this.btnLogin.TabIndex = 5;
@@ -105,14 +92,14 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BackgroundImage = global::GenteFitNetriders.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(588, 324);
+            this.ClientSize = new System.Drawing.Size(800, 400);
             this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textPassword);
             this.Controls.Add(this.textUser);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GenteFit inicio de Sesión";
@@ -127,7 +114,6 @@
         private System.Windows.Forms.TextBox textPassword;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnLogin;
     }
 }
