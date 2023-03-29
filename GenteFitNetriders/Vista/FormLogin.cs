@@ -29,18 +29,18 @@ namespace GenteFitNetriders
                 String userTipo = controller.GetUserLogged().tipo;
                 if (userTipo == "admin")
                 {
-                    this.Hide();
+                    this.Parent.FindForm().Hide();
                     FormAdminPanel formAdminPanel = new FormAdminPanel();
-                    formAdminPanel.FormClosed += (s, args) => this.Close();
+                    formAdminPanel.FormClosed += (s, args) => this.Parent.FindForm().Close();
                     formAdminPanel.SetController(controller);
                     formAdminPanel.Show();
 
                 }
                 else
                 {
-                    this.Hide();
+                    this.Parent.FindForm().Hide();
                     FormClientPanel formClientPanel = new FormClientPanel();
-                    formClientPanel.FormClosed += (s, args) => this.Close();
+                    formClientPanel.FormClosed += (s, args) => this.Parent.FindForm().Close();
                     formClientPanel.SetController(controller);
                     formClientPanel.Show();
                 }

@@ -15,19 +15,19 @@ namespace GenteFitNetriders.Controlador
         public bool UserLogin(String email, String password)
         {       
                 using (Modelo.NetridersEntities db = new Modelo.NetridersEntities())
+            {
+                var user = (from u in db.Usuarios
+                            where u.email == email
+                            && u.password == password
+                            select u).FirstOrDefault();
+                if (user == null)
                 {
-                    var user = (from u in db.Usuarios
-                              where u.email == email
-                              && u.password == password
-                              select u).FirstOrDefault(); ;
-                if (user != null)
-                {
-                    userLogged = user;
-                    return true;
+                    return false;
                 }
-                return false;
+                userLogged = user;
+                return true;
             }
-            
+
         }
 
         public Usuarios GetUserLogged()
