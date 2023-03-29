@@ -34,7 +34,7 @@
           <Property Name="nombre" Type="varchar" MaxLength="40" Nullable="false" />
           <Property Name="email" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="sexo" Type="varchar" MaxLength="10" Nullable="false" />
-          <Property Name="edad" Type="tinyint" Nullable="false" />
+          <Property Name="edad" Type="int" Nullable="false" />
           <Property Name="num_telefono" Type="varchar" MaxLength="15" Nullable="false" />
           <Property Name="password" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="tipo" Type="varchar" MaxLength="10" Nullable="false" />
@@ -117,7 +117,7 @@
           <Property Name="nombre" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="sexo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="edad" Type="Byte" Nullable="false" />
+          <Property Name="edad" Type="Int32" Nullable="false" />
           <Property Name="num_telefono" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="password" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="tipo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
@@ -151,7 +151,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="NetridersEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="NetridersEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Clases" EntityType="Self.Clases" />
           <EntitySet Name="Reserva" EntityType="Self.Reserva" />
           <EntitySet Name="Usuarios" EntityType="Self.Usuarios" />
@@ -169,7 +169,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="NetridersModelStoreContainer" CdmEntityContainer="NetridersEntities">
+        <EntityContainerMapping StorageEntityContainer="NetridersModelStoreContainer" CdmEntityContainer="NetridersEntities1">
           <EntitySetMapping Name="Clases">
             <EntityTypeMapping TypeName="NetridersModel.Clases">
               <MappingFragment StoreEntitySet="Clases">

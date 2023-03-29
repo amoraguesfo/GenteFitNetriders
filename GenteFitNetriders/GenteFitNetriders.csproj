@@ -59,7 +59,6 @@
     <Compile Include="Modelo\Clases.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Modelo\UserViewModel.cs" />
     <Compile Include="Modelo\Model1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -78,25 +77,26 @@
     <Compile Include="Modelo\Reserva.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Modelo\UserViewModel.cs" />
     <Compile Include="Modelo\Usuarios.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Vista\FormRegister.cs">
+    <Compile Include="Vista\Login\FormRegister.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\FormRegister.Designer.cs">
+    <Compile Include="Vista\Login\FormRegister.Designer.cs">
       <DependentUpon>FormRegister.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\FormLogin.cs">
+    <Compile Include="Vista\Login\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\FormLogin.Designer.cs">
+    <Compile Include="Vista\Login\FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\FormLoginPrincipal.cs">
+    <Compile Include="Vista\Login\FormLoginPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\FormLoginPrincipal.Designer.cs">
+    <Compile Include="Vista\Login\FormLoginPrincipal.Designer.cs">
       <DependentUpon>FormLoginPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\FormClientPanel.cs">
@@ -119,10 +119,10 @@
     <EmbeddedResource Include="Vista\FormClientPanel.resx">
       <DependentUpon>FormClientPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\FormRegister.resx">
+    <EmbeddedResource Include="Vista\Login\FormRegister.resx">
       <DependentUpon>FormRegister.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\FormLogin.resx">
+    <EmbeddedResource Include="Vista\Login\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -135,7 +135,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Vista\FormLoginPrincipal.resx">
+    <EmbeddedResource Include="Vista\Login\FormLoginPrincipal.resx">
       <DependentUpon>FormLoginPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Modelo\Model1.edmx">
@@ -160,20 +160,22 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="Modelo\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
       <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Modelo\Model1.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
-    <None Include="Resources\background.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

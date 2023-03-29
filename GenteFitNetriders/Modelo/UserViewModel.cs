@@ -12,7 +12,7 @@ namespace GenteFitNetriders.Modelo
         public string nombre { get; set; }
         public string email { get; set; }
         public string sexo { get; set; }
-        public byte edad { get; set; }
+        public int edad { get; set; }
         public string num_telefono { get; set; }
         public string tipo { get; set; }
     }

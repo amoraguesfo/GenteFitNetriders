@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GenteFitNetriders.Controlador;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,11 +14,15 @@ namespace GenteFitNetriders.Vista
 {
     public partial class FormLoginPrincipal : Form
     {
+        
         public FormLoginPrincipal()
         {
             InitializeComponent();
+          
         }
 
+
+        
         private void FormLoginPrincipal_Load(object sender, EventArgs e)
         {
             //TODO cada vez que se clica aumenta la memoria, porque?
@@ -35,6 +40,7 @@ namespace GenteFitNetriders.Vista
             }
             
             Form fh = formHijo as Form;
+            
             fh.TopLevel = false;
             fh.Dock =DockStyle.Fill;
             this.panelContenedor.Controls.Add(fh);

@@ -9,12 +9,10 @@ namespace GenteFitNetriders.Vista
         public FormAdminPanel()
         {
             InitializeComponent();
+            controller = new MainController();
         }
 
-        internal void SetController(MainController controller)
-        {
-            this.controller = controller;
-        }
+
         
         private void FormAdminPanel_Load(object sender, System.EventArgs e)
         {

@@ -4,10 +4,10 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="edc8d165b5424d7c93eda7e257088232" Name="Diagram1">
+      <Diagram DiagramId="197bf8a93d5e4436981e4faed9e987e2" Name="Diagram1">
         <EntityTypeShape EntityType="NetridersModel.Clases" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="NetridersModel.Reserva" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="NetridersModel.Usuarios" Width="1.5" PointX="5.375" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="NetridersModel.Usuarios" Width="1.5" PointX="5.5" PointY="1.75" IsExpanded="true" />
         <AssociationConnector Association="NetridersModel.FK_Reserva_Clases" ManuallyRouted="false" />
         <AssociationConnector Association="NetridersModel.FK_Reserva_Usuarios" ManuallyRouted="false" />
       </Diagram>
