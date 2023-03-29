@@ -15,7 +15,7 @@ namespace GenteFitNetriders.Vista
 
         private void FormClientPanel_Load(object sender, System.EventArgs e)
         {
-            labelUserName.Text = MainController.userLogged.email;
+            labelUserName.Text = Common.userLogged.email;
         }
     }
 

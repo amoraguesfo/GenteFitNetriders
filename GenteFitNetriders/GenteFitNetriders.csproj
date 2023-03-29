@@ -55,6 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controlador\Common.cs" />
     <Compile Include="Controlador\MainController.cs" />
     <Compile Include="Modelo\Clases.cs">
       <DependentUpon>Model1.tt</DependentUpon>
