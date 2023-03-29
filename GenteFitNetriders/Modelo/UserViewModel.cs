@@ -15,5 +15,6 @@ namespace GenteFitNetriders.Modelo
         public int edad { get; set; }
         public string num_telefono { get; set; }
         public string tipo { get; set; }
+        public string password { get; set; }
     }
 }

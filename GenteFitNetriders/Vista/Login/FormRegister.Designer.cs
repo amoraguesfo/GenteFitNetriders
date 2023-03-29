@@ -37,8 +37,6 @@
             this.textConfirmPassword = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.textNombre = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textApellidos = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.textEdad = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -120,7 +118,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(81, 118);
+            this.label6.Location = new System.Drawing.Point(110, 115);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(44, 13);
             this.label6.TabIndex = 10;
@@ -133,30 +131,12 @@
             this.textNombre.Size = new System.Drawing.Size(174, 20);
             this.textNombre.TabIndex = 8;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(81, 157);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 13);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Apellidos";
-            // 
-            // textApellidos
-            // 
-            this.textApellidos.Location = new System.Drawing.Point(187, 150);
-            this.textApellidos.Name = "textApellidos";
-            this.textApellidos.Size = new System.Drawing.Size(174, 20);
-            this.textApellidos.TabIndex = 11;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(81, 190);
+            this.label5.Location = new System.Drawing.Point(111, 154);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(32, 13);
             this.label5.TabIndex = 14;
@@ -164,7 +144,7 @@
             // 
             // textEdad
             // 
-            this.textEdad.Location = new System.Drawing.Point(187, 183);
+            this.textEdad.Location = new System.Drawing.Point(187, 150);
             this.textEdad.Name = "textEdad";
             this.textEdad.Size = new System.Drawing.Size(174, 20);
             this.textEdad.TabIndex = 13;
@@ -192,7 +172,7 @@
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(81, 219);
+            this.label8.Location = new System.Drawing.Point(110, 187);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(31, 13);
             this.label8.TabIndex = 18;
@@ -200,7 +180,7 @@
             // 
             // textSexo
             // 
-            this.textSexo.Location = new System.Drawing.Point(187, 212);
+            this.textSexo.Location = new System.Drawing.Point(187, 183);
             this.textSexo.Name = "textSexo";
             this.textSexo.Size = new System.Drawing.Size(174, 20);
             this.textSexo.TabIndex = 17;
@@ -232,8 +212,6 @@
             this.Controls.Add(this.textTelefono);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textEdad);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.textApellidos);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textNombre);
             this.Controls.Add(this.label3);
@@ -264,8 +242,6 @@
         private System.Windows.Forms.TextBox textConfirmPassword;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textNombre;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textApellidos;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textEdad;
         private System.Windows.Forms.Label label7;

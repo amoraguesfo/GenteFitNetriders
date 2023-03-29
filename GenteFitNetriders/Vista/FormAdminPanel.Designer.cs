@@ -30,6 +30,9 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridUsers = new System.Windows.Forms.DataGridView();
+            this.btnExportarXML = new System.Windows.Forms.Button();
+            this.btnImportar = new System.Windows.Forms.Button();
+            this.btnDelUser = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridUsers)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,6 +60,36 @@
             this.dataGridUsers.Size = new System.Drawing.Size(777, 321);
             this.dataGridUsers.TabIndex = 1;
             // 
+            // btnExportarXML
+            // 
+            this.btnExportarXML.Location = new System.Drawing.Point(12, 403);
+            this.btnExportarXML.Name = "btnExportarXML";
+            this.btnExportarXML.Size = new System.Drawing.Size(86, 23);
+            this.btnExportarXML.TabIndex = 2;
+            this.btnExportarXML.Text = "Exportar XML";
+            this.btnExportarXML.UseVisualStyleBackColor = true;
+            this.btnExportarXML.Click += new System.EventHandler(this.btnExportarXML_Click);
+            // 
+            // btnImportar
+            // 
+            this.btnImportar.Location = new System.Drawing.Point(121, 403);
+            this.btnImportar.Name = "btnImportar";
+            this.btnImportar.Size = new System.Drawing.Size(87, 23);
+            this.btnImportar.TabIndex = 3;
+            this.btnImportar.Text = "Importar XML";
+            this.btnImportar.UseVisualStyleBackColor = true;
+            this.btnImportar.Click += new System.EventHandler(this.btnImportar_Click);
+            // 
+            // btnDelUser
+            // 
+            this.btnDelUser.Location = new System.Drawing.Point(686, 403);
+            this.btnDelUser.Name = "btnDelUser";
+            this.btnDelUser.Size = new System.Drawing.Size(103, 23);
+            this.btnDelUser.TabIndex = 4;
+            this.btnDelUser.Text = "Eliminar usuario";
+            this.btnDelUser.UseVisualStyleBackColor = true;
+            this.btnDelUser.Click += new System.EventHandler(this.btnDelUser_Click);
+            // 
             // FormAdminPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -65,6 +98,9 @@
             this.BackgroundImage = global::GenteFitNetriders.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(801, 450);
+            this.Controls.Add(this.btnDelUser);
+            this.Controls.Add(this.btnImportar);
+            this.Controls.Add(this.btnExportarXML);
             this.Controls.Add(this.dataGridUsers);
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
@@ -82,5 +118,8 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridUsers;
+        private System.Windows.Forms.Button btnExportarXML;
+        private System.Windows.Forms.Button btnImportar;
+        private System.Windows.Forms.Button btnDelUser;
     }
 }

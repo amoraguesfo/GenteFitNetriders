@@ -16,7 +16,7 @@ namespace GenteFitNetriders.Modelo
     public partial class NetridersEntities : DbContext
     {
         public NetridersEntities()
-            : base("name=NetridersEntities1")
+            : base("name=NetridersEntities")
         {
         }
     

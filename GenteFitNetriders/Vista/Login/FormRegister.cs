@@ -17,7 +17,7 @@ namespace GenteFitNetriders
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            if (controller.addUser(textNombre.Text, textApellidos.Text, textEmail.Text, textSexo.Text, int.Parse(textEdad.Text), textTelefono.Text, textPassword.Text))
+            if (controller.addUser(textNombre.Text, textEmail.Text, textSexo.Text, int.Parse(textEdad.Text), textTelefono.Text, textPassword.Text))
             {
 
                 this.Parent.FindForm().Hide();

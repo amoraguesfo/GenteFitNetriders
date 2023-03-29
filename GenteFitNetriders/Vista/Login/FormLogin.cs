@@ -25,7 +25,7 @@ namespace GenteFitNetriders
             if (controller.UserLogin(email, pwd))
             
             {
-                String userTipo = MainController.userLogged.tipo;
+                String userTipo = Common.userLogged.tipo;
                 if (userTipo == "admin")
                 {
                     this.Parent.FindForm().Hide();
