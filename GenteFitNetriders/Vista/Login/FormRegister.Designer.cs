@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textUser = new System.Windows.Forms.TextBox();
+            this.textEmail = new System.Windows.Forms.TextBox();
             this.textPassword = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnLogin = new System.Windows.Forms.Button();
+            this.btnRegister = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.textConfirmPassword = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -48,12 +48,12 @@
             this.label9 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // textUser
+            // textEmail
             // 
-            this.textUser.Location = new System.Drawing.Point(512, 150);
-            this.textUser.Name = "textUser";
-            this.textUser.Size = new System.Drawing.Size(174, 20);
-            this.textUser.TabIndex = 0;
+            this.textEmail.Location = new System.Drawing.Point(512, 150);
+            this.textEmail.Name = "textEmail";
+            this.textEmail.Size = new System.Drawing.Size(174, 20);
+            this.textEmail.TabIndex = 0;
             // 
             // textPassword
             // 
@@ -73,7 +73,6 @@
             this.label1.Size = new System.Drawing.Size(32, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "Email";
-         
             // 
             // label2
             // 
@@ -86,16 +85,16 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Contrasseña";
             // 
-            // btnLogin
+            // btnRegister
             // 
-            this.btnLogin.BackColor = System.Drawing.Color.YellowGreen;
-            this.btnLogin.Location = new System.Drawing.Point(611, 256);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(75, 23);
-            this.btnLogin.TabIndex = 5;
-            this.btnLogin.Text = "Registrarse";
-            this.btnLogin.UseVisualStyleBackColor = false;
-            this.btnLogin.Click += new System.EventHandler(this.buttonLogin_Click);
+            this.btnRegister.BackColor = System.Drawing.Color.YellowGreen;
+            this.btnRegister.Location = new System.Drawing.Point(611, 256);
+            this.btnRegister.Name = "btnRegister";
+            this.btnRegister.Size = new System.Drawing.Size(75, 23);
+            this.btnRegister.TabIndex = 5;
+            this.btnRegister.Text = "Registrarse";
+            this.btnRegister.UseVisualStyleBackColor = false;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // label3
             // 
@@ -239,11 +238,11 @@
             this.Controls.Add(this.textNombre);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textConfirmPassword);
-            this.Controls.Add(this.btnLogin);
+            this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textPassword);
-            this.Controls.Add(this.textUser);
+            this.Controls.Add(this.textEmail);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormRegister";
@@ -256,11 +255,11 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textUser;
+        private System.Windows.Forms.TextBox textEmail;
         private System.Windows.Forms.TextBox textPassword;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textConfirmPassword;
         private System.Windows.Forms.Label label6;

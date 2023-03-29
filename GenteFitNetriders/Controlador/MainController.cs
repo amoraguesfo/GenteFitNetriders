@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace GenteFitNetriders.Controlador
 {
@@ -11,7 +12,7 @@ namespace GenteFitNetriders.Controlador
         //- pasar el acceso a datos del FormLogin a esta clase
 
         //- Guardar el usuario logeado
-        private Modelo.Usuarios userLogged;
+        public static Modelo.Usuarios userLogged = null;
         public bool UserLogin(String email, String password)
         {       
                 using (Modelo.NetridersEntities db = new Modelo.NetridersEntities())
@@ -30,11 +31,7 @@ namespace GenteFitNetriders.Controlador
 
         }
 
-        public Usuarios GetUserLogged()
-        {
-            return userLogged;
-        }     
-        
+
         public IEnumerable<Modelo.UserViewModel> getUsers() {
             using (Modelo.NetridersEntities db = new Modelo.NetridersEntities())
             {
@@ -51,6 +48,34 @@ namespace GenteFitNetriders.Controlador
                                                         }
                                                         ).ToList();
                 return usuarios;
+            }
+        }
+
+        public bool addUser(String nombre, String apellidos, String email, String sexo, int edad, String num_telf, String password)
+        {
+            try
+            {
+                Usuarios user = null;
+                using (Modelo.NetridersEntities db = new Modelo.NetridersEntities())
+                {
+                    user = new Usuarios
+                    {
+                        nombre = nombre + " " + apellidos,
+                        email = email,
+                        sexo = sexo,
+                        num_telefono = num_telf,
+                        password = password,
+                        tipo = "cliente" //Solo puede darse de alta nuevos clientes, no 
+                    };
+                    db.Usuarios.Add(user);
+                    db.SaveChanges();
+                }
+                userLogged = user;
+                return true;
+            }
+            catch(Exception ex)
+            {
+                throw new Exception("Error an insertar el ussuario " + ex.Message);
             }
         }
     }
