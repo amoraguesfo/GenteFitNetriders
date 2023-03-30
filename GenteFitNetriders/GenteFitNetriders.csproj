@@ -60,6 +60,8 @@
     <Compile Include="Modelo\Clases.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Modelo\ClaseViewModel.cs" />
+    <Compile Include="Modelo\ReservaViewModel.cs" />
     <Compile Include="Modelo\Model1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
