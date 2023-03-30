@@ -20,9 +20,9 @@ namespace GenteFitNetriders
             if (controller.addUser(textNombre.Text, textEmail.Text, textSexo.Text, int.Parse(textEdad.Text), textTelefono.Text, textPassword.Text))
             {
 
-                this.Parent.FindForm().Hide();
+               // this.Parent.FindForm().Hide();
                 FormClientPanel formClientPanel = new FormClientPanel();
-                formClientPanel.FormClosed += (s, args) => this.Parent.FindForm().Close();
+               // formClientPanel.FormClosed += (s, args) => this.Parent.FindForm().Close();
                 formClientPanel.Show();
             }
             else

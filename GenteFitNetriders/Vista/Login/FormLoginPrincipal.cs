@@ -37,9 +37,7 @@ namespace GenteFitNetriders.Vista
             {
 
                    this.panelContenedor.Controls.RemoveAt(0);
-                   Debug.WriteLine(this.panelContenedor.Controls.Count);
-
-                   this.panelContenedor.Controls.RemoveAt(0);            
+                   Debug.WriteLine(this.panelContenedor.Controls.Count);        
 
             }
             

@@ -73,8 +73,7 @@ namespace GenteFitNetriders.Controlador
 
         public bool addUser(String nombre, String email, String sexo, int edad, String num_telf, String password)
         {
-            try
-            {
+ 
                 Usuarios user = null;
                 using (Modelo.NetridersEntities db = new Modelo.NetridersEntities())
                 {
@@ -93,11 +92,8 @@ namespace GenteFitNetriders.Controlador
                 }
                 Common.userLogged = user;
                 return true;
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Error an insertar el ussuario " + ex.Message); 
-            }
+            
+
         }
 
         public bool editUser(int id, String nombre, String email, String sexo, int edad, String num_telf, String password)
@@ -261,17 +257,19 @@ namespace GenteFitNetriders.Controlador
 
 
             Debug.WriteLine(xml.ToString());
-            using (XmlWriter writer = XmlWriter.Create("usuarios2.xml"))
+            using (XmlWriter writer = XmlWriter.Create("export_usuarios.xml"))
             {
                 xml.WriteTo(writer);
             }
+
+            MessageBox.Show("El XML de Usuariosde ha exportado correctamente");
 
         }
 
         public void importarUsuariosXML()
         {
 
-            XDocument xDoc = XDocument.Load(@"usuarios2.xml");
+            XDocument xDoc = XDocument.Load(@"import_usuarios.xml");
             Debug.WriteLine(xDoc.ToString());
 
 
@@ -296,7 +294,7 @@ namespace GenteFitNetriders.Controlador
                 addUser(u.nombre, u.email, u.sexo, u.edad, u.num_telefono, u.password);
             }
 
-            MessageBox.Show("Se ha cargado el XML Usuarios");
+            MessageBox.Show("El XML Usuarios de ususuarios ");
 
         }
     }
