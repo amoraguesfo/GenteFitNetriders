@@ -35,8 +35,12 @@ namespace GenteFitNetriders.Vista
         {
             if(this.panelContenedor.Controls.Count > 0)
             {
+
                    this.panelContenedor.Controls.RemoveAt(0);
                    Debug.WriteLine(this.panelContenedor.Controls.Count);
+
+                   this.panelContenedor.Controls.RemoveAt(0);            
+
             }
             
             Form fh = formHijo as Form;

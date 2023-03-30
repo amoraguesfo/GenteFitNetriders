@@ -20,6 +20,7 @@ namespace GenteFitNetriders.Controlador
 
         public bool UserLogin(String email, String password)
         {
+           
             using (Modelo.NetridersEntities db = new Modelo.NetridersEntities())
             {
                 var user = (from u in db.Usuarios
@@ -35,7 +36,6 @@ namespace GenteFitNetriders.Controlador
             }
 
         }
-
 
         public IEnumerable<Modelo.UserViewModel> getUsers()
         {
@@ -58,6 +58,19 @@ namespace GenteFitNetriders.Controlador
             }
         }
 
+        public Usuarios getUserById(int id)
+        {
+            using (Modelo.NetridersEntities db = new Modelo.NetridersEntities())
+            {
+                var user = (from u in db.Usuarios
+                            where u.id == id
+                         
+                            select u).FirstOrDefault();
+                
+                return user;
+            }
+        }
+
         public bool addUser(String nombre, String email, String sexo, int edad, String num_telf, String password)
         {
             try
@@ -69,6 +82,7 @@ namespace GenteFitNetriders.Controlador
                     {
                         nombre = nombre,
                         email = email,
+                        edad = edad,
                         sexo = sexo,
                         num_telefono = num_telf,
                         password = password,
@@ -82,7 +96,7 @@ namespace GenteFitNetriders.Controlador
             }
             catch (Exception ex)
             {
-                throw new Exception("Error an insertar el ussuario " + ex.Message);
+                throw new Exception("Error an insertar el ussuario " + ex.Message); 
             }
         }
 
@@ -140,13 +154,96 @@ namespace GenteFitNetriders.Controlador
         }
 
 
+        public IEnumerable<Modelo.ClaseViewModel> getClases()
+        {
+            using (Modelo.NetridersEntities db = new Modelo.NetridersEntities())
+            {
+                IEnumerable<Modelo.ClaseViewModel> clases = (from c in db.Clases
+                                                              select new Modelo.ClaseViewModel
+                                                              {
+                                                                  id = c.id,
+                                                                  nombre_clase = c.nombre_clase,
+                                                                  profesor = c.nrofesor,
+                                                                  plazas = c.plazas,
+                                                                  fecha_clase = c.fecha_clase,
+                                                                  hora_clase = c.hora_clase,
+                                                                  duracion = c.duracion
+                                                              }
+                                                       ).ToList();
+                return clases;
+            }
+        }
+
+        public Clases getClaseById(int id)  
+        {
+            using (Modelo.NetridersEntities db = new Modelo.NetridersEntities())
+            {
+                var clase = (from c in db.Clases
+                            where c.id == id
+                            select c).FirstOrDefault();
+
+                return clase;
+            }
+        }
+        public bool editClase(int id, String nombreClase, String profesor, int plazas, DateTime fechaClase, TimeSpan horaClase, int duracion)
+        {
+            try
+            {
+                using (Modelo.NetridersEntities db = new Modelo.NetridersEntities())
+                {
+                    Clases clase = (from c in db.Clases
+                                     where c.id == id
+                                     select c).FirstOrDefault();
+
+                    clase.nombre_clase = nombreClase;
+                    clase.nrofesor = profesor;
+                    clase.plazas = plazas;
+                    clase.fecha_clase = fechaClase;
+                    clase.hora_clase = horaClase;
+                    clase.duracion = duracion;
+
+                    db.SaveChanges();
+
+                    return true;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al actualizar la clase " + ex.Message);
+            }
+        }
+
+        public bool deleteClase(int id)
+        {
+            //TODO checkear si la clase que intenta elminiar a otro es admin
+            //Common.userLogged.tipo == "admin"
+            try
+            {
+                using (Modelo.NetridersEntities db = new Modelo.NetridersEntities())
+                {
+                    Clases clase = (from c in db.Clases
+                                     where c.id == id
+                                     select c).FirstOrDefault();
+
+                    db.Clases.Remove(clase);
+                    db.SaveChanges();
+
+                    return true;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al eliminar la clase " + ex.Message);
+            }
+        }
+
         public void exportUsusariosXML()
         {
 
             //List<Modelo.UserViewModel> users = (List<UserViewModel>)this.getUsers();
-            var  users = this.getUsers();
+            var users = this.getUsers();
             var xml = new XElement("Usuarios");
-            
+
             foreach (var u in users)
             {
                 Debug.WriteLine(u.email);
@@ -161,54 +258,47 @@ namespace GenteFitNetriders.Controlador
                                );
 
             }
-          
 
-            Debug.WriteLine(xml.ToString());    
+
+            Debug.WriteLine(xml.ToString());
             using (XmlWriter writer = XmlWriter.Create("usuarios2.xml"))
             {
                 xml.WriteTo(writer);
-            } 
+            }
 
         }
 
         public void importarUsuariosXML()
         {
 
-                XDocument xDoc = XDocument.Load(@"usuarios2.xml");
-                Debug.WriteLine(xDoc.ToString());
+            XDocument xDoc = XDocument.Load(@"usuarios2.xml");
+            Debug.WriteLine(xDoc.ToString());
 
 
-                List<Usuarios> users = xDoc.Descendants("Usuario").Select
-                (user => 
-                new Usuarios
-                {
-                    id = int.Parse(user.Attribute("id").Value), //no tendremos el i en cuenta ya que la clave para identificar al usuario es el email
-                    nombre = user.Element("Nombre").Value,
-                    email = user.Element("Email").Value,
-                    sexo = user.Element("Sexo").Value == "Masculino" ? "m" : "f",
-                    edad = int.Parse(user.Element("Edad").Value),
-                    num_telefono = user.Element("Telefono").Value,
-                    password = user.Element("Password").Value
-                }
-                ).ToList();
+            List<Usuarios> users = xDoc.Descendants("Usuario").Select
+            (user =>
+            new Usuarios
+            {
+                id = int.Parse(user.Attribute("id").Value), //no tendremos el i en cuenta ya que la clave para identificar al usuario es el email
+                nombre = user.Element("Nombre").Value,
+                email = user.Element("Email").Value,
+                sexo = user.Element("Sexo").Value == "Masculino" ? "m" : "f",
+                edad = int.Parse(user.Element("Edad").Value),
+                num_telefono = user.Element("Telefono").Value,
+                password = user.Element("Password").Value
+            }
+            ).ToList();
 
 
-                foreach (var u in users)
-                {
-                    //Debug.WriteLine(u.email);
-                    addUser(u.nombre, u.email, u.sexo, u.edad, u.num_telefono, u.password);
-                }
-              
-                MessageBox.Show("Se ha cargado el XML Usuarios");
+            foreach (var u in users)
+            {
+                //Debug.WriteLine(u.email);
+                addUser(u.nombre, u.email, u.sexo, u.edad, u.num_telefono, u.password);
+            }
 
-
+            MessageBox.Show("Se ha cargado el XML Usuarios");
 
         }
-
-        
-
-
     }
-
-
+   
 }
