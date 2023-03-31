@@ -1,5 +1,6 @@
 ﻿using GenteFitNetriders.Controlador;
 using GenteFitNetriders.Vista;
+using GenteFitNetriders.Vista.Admin;
 using System;
 using System.Windows.Forms;
 
@@ -29,17 +30,17 @@ namespace GenteFitNetriders
                 if (userTipo == "admin")
                 {
                     //this.Parent.FindForm().Hide();
-                    FormAdminPanel formAdminPanel = new FormAdminPanel();
+                   FormAdminPrincipal principal = new FormAdminPrincipal();
                     //formAdminPanel.FormClosed += (s, args) => this.Parent.FindForm().Close();
-                    formAdminPanel.Show();
+                    principal.Show();
 
                 }
                 else
                 {
                     //this.Parent.FindForm().Hide();
-                    FormClientPanel formClientPanel = new FormClientPanel();
+                    FormAdminPrincipal principal = new FormAdminPrincipal();
                     //formClientPanel.FormClosed += (s, args) => this.Parent.FindForm().Close();
-                    formClientPanel.Show();
+                    principal.Show();
                 }
 
             }

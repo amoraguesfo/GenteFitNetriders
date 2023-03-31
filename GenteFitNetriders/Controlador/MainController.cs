@@ -149,7 +149,7 @@ namespace GenteFitNetriders.Controlador
             }
         }
 
-
+        
         public IEnumerable<Modelo.ClaseViewModel> getClases()
         {
             using (Modelo.NetridersEntities db = new Modelo.NetridersEntities())
@@ -181,6 +181,30 @@ namespace GenteFitNetriders.Controlador
                 return clase;
             }
         }
+        public bool addClase(String nombreClase, String profesor, int plazas, DateTime fechaClase, TimeSpan horaClase, int duracion)
+        {
+
+            using (Modelo.NetridersEntities db = new Modelo.NetridersEntities())
+            {
+                Clases clase = new Clases
+                {
+                    nombre_clase = nombreClase,
+                    nrofesor = profesor,
+                    plazas = plazas,
+                    fecha_clase = fechaClase,
+                    hora_clase = horaClase,
+                    duracion = duracion
+                };
+                db.Clases.Add(clase);
+
+                db.SaveChanges();
+            }
+
+            return true;
+
+
+        }
+       
         public bool editClase(int id, String nombreClase, String profesor, int plazas, DateTime fechaClase, TimeSpan horaClase, int duracion)
         {
             try
@@ -222,6 +246,87 @@ namespace GenteFitNetriders.Controlador
                                      select c).FirstOrDefault();
 
                     db.Clases.Remove(clase);
+                    db.SaveChanges();
+
+                    return true;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al eliminar la clase " + ex.Message);
+            }
+        }
+
+
+
+        public Reserva getReservaById(int id)
+        {
+            using (Modelo.NetridersEntities db = new Modelo.NetridersEntities())
+            {
+                var res = (from r in db.Reserva
+                             where r.id == id
+                             select r).FirstOrDefault();
+
+                return res;
+            }
+        }
+        public bool addReserva(int idUsuario, int idClase, string estado)
+        {
+
+            using (Modelo.NetridersEntities db = new Modelo.NetridersEntities())
+            {
+               Reserva res = new Reserva();
+                {
+                    res.id_usuario = idUsuario;
+                        res.id_clase = idClase;
+                    res.estado = estado;
+                };
+                db.Reserva.Add(res);
+
+                db.SaveChanges();
+            }
+
+            return true;
+
+
+        }
+
+        public bool editReserva(int id, int idUsuario, int idClase, string estado)
+        {
+            try
+            {
+                using (Modelo.NetridersEntities db = new Modelo.NetridersEntities())
+                {
+                    Reserva res = (from r in db.Reserva
+                                    where r.id == id
+                                    select r).FirstOrDefault();
+
+                    res.id_usuario = idUsuario;
+                    res.id_clase = idClase;
+                    res.estado = estado;
+                    db.SaveChanges();
+
+                    return true;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al actualizar la clase " + ex.Message);
+            }
+        }
+
+        public bool deleteReserva(int id)
+        {
+
+            try
+            {
+                using (Modelo.NetridersEntities db = new Modelo.NetridersEntities())
+                {
+                    Reserva res = (from r in db.Reserva
+                                    where r.id == id
+                                    select r).FirstOrDefault();
+
+                    db.Reserva.Remove(res);
                     db.SaveChanges();
 
                     return true;

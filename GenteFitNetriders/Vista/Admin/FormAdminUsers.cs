@@ -5,10 +5,10 @@ using System.Xml.Linq;
 
 namespace GenteFitNetriders.Vista
 {
-    public partial class FormAdminPanel : Form
+    public partial class FormAdminUsers : Form
     {
         private MainController controller;
-        public FormAdminPanel()
+        public FormAdminUsers()
         {
             InitializeComponent();
             controller = new MainController();

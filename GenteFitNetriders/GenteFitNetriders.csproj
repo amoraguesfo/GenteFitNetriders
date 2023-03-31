@@ -84,6 +84,18 @@
     <Compile Include="Modelo\Usuarios.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Vista\Admin\FormAdminClases.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Admin\FormAdminClases.Designer.cs">
+      <DependentUpon>FormAdminClases.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Admin\FormAdminPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Admin\FormAdminPrincipal.Designer.cs">
+      <DependentUpon>FormAdminPrincipal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\Login\FormRegister.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,16 +120,22 @@
     <Compile Include="Vista\FormClientPanel.Designer.cs">
       <DependentUpon>FormClientPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\FormAdminPanel.cs">
+    <Compile Include="Vista\Admin\FormAdminUsers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\FormAdminPanel.Designer.cs">
-      <DependentUpon>FormAdminPanel.cs</DependentUpon>
+    <Compile Include="Vista\Admin\FormAdminUsers.Designer.cs">
+      <DependentUpon>FormAdminUsers.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Vista\FormAdminPanel.resx">
-      <DependentUpon>FormAdminPanel.cs</DependentUpon>
+    <EmbeddedResource Include="Vista\Admin\FormAdminClases.resx">
+      <DependentUpon>FormAdminClases.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Admin\FormAdminUsers.resx">
+      <DependentUpon>FormAdminUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Admin\FormAdminPrincipal.resx">
+      <DependentUpon>FormAdminPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\FormClientPanel.resx">
       <DependentUpon>FormClientPanel.cs</DependentUpon>
