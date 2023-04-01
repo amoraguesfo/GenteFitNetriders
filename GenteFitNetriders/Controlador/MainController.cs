@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Diagnostics;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Security.Cryptography;
 using System.Windows.Forms;
 using System.Xml;
@@ -73,7 +74,8 @@ namespace GenteFitNetriders.Controlador
 
         public bool addUser(String nombre, String email, String sexo, int edad, String num_telf, String password)
         {
- 
+            try
+            {
                 Usuarios user = null;
                 using (Modelo.NetridersEntities db = new Modelo.NetridersEntities())
                 {
@@ -92,7 +94,12 @@ namespace GenteFitNetriders.Controlador
                 }
                 Common.userLogged = user;
                 return true;
-            
+
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
 
         }
 
@@ -120,7 +127,7 @@ namespace GenteFitNetriders.Controlador
             }
             catch (Exception ex)
             {
-                throw new Exception("Error an actualizar el ussuario " + ex.Message);
+                return false;
             }
         }
 
@@ -270,6 +277,41 @@ namespace GenteFitNetriders.Controlador
                                                                  id_clase = r.id_clase,
                                                                  estado = r.estado
                                                              }
+                                                       ).ToList();
+                return reservas;
+            }
+        }
+        public IEnumerable<Modelo.ReservaViewModel> getReservasByUser(int idUsusario)
+        {
+            using (Modelo.NetridersEntities db = new Modelo.NetridersEntities())
+            {
+                IEnumerable<Modelo.ReservaViewModel> reservas = (from r in db.Reserva
+                                                                 where r.id_usuario == idUsusario
+                                                                 select new Modelo.ReservaViewModel    
+                                                                 {
+                                                                     id = r.id,
+                                                                     id_usuario = r.id_usuario,
+                                                                     id_clase = r.id_clase,
+                                                                     estado = r.estado
+                                                                 }
+                                                       ).ToList();
+                return reservas;
+            }
+        }
+
+        public IEnumerable<Modelo.ReservaViewModel> getReservasByClass(int idClase)
+        {
+            using (Modelo.NetridersEntities db = new Modelo.NetridersEntities())
+            {
+                IEnumerable<Modelo.ReservaViewModel> reservas = (from r in db.Reserva
+                                                                 where r.id_clase == idClase
+                                                                 select new Modelo.ReservaViewModel
+                                                                 {
+                                                                     id = r.id,
+                                                                     id_usuario = r.id_usuario,
+                                                                     id_clase = r.id_clase,
+                                                                     estado = r.estado
+                                                                 }
                                                        ).ToList();
                 return reservas;
             }
@@ -506,7 +548,7 @@ namespace GenteFitNetriders.Controlador
 
 
             Debug.WriteLine(xml.ToString());
-            using (XmlWriter writer = XmlWriter.Create("export_clases.xml"))
+            using (XmlWriter writer = XmlWriter.Create("export_reservas.xml"))
             {
                 xml.WriteTo(writer);
             }

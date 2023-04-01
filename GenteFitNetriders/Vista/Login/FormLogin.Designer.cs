@@ -41,7 +41,7 @@
             this.textUser.Name = "textUser";
             this.textUser.Size = new System.Drawing.Size(174, 20);
             this.textUser.TabIndex = 0;
-            this.textUser.Text = "admin@gentefit.com";
+            this.textUser.Text = "toni@toni.com";
             // 
             // textPassword
             // 
@@ -103,6 +103,7 @@
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GenteFit inicio de Sesión";
+            this.Load += new System.EventHandler(this.FormLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

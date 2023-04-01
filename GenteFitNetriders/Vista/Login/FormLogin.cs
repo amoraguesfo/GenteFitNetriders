@@ -29,18 +29,18 @@ namespace GenteFitNetriders
                 String userTipo = Common.userLogged.tipo;
                 if (userTipo == "admin")
                 {
-                    //this.Parent.FindForm().Hide();
+                   this.Parent.FindForm().Hide();
                    FormAdminPrincipal principal = new FormAdminPrincipal();
-                    //formAdminPanel.FormClosed += (s, args) => this.Parent.FindForm().Close();
-                    principal.Show();
+                   principal.FormClosed += (s, args) => this.Parent.FindForm().Show();
+                   principal.Show();
 
                 }
                 else
                 {
-                    //this.Parent.FindForm().Hide();
-                    FormAdminPrincipal principal = new FormAdminPrincipal();
-                    //formClientPanel.FormClosed += (s, args) => this.Parent.FindForm().Close();
-                    principal.Show();
+                    this.Parent.FindForm().Hide();
+                    FormClientPanel clientPanel = new FormClientPanel();
+                    clientPanel.FormClosed += (s, args) => this.Parent.FindForm().Show();
+                    clientPanel.Show();
                 }
 
             }
@@ -50,5 +50,9 @@ namespace GenteFitNetriders
             }
         }
 
+        private void FormLogin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

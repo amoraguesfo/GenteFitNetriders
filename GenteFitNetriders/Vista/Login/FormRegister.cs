@@ -30,5 +30,85 @@ namespace GenteFitNetriders
                 MessageBox.Show("Error al crear el usuario");
             }
         }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textSexo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textTelefono_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textEdad_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textNombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textConfirmPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textEmail_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormRegister_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

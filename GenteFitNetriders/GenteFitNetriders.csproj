@@ -96,17 +96,35 @@
     <Compile Include="Vista\Admin\FormAdminPrincipal.Designer.cs">
       <DependentUpon>FormAdminPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\Admin\FormAdminReservas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Admin\FormAdminReservas.Designer.cs">
+      <DependentUpon>FormAdminReservas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\Admin\FormAminAddClase.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vista\Admin\FormAminAddClase.Designer.cs">
       <DependentUpon>FormAminAddClase.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\Form1.cs">
+    <Compile Include="Vista\Client\FormClientClases.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Vista\Client\FormClientClases.Designer.cs">
+      <DependentUpon>FormClientClases.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Client\FormClientEditProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Client\FormClientEditProfile.Designer.cs">
+      <DependentUpon>FormClientEditProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Client\FormClientReservas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Client\FormClientReservas.Designer.cs">
+      <DependentUpon>FormClientReservas.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\Login\FormRegister.cs">
       <SubType>Form</SubType>
@@ -126,10 +144,10 @@
     <Compile Include="Vista\Login\FormLoginPrincipal.Designer.cs">
       <DependentUpon>FormLoginPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\FormClientPanel.cs">
+    <Compile Include="Vista\Client\FormClientPanel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\FormClientPanel.Designer.cs">
+    <Compile Include="Vista\Client\FormClientPanel.Designer.cs">
       <DependentUpon>FormClientPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\Admin\FormAdminUsers.cs">
@@ -143,6 +161,9 @@
     <EmbeddedResource Include="Vista\Admin\FormAdminClases.resx">
       <DependentUpon>FormAdminClases.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Admin\FormAdminReservas.resx">
+      <DependentUpon>FormAdminReservas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\Admin\FormAdminUsers.resx">
       <DependentUpon>FormAdminUsers.cs</DependentUpon>
     </EmbeddedResource>
@@ -152,8 +173,17 @@
     <EmbeddedResource Include="Vista\Admin\FormAminAddClase.resx">
       <DependentUpon>FormAminAddClase.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\FormClientPanel.resx">
+    <EmbeddedResource Include="Vista\Client\FormClientClases.resx">
+      <DependentUpon>FormClientClases.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Client\FormClientEditProfile.resx">
+      <DependentUpon>FormClientEditProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Client\FormClientPanel.resx">
       <DependentUpon>FormClientPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Client\FormClientReservas.resx">
+      <DependentUpon>FormClientReservas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Login\FormRegister.resx">
       <DependentUpon>FormRegister.cs</DependentUpon>

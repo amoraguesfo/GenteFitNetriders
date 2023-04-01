@@ -71,7 +71,8 @@ namespace GenteFitNetriders.Vista.Admin
             btnClases.Enabled = true;
             btnUsusarios.Enabled = true;
             btnReservas.Enabled = false;
- 
+            abrirFormInPanel(new FormAdminReservas());
+
         }
     }
 }

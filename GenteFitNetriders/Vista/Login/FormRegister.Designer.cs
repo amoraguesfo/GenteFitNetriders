@@ -52,6 +52,7 @@
             this.textEmail.Name = "textEmail";
             this.textEmail.Size = new System.Drawing.Size(174, 20);
             this.textEmail.TabIndex = 0;
+            this.textEmail.TextChanged += new System.EventHandler(this.textEmail_TextChanged);
             // 
             // textPassword
             // 
@@ -60,6 +61,7 @@
             this.textPassword.PasswordChar = '*';
             this.textPassword.Size = new System.Drawing.Size(174, 20);
             this.textPassword.TabIndex = 1;
+            this.textPassword.TextChanged += new System.EventHandler(this.textPassword_TextChanged);
             // 
             // label1
             // 
@@ -71,6 +73,7 @@
             this.label1.Size = new System.Drawing.Size(32, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "Email";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -82,6 +85,7 @@
             this.label2.Size = new System.Drawing.Size(66, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "Contrasseña";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // btnRegister
             // 
@@ -104,6 +108,7 @@
             this.label3.Size = new System.Drawing.Size(100, 13);
             this.label3.TabIndex = 7;
             this.label3.Text = "Repite Contrasseña";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // textConfirmPassword
             // 
@@ -112,6 +117,7 @@
             this.textConfirmPassword.PasswordChar = '*';
             this.textConfirmPassword.Size = new System.Drawing.Size(174, 20);
             this.textConfirmPassword.TabIndex = 6;
+            this.textConfirmPassword.TextChanged += new System.EventHandler(this.textConfirmPassword_TextChanged);
             // 
             // label6
             // 
@@ -123,6 +129,7 @@
             this.label6.Size = new System.Drawing.Size(44, 13);
             this.label6.TabIndex = 10;
             this.label6.Text = "Nombre";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // textNombre
             // 
@@ -130,6 +137,7 @@
             this.textNombre.Name = "textNombre";
             this.textNombre.Size = new System.Drawing.Size(174, 20);
             this.textNombre.TabIndex = 8;
+            this.textNombre.TextChanged += new System.EventHandler(this.textNombre_TextChanged);
             // 
             // label5
             // 
@@ -141,6 +149,7 @@
             this.label5.Size = new System.Drawing.Size(32, 13);
             this.label5.TabIndex = 14;
             this.label5.Text = "Edad";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // textEdad
             // 
@@ -148,6 +157,7 @@
             this.textEdad.Name = "textEdad";
             this.textEdad.Size = new System.Drawing.Size(174, 20);
             this.textEdad.TabIndex = 13;
+            this.textEdad.TextChanged += new System.EventHandler(this.textEdad_TextChanged);
             // 
             // label7
             // 
@@ -159,6 +169,7 @@
             this.label7.Size = new System.Drawing.Size(49, 13);
             this.label7.TabIndex = 16;
             this.label7.Text = "Telefono";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // textTelefono
             // 
@@ -166,6 +177,7 @@
             this.textTelefono.Name = "textTelefono";
             this.textTelefono.Size = new System.Drawing.Size(174, 20);
             this.textTelefono.TabIndex = 15;
+            this.textTelefono.TextChanged += new System.EventHandler(this.textTelefono_TextChanged);
             // 
             // label8
             // 
@@ -177,6 +189,7 @@
             this.label8.Size = new System.Drawing.Size(31, 13);
             this.label8.TabIndex = 18;
             this.label8.Text = "Sexo";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // textSexo
             // 
@@ -184,6 +197,7 @@
             this.textSexo.Name = "textSexo";
             this.textSexo.Size = new System.Drawing.Size(174, 20);
             this.textSexo.TabIndex = 17;
+            this.textSexo.TextChanged += new System.EventHandler(this.textSexo_TextChanged);
             // 
             // label9
             // 
@@ -196,6 +210,7 @@
             this.label9.Size = new System.Drawing.Size(259, 20);
             this.label9.TabIndex = 19;
             this.label9.Text = "Introduce tus datos para registrarte";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // FormRegister
             // 
@@ -226,6 +241,7 @@
             this.Name = "FormRegister";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GenteFit inicio de Sesión";
+            this.Load += new System.EventHandler(this.FormRegister_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
