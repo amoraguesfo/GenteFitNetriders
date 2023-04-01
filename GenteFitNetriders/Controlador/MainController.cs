@@ -15,9 +15,6 @@ namespace GenteFitNetriders.Controlador
 {
     internal class MainController
     {
-        //TODO
-        //- pasar el acceso a datos del FormLogin a esta clase
-
 
         public bool UserLogin(String email, String password)
         {
