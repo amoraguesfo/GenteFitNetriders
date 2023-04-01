@@ -374,11 +374,12 @@ namespace GenteFitNetriders.Controlador
         public void importarUsuariosXML()
         {
 
-            XDocument xDoc = XDocument.Load(@"import_usuarios.xml");
-            Debug.WriteLine(xDoc.ToString());
+
+            XDocument xml= XDocument.Load(@"import_usuarios.xml");
+            Debug.WriteLine(xml.ToString());
 
 
-            List<Usuarios> users = xDoc.Descendants("Usuario").Select
+            List<Usuarios> users = xml.Descendants("Usuario").Select
             (user =>
             new Usuarios
             {
@@ -397,6 +398,71 @@ namespace GenteFitNetriders.Controlador
             {
                 //Debug.WriteLine(u.email);
                 addUser(u.nombre, u.email, u.sexo, u.edad, u.num_telefono, u.password);
+            }
+
+            MessageBox.Show("El XML Usuarios de ususuarios ");
+
+        }
+
+        public void exportarClaseXML()
+        {
+
+            //List<Modelo.UserViewModel> users = (List<UserViewModel>)this.getUsers();
+            var clases = this.getClases();
+            var xml = new XElement("Clases");
+
+            foreach (var c in clases)
+            {
+              
+                xml.Add(new XElement("Clase",
+                                       new XAttribute("id", c.id),
+                                       new XElement("Nombre", c.nombre_clase),
+                                       new XElement("Profesor", c.profesor),
+                                       new XElement("Plazas", c.plazas.ToString()),
+                                       new XElement("Fecha", c.fecha_clase.ToString()),
+                                       new XElement("Hora", c.hora_clase.ToString()),
+                                       new XElement("Duracion", c.duracion))
+
+                               );
+
+            }
+
+
+            Debug.WriteLine(xml.ToString());
+            using (XmlWriter writer = XmlWriter.Create("export_clases.xml"))
+            {
+                xml.WriteTo(writer);
+            }
+
+            MessageBox.Show("El XML de clases se ha exportado correctamente");
+
+        }
+
+        public void importarClasesXML()
+        {
+
+            XDocument xml = XDocument.Load(@"import_clases.xml");
+            Debug.WriteLine(xml.ToString());
+
+            List<Clases> clases =xml.Descendants("Clase").Select
+            (clase =>
+            new Clases
+            {
+                id = int.Parse(clase.Attribute("id").Value), //no tendremos el i en cuenta ya que la clave para identificar al usuario es el email
+                nombre_clase = clase.Element("Nombre").Value,
+                nrofesor = clase.Element("Profesor").Value,
+                plazas = int.Parse(clase.Element("Plazas").Value),
+                fecha_clase = DateTime.Parse(clase.Element("Fecha").Value),
+                hora_clase = TimeSpan.Parse(clase.Element("Hora").Value),
+                duracion = int.Parse(clase.Element("Duracion").Value)
+            }
+            ).ToList();
+
+
+            foreach (var c in clases)
+            {
+                //Debug.WriteLine(u.email);
+                addClase(c.nombre_clase, c.nrofesor, c.plazas, c.fecha_clase, c.hora_clase, c.duracion);
             }
 
             MessageBox.Show("El XML Usuarios de ususuarios ");

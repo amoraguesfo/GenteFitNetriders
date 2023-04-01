@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             this.dataGridClases = new System.Windows.Forms.DataGridView();
-            this.btnDelUser = new System.Windows.Forms.Button();
-            this.btnImportar = new System.Windows.Forms.Button();
+            this.btnDelClase = new System.Windows.Forms.Button();
+            this.btnImportarXML = new System.Windows.Forms.Button();
             this.btnExportarXML = new System.Windows.Forms.Button();
+            this.addClase = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridClases)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,25 +44,27 @@
             this.dataGridClases.Size = new System.Drawing.Size(788, 363);
             this.dataGridClases.TabIndex = 0;
             // 
-            // btnDelUser
+            // btnDelClase
             // 
-            this.btnDelUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDelUser.Location = new System.Drawing.Point(685, 415);
-            this.btnDelUser.Name = "btnDelUser";
-            this.btnDelUser.Size = new System.Drawing.Size(103, 23);
-            this.btnDelUser.TabIndex = 7;
-            this.btnDelUser.Text = "Eliminar usuario";
-            this.btnDelUser.UseVisualStyleBackColor = true;
+            this.btnDelClase.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDelClase.Location = new System.Drawing.Point(685, 415);
+            this.btnDelClase.Name = "btnDelClase";
+            this.btnDelClase.Size = new System.Drawing.Size(103, 23);
+            this.btnDelClase.TabIndex = 7;
+            this.btnDelClase.Text = "Eliminar clase";
+            this.btnDelClase.UseVisualStyleBackColor = true;
+            this.btnDelClase.Click += new System.EventHandler(this.btnDelUser_Click);
             // 
-            // btnImportar
+            // btnImportarXML
             // 
-            this.btnImportar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnImportar.Location = new System.Drawing.Point(104, 415);
-            this.btnImportar.Name = "btnImportar";
-            this.btnImportar.Size = new System.Drawing.Size(87, 23);
-            this.btnImportar.TabIndex = 6;
-            this.btnImportar.Text = "Importar XML";
-            this.btnImportar.UseVisualStyleBackColor = true;
+            this.btnImportarXML.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnImportarXML.Location = new System.Drawing.Point(104, 415);
+            this.btnImportarXML.Name = "btnImportarXML";
+            this.btnImportarXML.Size = new System.Drawing.Size(87, 23);
+            this.btnImportarXML.TabIndex = 6;
+            this.btnImportarXML.Text = "Importar XML";
+            this.btnImportarXML.UseVisualStyleBackColor = true;
+            this.btnImportarXML.Click += new System.EventHandler(this.btnImportarXML_Click);
             // 
             // btnExportarXML
             // 
@@ -72,6 +75,20 @@
             this.btnExportarXML.TabIndex = 5;
             this.btnExportarXML.Text = "Exportar XML";
             this.btnExportarXML.UseVisualStyleBackColor = true;
+            this.btnExportarXML.Click += new System.EventHandler(this.btnExportarXML_Click);
+            // 
+            // addClase
+            // 
+            this.addClase.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.addClase.AutoSize = true;
+            this.addClase.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.addClase.Location = new System.Drawing.Point(550, 415);
+            this.addClase.Name = "addClase";
+            this.addClase.Size = new System.Drawing.Size(103, 23);
+            this.addClase.TabIndex = 8;
+            this.addClase.Text = "Añadir clase";
+            this.addClase.UseVisualStyleBackColor = true;
+            this.addClase.Click += new System.EventHandler(this.button1_Click);
             // 
             // FormAdminClases
             // 
@@ -81,8 +98,9 @@
             this.BackgroundImage = global::GenteFitNetriders.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnDelUser);
-            this.Controls.Add(this.btnImportar);
+            this.Controls.Add(this.addClase);
+            this.Controls.Add(this.btnDelClase);
+            this.Controls.Add(this.btnImportarXML);
             this.Controls.Add(this.btnExportarXML);
             this.Controls.Add(this.dataGridClases);
             this.DoubleBuffered = true;
@@ -92,14 +110,16 @@
             this.Load += new System.EventHandler(this.FormAdminClases_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridClases)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridClases;
-        private System.Windows.Forms.Button btnDelUser;
-        private System.Windows.Forms.Button btnImportar;
+        private System.Windows.Forms.Button btnDelClase;
+        private System.Windows.Forms.Button btnImportarXML;
         private System.Windows.Forms.Button btnExportarXML;
+        private System.Windows.Forms.Button addClase;
     }
 }

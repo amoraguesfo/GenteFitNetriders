@@ -32,6 +32,7 @@
             this.btnExportarXML = new System.Windows.Forms.Button();
             this.btnImportar = new System.Windows.Forms.Button();
             this.btnDelUser = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridUsers)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,9 +43,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridUsers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridUsers.Location = new System.Drawing.Point(12, 12);
+            this.dataGridUsers.Location = new System.Drawing.Point(12, 55);
             this.dataGridUsers.Name = "dataGridUsers";
-            this.dataGridUsers.Size = new System.Drawing.Size(760, 458);
+            this.dataGridUsers.Size = new System.Drawing.Size(760, 415);
             this.dataGridUsers.TabIndex = 1;
             // 
             // btnExportarXML
@@ -80,6 +81,17 @@
             this.btnDelUser.UseVisualStyleBackColor = true;
             this.btnDelUser.Click += new System.EventHandler(this.btnDelUser_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(266, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(205, 26);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Gestión de usuarios";
+            // 
             // FormAdminUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -88,6 +100,7 @@
             this.BackgroundImage = global::GenteFitNetriders.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(784, 511);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnDelUser);
             this.Controls.Add(this.btnImportar);
             this.Controls.Add(this.btnExportarXML);
@@ -100,6 +113,7 @@
             this.Load += new System.EventHandler(this.FormAdminPanel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridUsers)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -108,5 +122,6 @@
         private System.Windows.Forms.Button btnExportarXML;
         private System.Windows.Forms.Button btnImportar;
         private System.Windows.Forms.Button btnDelUser;
+        private System.Windows.Forms.Label label1;
     }
 }

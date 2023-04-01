@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 namespace GenteFitNetriders.Vista.Admin
 {
@@ -50,16 +51,27 @@ namespace GenteFitNetriders.Vista.Admin
         private void btnUsusarios_Click(object sender, EventArgs e)
         {
 
-            btnClases.Enabled = true;
             btnUsusarios.Enabled = false;
+            btnClases.Enabled = true;
+            btnReservas.Enabled = true;
             abrirFormInPanel(new FormAdminUsers());
         }
 
         private void btnClases_Click(object sender, EventArgs e)
         {
-            btnClases.Enabled = false;
+            
             btnUsusarios.Enabled = true;
+            btnClases.Enabled = false;
+            btnReservas.Enabled = true;
             abrirFormInPanel(new FormAdminClases());
+        }
+
+        private void btnReservas_Click(object sender, EventArgs e)
+        {
+            btnClases.Enabled = true;
+            btnUsusarios.Enabled = true;
+            btnReservas.Enabled = false;
+ 
         }
     }
 }

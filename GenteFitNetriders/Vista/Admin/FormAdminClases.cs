@@ -24,5 +24,34 @@ namespace GenteFitNetriders.Vista.Admin
         {
             dataGridClases.DataSource = controller.getClases();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            FormAminAddClase formAdminAddClase =  new FormAminAddClase();
+
+            formAdminAddClase.ShowDialog();
+            dataGridClases.DataSource = controller.getClases();
+
+        }
+
+        private void btnDelUser_Click(object sender, EventArgs e)
+        {
+            Modelo.ClaseViewModel clase = (Modelo.ClaseViewModel)dataGridClases.CurrentRow.DataBoundItem;
+            controller.deleteClase(clase.id);
+            MessageBox.Show("LA clase se ha eliminado correctamente");
+            dataGridClases.DataSource = controller.getClases();
+        }
+
+        private void btnImportarXML_Click(object sender, EventArgs e)
+        {
+            controller.importarClasesXML();
+            dataGridClases.DataSource = controller.getClases();
+        }
+
+        private void btnExportarXML_Click(object sender, EventArgs e)
+        {
+            controller.exportarClaseXML();
+        }
     }
 }

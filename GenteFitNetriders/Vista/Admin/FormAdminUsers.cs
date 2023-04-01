@@ -26,6 +26,7 @@ namespace GenteFitNetriders.Vista
         {
             Modelo.UserViewModel user = (Modelo.UserViewModel)dataGridUsers.CurrentRow.DataBoundItem;
             controller.deleteUser(user.id);
+            MessageBox.Show("El ususario se ha eliminado correctamente");
             dataGridUsers.DataSource = controller.getUsers();
         }
 
