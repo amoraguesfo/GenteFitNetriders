@@ -258,6 +258,22 @@ namespace GenteFitNetriders.Controlador
         }
 
 
+        public IEnumerable<Modelo.ReservaViewModel> getReservas()
+        {
+            using (Modelo.NetridersEntities db = new Modelo.NetridersEntities())
+            {
+                IEnumerable<Modelo.ReservaViewModel> reservas = (from r in db.Reserva
+                                                             select new Modelo.ReservaViewModel
+                                                             {
+                                                                 id = r.id,
+                                                                 id_usuario = r.id_usuario,
+                                                                 id_clase = r.id_clase,
+                                                                 estado = r.estado
+                                                             }
+                                                       ).ToList();
+                return reservas;
+            }
+        }
 
         public Reserva getReservaById(int id)
         {
@@ -367,7 +383,7 @@ namespace GenteFitNetriders.Controlador
                 xml.WriteTo(writer);
             }
 
-            MessageBox.Show("El XML de Usuariosde ha exportado correctamente");
+            MessageBox.Show("El XML de Usuarios se ha exportado correctamente");
 
         }
 
@@ -400,7 +416,7 @@ namespace GenteFitNetriders.Controlador
                 addUser(u.nombre, u.email, u.sexo, u.edad, u.num_telefono, u.password);
             }
 
-            MessageBox.Show("El XML Usuarios de ususuarios ");
+            MessageBox.Show("El XML de usuarios se ha importado correctamente ");
 
         }
 
@@ -418,8 +434,8 @@ namespace GenteFitNetriders.Controlador
                                        new XAttribute("id", c.id),
                                        new XElement("Nombre", c.nombre_clase),
                                        new XElement("Profesor", c.profesor),
-                                       new XElement("Plazas", c.plazas.ToString()),
-                                       new XElement("Fecha", c.fecha_clase.ToString()),
+                                       new XElement("Plazas", c.plazas),
+                                       new XElement("Fecha", c.fecha_clase),
                                        new XElement("Hora", c.hora_clase.ToString()),
                                        new XElement("Duracion", c.duracion))
 
@@ -465,8 +481,65 @@ namespace GenteFitNetriders.Controlador
                 addClase(c.nombre_clase, c.nrofesor, c.plazas, c.fecha_clase, c.hora_clase, c.duracion);
             }
 
-            MessageBox.Show("El XML Usuarios de ususuarios ");
+            MessageBox.Show("El XML de clases se ha importado correctamente ");
 
+        }
+
+        public void exportarReservasXML()
+        {
+
+            //List<Modelo.UserViewModel> users = (List<UserViewModel>)this.getUsers();
+            var reservas = this.getReservas();
+            var xml = new XElement("Reservas");
+
+            foreach (var r in reservas)
+            {
+
+                xml.Add(new XElement("Reserva",
+                                       new XAttribute("id", r.id),
+                                       new XElement("IdUsuario", r.id_usuario),
+                                       new XElement("IdClase", r.id_clase),
+                                       new XElement("Estado", r.estado))
+                               );
+
+            }
+
+
+            Debug.WriteLine(xml.ToString());
+            using (XmlWriter writer = XmlWriter.Create("export_clases.xml"))
+            {
+                xml.WriteTo(writer);
+            }
+
+            MessageBox.Show("El XML de reservas se ha exportado correctamente");
+
+        }
+
+        public void importarReservasXML()
+        {
+
+            XDocument xml = XDocument.Load(@"import_reservas.xml");
+            Debug.WriteLine(xml.ToString());
+
+            List<Reserva> reservas = xml.Descendants("Reserva").Select
+            (res =>
+            new Reserva
+            {
+                id = int.Parse(res.Attribute("id").Value), //no tendremos el i en cuenta ya que la clave para identificar al usuario es el email
+                id_usuario = int.Parse(res.Element("IdUsuario").Value),
+                id_clase = int.Parse(res.Element("IdClase").Value),
+                estado = res.Element("Estado").Value
+            }
+            ).ToList();
+
+
+            foreach (var r in reservas)
+            {
+                //Debug.WriteLine(u.email);
+                addReserva(r.id_usuario, r.id_clase, r.estado);
+            }
+
+            MessageBox.Show("El XML reservas se ha importado correctamente");
         }
     }
    
