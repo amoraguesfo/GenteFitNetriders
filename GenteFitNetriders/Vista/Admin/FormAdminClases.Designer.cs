@@ -33,15 +33,16 @@
             this.btnImportarXML = new System.Windows.Forms.Button();
             this.btnExportarXML = new System.Windows.Forms.Button();
             this.addClase = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridClases)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridClases
             // 
             this.dataGridClases.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridClases.Location = new System.Drawing.Point(12, 12);
+            this.dataGridClases.Location = new System.Drawing.Point(12, 38);
             this.dataGridClases.Name = "dataGridClases";
-            this.dataGridClases.Size = new System.Drawing.Size(788, 363);
+            this.dataGridClases.Size = new System.Drawing.Size(788, 337);
             this.dataGridClases.TabIndex = 0;
             // 
             // btnDelClase
@@ -90,6 +91,17 @@
             this.addClase.UseVisualStyleBackColor = true;
             this.addClase.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(289, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(185, 26);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Gestion de clases";
+            // 
             // FormAdminClases
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -98,6 +110,7 @@
             this.BackgroundImage = global::GenteFitNetriders.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.addClase);
             this.Controls.Add(this.btnDelClase);
             this.Controls.Add(this.btnImportarXML);
@@ -121,5 +134,6 @@
         private System.Windows.Forms.Button btnImportarXML;
         private System.Windows.Forms.Button btnExportarXML;
         private System.Windows.Forms.Button addClase;
+        private System.Windows.Forms.Label label1;
     }
 }

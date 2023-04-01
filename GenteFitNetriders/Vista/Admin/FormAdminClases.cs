@@ -53,5 +53,7 @@ namespace GenteFitNetriders.Vista.Admin
         {
             controller.exportarClaseXML();
         }
+
+
     }
 }

@@ -43,9 +43,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridUsers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridUsers.Location = new System.Drawing.Point(12, 55);
+            this.dataGridUsers.Location = new System.Drawing.Point(12, 38);
             this.dataGridUsers.Name = "dataGridUsers";
-            this.dataGridUsers.Size = new System.Drawing.Size(760, 415);
+            this.dataGridUsers.Size = new System.Drawing.Size(760, 432);
             this.dataGridUsers.TabIndex = 1;
             // 
             // btnExportarXML
