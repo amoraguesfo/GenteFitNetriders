@@ -55,6 +55,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controlador\ExportXML.cs" />
+    <Compile Include="Controlador\ImportXML.cs" />
     <Compile Include="Controlador\Common.cs" />
     <Compile Include="Controlador\MainController.cs" />
     <Compile Include="Modelo\Clases.cs">

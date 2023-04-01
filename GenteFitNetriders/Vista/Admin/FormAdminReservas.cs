@@ -28,19 +28,21 @@ namespace GenteFitNetriders.Vista.Admin
         private void btnAnular_Click(object sender, EventArgs e)
         {
             Modelo.ReservaViewModel reserva = (Modelo.ReservaViewModel)dataGridViewReservas.CurrentRow.DataBoundItem;
-            controller.deleteClase(reserva.id);
+            controller.deleteReserva(reserva.id);
             MessageBox.Show("La reservas se ha eliminado correctamente");
             dataGridViewReservas.DataSource = controller.getReservas();
         }
 
         private void btnExportarXML_Click(object sender, EventArgs e)
         {
-            controller.exportarReservasXML();
+            ExportXML exportXML = new ExportXML();
+            exportXML.exportReservasXML();
         }
 
         private void btnImportarXML_Click(object sender, EventArgs e)
         {
-            controller.importarReservasXML();
+            ImportXML importXML = new ImportXML();
+            importXML.importReservasXML();
             dataGridViewReservas.DataSource = controller.getReservas();
         }
     }

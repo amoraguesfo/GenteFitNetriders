@@ -32,18 +32,18 @@ namespace GenteFitNetriders.Vista
 
         private void btnExportarXML_Click(object sender, EventArgs e)
         {
-            controller.exportUsusariosXML();
+            ExportXML exportXML = new ExportXML();
+            exportXML.exportUsusariosXML();
         }
 
         private void btnImportarXML_Click(object sender, EventArgs e)
         {
-            controller.exportUsusariosXML();
-        }
-
-        private void btnImportar_Click(object sender, EventArgs e)
-        {
-            controller.importarUsuariosXML();
+            
+            ImportXML importXML = new ImportXML();
+            importXML.importUsuariosXML();
             dataGridUsers.DataSource = controller.getUsers();
         }
+
+
     }
 }

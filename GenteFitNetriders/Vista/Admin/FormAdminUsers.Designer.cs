@@ -30,7 +30,7 @@
         {
             this.dataGridUsers = new System.Windows.Forms.DataGridView();
             this.btnExportarXML = new System.Windows.Forms.Button();
-            this.btnImportar = new System.Windows.Forms.Button();
+            this.btnImportarXML = new System.Windows.Forms.Button();
             this.btnDelUser = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridUsers)).BeginInit();
@@ -59,16 +59,16 @@
             this.btnExportarXML.UseVisualStyleBackColor = true;
             this.btnExportarXML.Click += new System.EventHandler(this.btnExportarXML_Click);
             // 
-            // btnImportar
+            // btnImportarXML
             // 
-            this.btnImportar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnImportar.Location = new System.Drawing.Point(104, 476);
-            this.btnImportar.Name = "btnImportar";
-            this.btnImportar.Size = new System.Drawing.Size(87, 23);
-            this.btnImportar.TabIndex = 3;
-            this.btnImportar.Text = "Importar XML";
-            this.btnImportar.UseVisualStyleBackColor = true;
-            this.btnImportar.Click += new System.EventHandler(this.btnImportar_Click);
+            this.btnImportarXML.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnImportarXML.Location = new System.Drawing.Point(104, 476);
+            this.btnImportarXML.Name = "btnImportarXML";
+            this.btnImportarXML.Size = new System.Drawing.Size(87, 23);
+            this.btnImportarXML.TabIndex = 3;
+            this.btnImportarXML.Text = "Importar XML";
+            this.btnImportarXML.UseVisualStyleBackColor = true;
+            this.btnImportarXML.Click += new System.EventHandler(this.btnImportarXML_Click);
             // 
             // btnDelUser
             // 
@@ -102,7 +102,7 @@
             this.ClientSize = new System.Drawing.Size(784, 511);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnDelUser);
-            this.Controls.Add(this.btnImportar);
+            this.Controls.Add(this.btnImportarXML);
             this.Controls.Add(this.btnExportarXML);
             this.Controls.Add(this.dataGridUsers);
             this.DoubleBuffered = true;
@@ -120,7 +120,7 @@
         #endregion
         private System.Windows.Forms.DataGridView dataGridUsers;
         private System.Windows.Forms.Button btnExportarXML;
-        private System.Windows.Forms.Button btnImportar;
+        private System.Windows.Forms.Button btnImportarXML;
         private System.Windows.Forms.Button btnDelUser;
         private System.Windows.Forms.Label label1;
     }

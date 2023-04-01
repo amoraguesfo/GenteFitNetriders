@@ -45,13 +45,15 @@ namespace GenteFitNetriders.Vista.Admin
 
         private void btnImportarXML_Click(object sender, EventArgs e)
         {
-            controller.importarClasesXML();
+            ImportXML importXML = new ImportXML();  
+            importXML.importClasesXML();
             dataGridClases.DataSource = controller.getClases();
         }
 
         private void btnExportarXML_Click(object sender, EventArgs e)
         {
-            controller.exportarClaseXML();
+            ExportXML exportXML = new ExportXML();
+            exportXML.exportClaseXML();
         }
 
 
