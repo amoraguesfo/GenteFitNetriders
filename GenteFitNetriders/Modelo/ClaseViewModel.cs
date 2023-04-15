@@ -12,6 +12,8 @@ namespace GenteFitNetriders.Modelo
         public string nombre_clase { get; set; }
         public string profesor { get; set; }
         public int plazas { get; set; }
+
+        public int reservas { get; set; }
         public System.DateTime fecha_clase { get; set; }
         public System.TimeSpan hora_clase { get; set; }
         public int duracion { get; set; }

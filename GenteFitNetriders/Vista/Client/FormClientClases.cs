@@ -23,8 +23,19 @@ namespace GenteFitNetriders.Vista.Client
 
         private void FormClientClases_Load(object sender, EventArgs e)
         {
-            dataGridViewClases.DataSource = controller.getClases();
+            fillDataGrid();
+
         }
+
+
+        private void fillDataGrid()
+        {
+            dataGridViewClases.DataSource = controller.getClases();
+            dataGridViewClases.Columns["id"].Visible = false;
+
+        }
+
+        
 
         private void btnReservar_Click(object sender, EventArgs e)
         {
@@ -43,7 +54,9 @@ namespace GenteFitNetriders.Vista.Client
                 string estado = controller.getReservasByClass(clase.id).Count() < clase.plazas ? "reservada" : "espera";
                 controller.addReserva(Common.userLogged.id, clase.id, estado);
                 MessageBox.Show("La reserva se ha realizado correctamente");
-                    
+                fillDataGrid();
+
+
         }
 
 

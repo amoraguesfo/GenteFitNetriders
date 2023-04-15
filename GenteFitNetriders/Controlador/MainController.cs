@@ -165,6 +165,7 @@ namespace GenteFitNetriders.Controlador
                                                                  nombre_clase = c.nombre_clase,
                                                                  profesor = c.nrofesor,
                                                                  plazas = c.plazas,
+                                                                 reservas = c.Reserva.Count(),
                                                                  fecha_clase = c.fecha_clase,
                                                                  hora_clase = c.hora_clase,
                                                                  duracion = c.duracion
@@ -271,7 +272,12 @@ namespace GenteFitNetriders.Controlador
                                                                  {
                                                                      id = r.id,
                                                                      id_usuario = r.id_usuario,
+                                                                     nombre_usuario = r.Usuarios.nombre,
+                                                                     email_usuario = r.Usuarios.email,
                                                                      id_clase = r.id_clase,
+                                                                     nombre_clase = r.Clases.nombre_clase,
+                                                                     fecha_clase = r.Clases.fecha_clase,
+                                                                     hora_clase = r.Clases.hora_clase,
                                                                      estado = r.estado
                                                                  }
                                                        ).ToList();
@@ -288,7 +294,12 @@ namespace GenteFitNetriders.Controlador
                                                                  {
                                                                      id = r.id,
                                                                      id_usuario = r.id_usuario,
+                                                                     nombre_usuario = r.Usuarios.nombre,
+                                                                     email_usuario = r.Usuarios.email,
                                                                      id_clase = r.id_clase,
+                                                                     nombre_clase = r.Clases.nombre_clase,
+                                                                     fecha_clase = r.Clases.fecha_clase,
+                                                                     hora_clase = r.Clases.hora_clase,
                                                                      estado = r.estado
                                                                  }
                                                        ).ToList();
@@ -306,7 +317,12 @@ namespace GenteFitNetriders.Controlador
                                                                  {
                                                                      id = r.id,
                                                                      id_usuario = r.id_usuario,
+                                                                     nombre_usuario = r.Usuarios.nombre,
+                                                                     email_usuario = r.Usuarios.email,
                                                                      id_clase = r.id_clase,
+                                                                     nombre_clase = r.Clases.nombre_clase,
+                                                                     fecha_clase = r.Clases.fecha_clase,
+                                                                     hora_clase = r.Clases.hora_clase,
                                                                      estado = r.estado
                                                                  }
                                                        ).ToList();
@@ -382,8 +398,16 @@ namespace GenteFitNetriders.Controlador
                                    select r).FirstOrDefault();
 
                     db.Reserva.Remove(res);
-                    db.SaveChanges();
+                    //db.SaveChanges();
 
+                    //TODO buscar si hay alguien en espera por fecha y actualizar su reserva mejorar con transaccion?transaccion?
+                    Reserva espera = (from r in db.Reserva
+                                      where r.id_clase == res.id_clase && r.estado == "espera"
+                                      orderby r.id
+                                      select r).FirstOrDefault();
+
+                    espera.estado = "reservada";
+                    db.SaveChanges();
                     return true;
                 }
             }

@@ -18,9 +18,10 @@ namespace GenteFitNetriders.Vista.Admin
         {
             InitializeComponent();
             controller = new MainController();
+
             dateTimePickerHora.ShowUpDown = true;
-            dateTimePickerHora.CustomFormat = "hh:mm";
-            dateTimePickerHora.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            dateTimePickerHora.CustomFormat = "HH:mm";
+            dateTimePickerHora.Format = DateTimePickerFormat.Custom;
         }
 
         private void btnCrear_Click(object sender, EventArgs e)

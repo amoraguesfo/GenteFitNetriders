@@ -18,16 +18,22 @@ namespace GenteFitNetriders.Vista
         
         private void FormAdminPanel_Load(object sender, System.EventArgs e)
         {
-            dataGridUsers.DataSource =  controller.getUsers();
+
+            fillDataGrid();
 
         }
-
+        private void fillDataGrid()
+        {
+            dataGridUsers.DataSource = controller.getUsers();
+            dataGridUsers.Columns["password"].Visible = false;
+            
+        }
         private void btnDelUser_Click(object sender, System.EventArgs e)
         {
             Modelo.UserViewModel user = (Modelo.UserViewModel)dataGridUsers.CurrentRow.DataBoundItem;
             controller.deleteUser(user.id);
-            MessageBox.Show("El ususario se ha eliminado correctamente");
-            dataGridUsers.DataSource = controller.getUsers();
+            MessageBox.Show("El usuario se ha eliminado correctamente");
+            fillDataGrid();
         }
 
         private void btnExportarXML_Click(object sender, EventArgs e)
@@ -41,7 +47,7 @@ namespace GenteFitNetriders.Vista
             
             ImportXML importXML = new ImportXML();
             importXML.importUsuariosXML();
-            dataGridUsers.DataSource = controller.getUsers();
+            fillDataGrid();
         }
 
 

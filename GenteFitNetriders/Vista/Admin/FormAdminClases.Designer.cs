@@ -44,6 +44,8 @@
             this.dataGridClases.Name = "dataGridClases";
             this.dataGridClases.Size = new System.Drawing.Size(788, 337);
             this.dataGridClases.TabIndex = 0;
+       
+       
             // 
             // btnDelClase
             // 

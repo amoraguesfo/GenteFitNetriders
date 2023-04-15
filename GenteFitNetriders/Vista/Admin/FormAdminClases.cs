@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace GenteFitNetriders.Vista.Admin
 {
@@ -22,7 +23,52 @@ namespace GenteFitNetriders.Vista.Admin
 
         private void FormAdminClases_Load(object sender, EventArgs e)
         {
+
+            fillDataGrid();
+            dataGridClases.ColumnHeaderMouseClick += dataGridClases_ColumnHeaderMouseClick;
+
+        }
+
+        private void fillDataGrid()
+        {
             dataGridClases.DataSource = controller.getClases();
+            dataGridClases.Columns["id"].Visible = false;
+        }
+        private void dataGridClases_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            DataGridViewColumn clickedColumn = dataGridClases.Columns[e.ColumnIndex];
+
+            // Check if the clicked column is a sortable column
+            if (clickedColumn.SortMode != DataGridViewColumnSortMode.Automatic)
+                return;
+
+            // Determine the sort direction
+            ListSortDirection sortDirection;
+            if (clickedColumn.HeaderCell.SortGlyphDirection == SortOrder.Ascending)
+                sortDirection = ListSortDirection.Descending;
+            else
+                sortDirection = ListSortDirection.Ascending;
+
+            // Get the data source and column name
+            IEnumerable<Modelo.ClaseViewModel> dataSource = (IEnumerable<Modelo.ClaseViewModel>)dataGridClases.DataSource;
+            string columnName = clickedColumn.Name;
+
+            // Sort the data using LINQ
+            IEnumerable<Modelo.ClaseViewModel> sortedData;
+            if (sortDirection == ListSortDirection.Ascending)
+                sortedData = dataSource.OrderBy(d => d.GetType().GetProperty(columnName).GetValue(d, null));
+            else
+                sortedData = dataSource.OrderByDescending(d => d.GetType().GetProperty(columnName).GetValue(d, null));
+
+            // Set the sorted data as the DataGridView's data source
+            dataGridClases.DataSource = sortedData.ToList();
+
+            // Set the sort glyph
+            DataGridViewColumnHeaderCell headerCell = dataGridClases.Columns[e.ColumnIndex].HeaderCell;
+            if (sortDirection == ListSortDirection.Ascending)
+                headerCell.SortGlyphDirection = SortOrder.Ascending;
+            else
+                headerCell.SortGlyphDirection = SortOrder.Descending;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -31,7 +77,7 @@ namespace GenteFitNetriders.Vista.Admin
             FormAminAddClase formAdminAddClase =  new FormAminAddClase();
 
             formAdminAddClase.ShowDialog();
-            dataGridClases.DataSource = controller.getClases();
+            fillDataGrid();
 
         }
 
@@ -40,14 +86,14 @@ namespace GenteFitNetriders.Vista.Admin
             Modelo.ClaseViewModel clase = (Modelo.ClaseViewModel)dataGridClases.CurrentRow.DataBoundItem;
             controller.deleteClase(clase.id);
             MessageBox.Show("LA clase se ha eliminado correctamente");
-            dataGridClases.DataSource = controller.getClases();
+            fillDataGrid();
         }
 
         private void btnImportarXML_Click(object sender, EventArgs e)
         {
             ImportXML importXML = new ImportXML();  
             importXML.importClasesXML();
-            dataGridClases.DataSource = controller.getClases();
+            fillDataGrid();
         }
 
         private void btnExportarXML_Click(object sender, EventArgs e)

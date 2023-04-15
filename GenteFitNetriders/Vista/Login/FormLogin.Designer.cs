@@ -41,7 +41,7 @@
             this.textUser.Name = "textUser";
             this.textUser.Size = new System.Drawing.Size(174, 20);
             this.textUser.TabIndex = 0;
-            this.textUser.Text = "toni@toni.com";
+            this.textUser.Text = "admin@gentefit.com";
             // 
             // textPassword
             // 
