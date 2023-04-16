@@ -21,7 +21,7 @@ namespace GenteFitNetriders.Vista
         public FormLoginPrincipal()
         {
             InitializeComponent();
-            ActiveButton(btnLogin, UtilsVista.RGBColors.verde1);
+            ActiveButton(btnLogin, RGBColors.verde1);
           
         }
 
@@ -39,7 +39,7 @@ namespace GenteFitNetriders.Vista
             if (currentButton != null)
             {
                 //Estilo del botton
-                currentButton.BackColor = UtilsVista.RGBColors.negro;
+                currentButton.BackColor = RGBColors.negro;
             }
         }
 
@@ -66,14 +66,14 @@ namespace GenteFitNetriders.Vista
         }
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            ActiveButton(sender, UtilsVista.RGBColors.verde1);
+            ActiveButton(sender, RGBColors.verde1);
             AbrirFormHijo(new FormLogin());
             
         }
 
         private void btnRegistro_Click(object sender, EventArgs e)
         {
-            ActiveButton(sender, UtilsVista.RGBColors.verde1);
+            ActiveButton(sender, RGBColors.verde1);
             AbrirFormHijo(new FormRegister());
         }
 

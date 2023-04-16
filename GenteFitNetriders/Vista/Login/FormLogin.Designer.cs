@@ -42,7 +42,7 @@
             this.textUser.Name = "textUser";
             this.textUser.Size = new System.Drawing.Size(231, 27);
             this.textUser.TabIndex = 0;
-            this.textUser.Text = "EMAIL";
+            this.textUser.Text = "Email";
             this.textUser.Enter += new System.EventHandler(this.textUser_Enter);
             this.textUser.Leave += new System.EventHandler(this.textUser_Leave);
             // 
@@ -54,7 +54,7 @@
             this.textPassword.Name = "textPassword";
             this.textPassword.Size = new System.Drawing.Size(231, 27);
             this.textPassword.TabIndex = 1;
-            this.textPassword.Text = "CONTRASEÑA";
+            this.textPassword.Text = "Contraseña";
             this.textPassword.Enter += new System.EventHandler(this.textPassword_Enter);
             this.textPassword.Leave += new System.EventHandler(this.textPassword_Leave);
             // 
@@ -77,11 +77,11 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 22F);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(340, 137);
+            this.label1.Location = new System.Drawing.Point(297, 135);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 41);
+            this.label1.Size = new System.Drawing.Size(191, 41);
             this.label1.TabIndex = 6;
-            this.label1.Text = "LOGIN";
+            this.label1.Text = "Inicia sessión";
             // 
             // FormLogin
             // 

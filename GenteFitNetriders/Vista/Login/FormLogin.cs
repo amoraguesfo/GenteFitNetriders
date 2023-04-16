@@ -58,9 +58,9 @@ namespace GenteFitNetriders
 
         private void textUser_Enter(object sender, EventArgs e)
         {
-            if(textUser.Text == "EMAIL") {
+            if(textUser.Text == "Email") {
                 textUser.Text = "";
-                textUser.ForeColor = UtilsVista.RGBColors.negro;
+                textUser.ForeColor = RGBColors.negro;
             }
         }
 
@@ -68,17 +68,17 @@ namespace GenteFitNetriders
         {
             if (textUser.Text == "")
             {
-                textUser.Text = "EMAIL";
-                textUser.ForeColor = UtilsVista.RGBColors.gris;
+                textUser.Text = "Email";
+                textUser.ForeColor = RGBColors.gris;
             }
         }
 
         private void textPassword_Enter(object sender, EventArgs e)
         {
-            if (textPassword.Text == "CONTRASEÑA")
+            if (textPassword.Text == "Contraseña")
             {
                 textPassword.Text = "";
-                textPassword.ForeColor = UtilsVista.RGBColors.negro;
+                textPassword.ForeColor = RGBColors.negro;
                 textPassword.UseSystemPasswordChar = true;
             }
         }
@@ -87,8 +87,8 @@ namespace GenteFitNetriders
         {
             if (textPassword.Text == "")
             {
-                textPassword.Text = "CONTRASEÑA";
-                textPassword.ForeColor = UtilsVista.RGBColors.gris;
+                textPassword.Text = "Contraseña";
+                textPassword.ForeColor = RGBColors.gris;
                 textPassword.UseSystemPasswordChar = false;
             }
         }

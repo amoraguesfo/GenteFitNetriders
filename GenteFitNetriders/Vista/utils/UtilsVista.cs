@@ -7,13 +7,10 @@ using System.Threading.Tasks;
 
 namespace GenteFitNetriders.Vista.utils
 {
-    internal class UtilsVista
-    {
         public struct RGBColors
         {
             public static Color verde1 = Color.YellowGreen;//#00BF63
             public static Color negro = Color.FromArgb(0, 0, 0);
             public static Color gris = Color.DimGray;
         }
-    }
 }
