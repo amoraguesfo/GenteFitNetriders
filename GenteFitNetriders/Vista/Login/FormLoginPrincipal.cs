@@ -45,8 +45,7 @@ namespace GenteFitNetriders.Vista
 
         private void FormLoginPrincipal_Load(object sender, EventArgs e)
         {
-            //TODO cada vez que se clica aumenta la memoria, porque?
-
+ 
             AbrirFormHijo(new FormLogin());
         }
 

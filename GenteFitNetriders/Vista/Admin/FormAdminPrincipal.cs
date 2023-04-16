@@ -1,4 +1,6 @@
-﻿using System;
+﻿using FontAwesome.Sharp;
+using GenteFitNetriders.Vista.utils;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +16,8 @@ namespace GenteFitNetriders.Vista.Admin
 {
     public partial class FormAdminPrincipal : Form
     {
+        private IconButton currentButton;
+        private Form formHijoActual;
         public FormAdminPrincipal()
         {
             InitializeComponent();
@@ -22,57 +26,63 @@ namespace GenteFitNetriders.Vista.Admin
         private void FormAdminPrincipal_Load(object sender, EventArgs e)
         {
             //TODO cada vez que se clica aumenta la memoria, porque?
-            btnClases.Enabled = true;
-            btnUsusarios.Enabled = false;
-            abrirFormInPanel(new FormAdminUsers());
+            ActiveButton(btnUsuarios, RGBColors.verde1);
+            AbrirFormHijo(new FormAdminUsers());
         }
-
-        private void abrirFormInPanel(object formHijo)
+        private void ActiveButton(object senderBtn, Color color)
         {
-            if (this.panelContenedor.Controls.Count > 0)
+            if (senderBtn != null)
             {
-
-                this.panelContenedor.Controls.RemoveAt(0);
-                Debug.WriteLine(this.panelContenedor.Controls.Count);
-
+                DisableButton();
+                //Estilo del botton
+                currentButton = (IconButton)senderBtn;
+                currentButton.BackColor = color;
             }
-
-            Form fh = formHijo as Form;
-
-            fh.TopLevel = false;
-            fh.Dock = DockStyle.Fill;
-            this.panelContenedor.Controls.Add(fh);
-            this.panelContenedor.Tag = fh;
-            fh.Show();
+        }
+        private void DisableButton()
+        {
+            if (currentButton != null)
+            {
+                //Estilo del botton
+                currentButton.BackColor = RGBColors.negro;
+            }
+        }
+        private void AbrirFormHijo(Form formHijo)
+        {
+            if (formHijoActual != null)
+            {
+                formHijoActual.Close();
+            }
+            formHijoActual = formHijo;
+            formHijoActual.TopLevel = false;
+            formHijoActual.Dock = DockStyle.Fill;
+            this.panelContenedor.Controls.Add(formHijoActual);
+            this.panelContenedor.Tag = formHijoActual;
+            formHijoActual.Show();
         }
 
 
 
-        private void btnUsusarios_Click(object sender, EventArgs e)
+        private void btnUsuarios_Click(object sender, EventArgs e)
         {
-
-            btnUsusarios.Enabled = false;
-            btnClases.Enabled = true;
-            btnReservas.Enabled = true;
-            abrirFormInPanel(new FormAdminUsers());
+            ActiveButton(sender, RGBColors.verde1);
+            AbrirFormHijo(new FormAdminUsers());
         }
 
         private void btnClases_Click(object sender, EventArgs e)
         {
-            
-            btnUsusarios.Enabled = true;
-            btnClases.Enabled = false;
-            btnReservas.Enabled = true;
-            abrirFormInPanel(new FormAdminClases());
+
+            ActiveButton(sender, RGBColors.verde1);
+            AbrirFormHijo(new FormAdminClases());
         }
 
         private void btnReservas_Click(object sender, EventArgs e)
         {
-            btnClases.Enabled = true;
-            btnUsusarios.Enabled = true;
-            btnReservas.Enabled = false;
-            abrirFormInPanel(new FormAdminReservas());
+            ActiveButton(sender, RGBColors.verde1);
+            AbrirFormHijo(new FormAdminReservas());
 
         }
+
+
     }
 }

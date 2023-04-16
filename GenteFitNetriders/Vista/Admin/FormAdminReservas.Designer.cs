@@ -37,7 +37,7 @@
             // 
             // btnAnular
             // 
-            this.btnAnular.Location = new System.Drawing.Point(951, 638);
+            this.btnAnular.Location = new System.Drawing.Point(895, 613);
             this.btnAnular.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAnular.Name = "btnAnular";
             this.btnAnular.Size = new System.Drawing.Size(100, 35);
@@ -52,13 +52,13 @@
             this.dataGridViewReservas.Location = new System.Drawing.Point(13, 14);
             this.dataGridViewReservas.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridViewReservas.Name = "dataGridViewReservas";
-            this.dataGridViewReservas.Size = new System.Drawing.Size(774, 522);
+            this.dataGridViewReservas.Size = new System.Drawing.Size(982, 584);
             this.dataGridViewReservas.TabIndex = 4;
             // 
             // btnImportarXML
             // 
             this.btnImportarXML.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnImportarXML.Location = new System.Drawing.Point(139, 546);
+            this.btnImportarXML.Location = new System.Drawing.Point(139, 608);
             this.btnImportarXML.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnImportarXML.Name = "btnImportarXML";
             this.btnImportarXML.Size = new System.Drawing.Size(116, 35);
@@ -70,7 +70,7 @@
             // btnExportarXML
             // 
             this.btnExportarXML.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnExportarXML.Location = new System.Drawing.Point(16, 546);
+            this.btnExportarXML.Location = new System.Drawing.Point(16, 608);
             this.btnExportarXML.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnExportarXML.Name = "btnExportarXML";
             this.btnExportarXML.Size = new System.Drawing.Size(115, 35);
@@ -86,7 +86,7 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BackgroundImage = global::GenteFitNetriders.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 600);
+            this.ClientSize = new System.Drawing.Size(1008, 662);
             this.Controls.Add(this.btnImportarXML);
             this.Controls.Add(this.btnExportarXML);
             this.Controls.Add(this.btnAnular);

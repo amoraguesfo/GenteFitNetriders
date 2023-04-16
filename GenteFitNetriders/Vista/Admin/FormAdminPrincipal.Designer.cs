@@ -30,9 +30,9 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnReservas = new System.Windows.Forms.Button();
-            this.btnClases = new System.Windows.Forms.Button();
-            this.btnUsusarios = new System.Windows.Forms.Button();
+            this.btnUsuarios = new FontAwesome.Sharp.IconButton();
+            this.btnClases = new FontAwesome.Sharp.IconButton();
+            this.btnReservas = new FontAwesome.Sharp.IconButton();
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -52,50 +52,89 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Controls.Add(this.btnReservas);
+            this.panel1.Controls.Add(this.btnUsuarios);
             this.panel1.Controls.Add(this.btnClases);
-            this.panel1.Controls.Add(this.btnUsusarios);
+            this.panel1.Controls.Add(this.btnReservas);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1008, 77);
+            this.panel1.Size = new System.Drawing.Size(1008, 67);
             this.panel1.TabIndex = 1;
             // 
-            // btnReservas
+            // btnUsuarios
             // 
-            this.btnReservas.Location = new System.Drawing.Point(632, 18);
-            this.btnReservas.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnReservas.Name = "btnReservas";
-            this.btnReservas.Size = new System.Drawing.Size(113, 35);
-            this.btnReservas.TabIndex = 3;
-            this.btnReservas.Text = "Reservas";
-            this.btnReservas.UseVisualStyleBackColor = true;
-            this.btnReservas.Click += new System.EventHandler(this.btnReservas_Click);
+            this.btnUsuarios.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnUsuarios.BackColor = System.Drawing.Color.Black;
+            this.btnUsuarios.FlatAppearance.BorderSize = 0;
+            this.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUsuarios.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsuarios.ForeColor = System.Drawing.Color.White;
+            this.btnUsuarios.IconChar = FontAwesome.Sharp.IconChar.SignIn;
+            this.btnUsuarios.IconColor = System.Drawing.Color.White;
+            this.btnUsuarios.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnUsuarios.IconSize = 32;
+            this.btnUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUsuarios.Location = new System.Drawing.Point(589, 14);
+            this.btnUsuarios.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnUsuarios.Name = "btnUsuarios";
+            this.btnUsuarios.Size = new System.Drawing.Size(130, 40);
+            this.btnUsuarios.TabIndex = 6;
+            this.btnUsuarios.Text = "Usuarios";
+            this.btnUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUsuarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnUsuarios.UseVisualStyleBackColor = false;
+            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
             // 
             // btnClases
             // 
-            this.btnClases.Location = new System.Drawing.Point(460, 18);
+            this.btnClases.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClases.BackColor = System.Drawing.Color.Black;
+            this.btnClases.FlatAppearance.BorderSize = 0;
+            this.btnClases.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClases.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClases.ForeColor = System.Drawing.Color.White;
+            this.btnClases.IconChar = FontAwesome.Sharp.IconChar.SignIn;
+            this.btnClases.IconColor = System.Drawing.Color.White;
+            this.btnClases.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnClases.IconSize = 32;
+            this.btnClases.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClases.Location = new System.Drawing.Point(727, 14);
             this.btnClases.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnClases.Name = "btnClases";
-            this.btnClases.Size = new System.Drawing.Size(113, 35);
-            this.btnClases.TabIndex = 2;
+            this.btnClases.Size = new System.Drawing.Size(130, 40);
+            this.btnClases.TabIndex = 5;
             this.btnClases.Text = "Clases";
-            this.btnClases.UseVisualStyleBackColor = true;
+            this.btnClases.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClases.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnClases.UseVisualStyleBackColor = false;
             this.btnClases.Click += new System.EventHandler(this.btnClases_Click);
             // 
-            // btnUsusarios
+            // btnReservas
             // 
-            this.btnUsusarios.Location = new System.Drawing.Point(301, 18);
-            this.btnUsusarios.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnUsusarios.Name = "btnUsusarios";
-            this.btnUsusarios.Size = new System.Drawing.Size(100, 35);
-            this.btnUsusarios.TabIndex = 1;
-            this.btnUsusarios.Text = "Usuarios";
-            this.btnUsusarios.UseVisualStyleBackColor = true;
-            this.btnUsusarios.Click += new System.EventHandler(this.btnUsusarios_Click);
+            this.btnReservas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnReservas.BackColor = System.Drawing.Color.Black;
+            this.btnReservas.FlatAppearance.BorderSize = 0;
+            this.btnReservas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReservas.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReservas.ForeColor = System.Drawing.Color.White;
+            this.btnReservas.IconChar = FontAwesome.Sharp.IconChar.SignIn;
+            this.btnReservas.IconColor = System.Drawing.Color.White;
+            this.btnReservas.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnReservas.IconSize = 32;
+            this.btnReservas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReservas.Location = new System.Drawing.Point(865, 14);
+            this.btnReservas.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnReservas.Name = "btnReservas";
+            this.btnReservas.Size = new System.Drawing.Size(130, 40);
+            this.btnReservas.TabIndex = 4;
+            this.btnReservas.Text = "Reservas";
+            this.btnReservas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReservas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnReservas.UseVisualStyleBackColor = false;
+            this.btnReservas.Click += new System.EventHandler(this.btnReservas_Click);
             // 
             // panelContenedor
             // 
@@ -103,10 +142,10 @@
             this.panelContenedor.BackgroundImage = global::GenteFitNetriders.Properties.Resources.background;
             this.panelContenedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContenedor.Location = new System.Drawing.Point(0, 77);
+            this.panelContenedor.Location = new System.Drawing.Point(0, 67);
             this.panelContenedor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(1008, 652);
+            this.panelContenedor.Size = new System.Drawing.Size(1008, 662);
             this.panelContenedor.TabIndex = 2;
             // 
             // FormAdminPrincipal
@@ -132,9 +171,9 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnClases;
-        private System.Windows.Forms.Button btnUsusarios;
         private System.Windows.Forms.Panel panelContenedor;
-        private System.Windows.Forms.Button btnReservas;
+        private FontAwesome.Sharp.IconButton btnUsuarios;
+        private FontAwesome.Sharp.IconButton btnClases;
+        private FontAwesome.Sharp.IconButton btnReservas;
     }
 }

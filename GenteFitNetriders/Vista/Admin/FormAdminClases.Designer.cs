@@ -42,13 +42,13 @@
             this.dataGridClases.Location = new System.Drawing.Point(13, 14);
             this.dataGridClases.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridClases.Name = "dataGridClases";
-            this.dataGridClases.Size = new System.Drawing.Size(774, 522);
+            this.dataGridClases.Size = new System.Drawing.Size(978, 584);
             this.dataGridClases.TabIndex = 0;
             // 
             // btnDelClase
             // 
             this.btnDelClase.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDelClase.Location = new System.Drawing.Point(646, 546);
+            this.btnDelClase.Location = new System.Drawing.Point(854, 608);
             this.btnDelClase.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDelClase.Name = "btnDelClase";
             this.btnDelClase.Size = new System.Drawing.Size(137, 35);
@@ -60,7 +60,7 @@
             // btnImportarXML
             // 
             this.btnImportarXML.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnImportarXML.Location = new System.Drawing.Point(139, 546);
+            this.btnImportarXML.Location = new System.Drawing.Point(139, 608);
             this.btnImportarXML.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnImportarXML.Name = "btnImportarXML";
             this.btnImportarXML.Size = new System.Drawing.Size(116, 35);
@@ -72,7 +72,7 @@
             // btnExportarXML
             // 
             this.btnExportarXML.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnExportarXML.Location = new System.Drawing.Point(16, 546);
+            this.btnExportarXML.Location = new System.Drawing.Point(16, 608);
             this.btnExportarXML.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnExportarXML.Name = "btnExportarXML";
             this.btnExportarXML.Size = new System.Drawing.Size(115, 35);
@@ -86,7 +86,7 @@
             this.addClase.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.addClase.AutoSize = true;
             this.addClase.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.addClase.Location = new System.Drawing.Point(466, 546);
+            this.addClase.Location = new System.Drawing.Point(674, 608);
             this.addClase.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.addClase.Name = "addClase";
             this.addClase.Size = new System.Drawing.Size(137, 35);
@@ -102,7 +102,7 @@
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = global::GenteFitNetriders.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 600);
+            this.ClientSize = new System.Drawing.Size(1008, 662);
             this.Controls.Add(this.addClase);
             this.Controls.Add(this.btnDelClase);
             this.Controls.Add(this.btnImportarXML);

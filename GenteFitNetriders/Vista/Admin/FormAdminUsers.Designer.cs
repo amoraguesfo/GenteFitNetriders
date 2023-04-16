@@ -45,13 +45,13 @@
             this.dataGridUsers.Location = new System.Drawing.Point(13, 14);
             this.dataGridUsers.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridUsers.Name = "dataGridUsers";
-            this.dataGridUsers.Size = new System.Drawing.Size(768, 479);
+            this.dataGridUsers.Size = new System.Drawing.Size(976, 584);
             this.dataGridUsers.TabIndex = 1;
             // 
             // btnExportarXML
             // 
             this.btnExportarXML.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnExportarXML.Location = new System.Drawing.Point(16, 546);
+            this.btnExportarXML.Location = new System.Drawing.Point(16, 608);
             this.btnExportarXML.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnExportarXML.Name = "btnExportarXML";
             this.btnExportarXML.Size = new System.Drawing.Size(115, 35);
@@ -63,7 +63,7 @@
             // btnImportarXML
             // 
             this.btnImportarXML.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnImportarXML.Location = new System.Drawing.Point(139, 546);
+            this.btnImportarXML.Location = new System.Drawing.Point(139, 608);
             this.btnImportarXML.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnImportarXML.Name = "btnImportarXML";
             this.btnImportarXML.Size = new System.Drawing.Size(116, 35);
@@ -75,7 +75,7 @@
             // btnDelUser
             // 
             this.btnDelUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDelUser.Location = new System.Drawing.Point(647, 546);
+            this.btnDelUser.Location = new System.Drawing.Point(855, 608);
             this.btnDelUser.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDelUser.Name = "btnDelUser";
             this.btnDelUser.Size = new System.Drawing.Size(137, 35);
@@ -91,7 +91,7 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BackgroundImage = global::GenteFitNetriders.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 600);
+            this.ClientSize = new System.Drawing.Size(1008, 662);
             this.Controls.Add(this.btnDelUser);
             this.Controls.Add(this.btnImportarXML);
             this.Controls.Add(this.btnExportarXML);
