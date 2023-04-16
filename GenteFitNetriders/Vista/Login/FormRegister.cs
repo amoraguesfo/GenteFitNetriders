@@ -2,6 +2,8 @@
 using GenteFitNetriders.Vista;
 using GenteFitNetriders.Vista.utils;
 using System;
+using System.Text;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace GenteFitNetriders
@@ -19,137 +21,86 @@ namespace GenteFitNetriders
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            String sexo = rbMasculino.Checked ? "m" : "f";
-            
-            if (controller.addUser(textNombre.Text,
-                                    textEmail.Text,
-                                    sexo,
-                                    int.Parse(textEdad.Text),//TODO tratar error parseo
-                                    textTelefono.Text,
-                                    textPassword.Text))
-            {
+            //Limpiado de inputs
+            string nombre = textNombre.Text.Trim();
+            string email = textEmail.Text.Trim();
+            string telefono = textTelefono.Text.Trim();
+            string edad = textEdad.Text.Trim();
+            string sexo = rbMasculino.Checked ? "m" : "f";
+            string pwd1 = textPassword.Text;
+            string pwd2 = textConfirmPassword.Text;
 
-               // this.Parent.FindForm().Hide();
-                FormClientPanel formClientPanel = new FormClientPanel();
-               // formClientPanel.FormClosed += (s, args) => this.Parent.FindForm().Close();
-                formClientPanel.Show();
+            //Validación de datos (NOTA: mejor opción usar DataAnnotations en el modelo y enfocar la app como MVP,
+            //moviendo la lógica de validación a la capa presentador?
+            StringBuilder err = new StringBuilder();
+            bool isValid = true;
+          
+            // Validar el nombre
+           
+            if (!UtilsValidateInputs.IsValidName(nombre))
+            {
+                err.AppendLine("El campo de nombre es obligatorio.");
+                isValid = false;
+            }
+            // Validar la edad
+            int edadVal;
+            if (!int.TryParse(edad, out edadVal))
+            {
+                err.AppendLine("La edad debe ser un número entero.");
+                isValid = false;
+            }
+            // Validar el correo electrónico
+            if (!UtilsValidateInputs.IsValidEmail(email))
+            {
+                err.AppendLine("El correo electrónico no es válido.");
+                isValid = false;
+            }
+            // Validar el telefono
+            if (!UtilsValidateInputs.IsValidTelf(telefono))
+            {
+                err.AppendLine("El telefono no es válido.");
+                isValid = false;
+            }
+            //Validar contraseñas
+            if (!UtilsValidateInputs.IsValidPassword(pwd1))
+            {
+                err.AppendLine("La contraseña es demasiado corta");
+                isValid = false;
+            }
+            //Comparar contraseñas
+            if (!UtilsValidateInputs.PasswordsMatch(pwd1,pwd2))
+            {
+                err.AppendLine("Las contraseñas no coinciden");
+                isValid = false;
+            }
+            // Si todos los campos son válidos, agregar el usuario
+            if (isValid)
+            {
+                if (controller.addUser(textNombre.Text,
+                                         textEmail.Text,
+                                         sexo,
+                                         int.Parse(textEdad.Text),
+                                         textTelefono.Text,
+                                         textPassword.Text))
+                {
+
+                    // this.Parent.FindForm().Hide();
+                    FormClientPanel formClientPanel = new FormClientPanel();
+                    // formClientPanel.FormClosed += (s, args) => this.Parent.FindForm().Close();
+                    formClientPanel.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Error al crear el usuario");
+                }
             }
             else
             {
-                MessageBox.Show("Error al crear el usuario");
+                MessageBox.Show(err.ToString(), "Error de validación");
             }
+
+ 
         }
 
-        private void textNombre_Enter(object sender, EventArgs e)
-        {
-            if (textNombre.Text == "Nombre")
-            {
-                textNombre.Text = "";
-                textNombre.ForeColor = RGBColors.negro;
-            }
-        }
-
-        private void textNombre_Leave(object sender, EventArgs e)
-        {
-            if (textNombre.Text == "")
-            {
-                textNombre.Text = "Nombre";
-                textNombre.ForeColor = RGBColors.gris;
-            }
-        }
-
-        private void textTelefono_Enter(object sender, EventArgs e)
-        {
-            if (textTelefono.Text == "Teléfono")
-            {
-                textTelefono.Text = "";
-                textTelefono.ForeColor = RGBColors.negro;
-            }
-        }
-
-        private void textTelefono_Leave(object sender, EventArgs e)
-        {
-            if (textTelefono.Text == "")
-            {
-                textTelefono.Text = "Teléfono";
-                textTelefono.ForeColor = RGBColors.gris;
-            }
-        }
-
-        private void textEmail_Enter(object sender, EventArgs e)
-        {
-            if (textEmail.Text == "Email")
-            {
-                textEmail.Text = "";
-                textEmail.ForeColor = RGBColors.negro;
-            }
-        }
-
-        private void textEmail_Leave(object sender, EventArgs e)
-        {
-            if (textEmail.Text == "")
-            {
-                textEmail.Text = "Email";
-                textEmail.ForeColor = RGBColors.gris;
-            }
-        }
-
-        private void textEdad_Enter(object sender, EventArgs e)
-        {
-            if (textEdad.Text == "Edad")
-            {
-                textEdad.Text = "";
-                textEdad.ForeColor = RGBColors.negro;
-            }
-        }
-
-        private void textEdad_Leave(object sender, EventArgs e)
-        {
-            if (textEdad.Text == "")
-            {
-                textEdad.Text = "Edad";
-                textEdad.ForeColor = RGBColors.gris;
-            }
-        }
-
-        private void textPassword_Enter(object sender, EventArgs e)
-        {
-            if (textPassword.Text == "Contraseña")
-            {
-                textPassword.Text = "";
-                textPassword.ForeColor = RGBColors.negro;
-                textPassword.UseSystemPasswordChar = true;
-            }
-        }
-
-        private void textPassword_Leave(object sender, EventArgs e)
-        {
-            if (textPassword.Text == "")
-            {
-                textPassword.Text = "Contraseña";
-                textPassword.ForeColor = RGBColors.gris;
-                textPassword.UseSystemPasswordChar = false;
-            }
-        }
-
-        private void textConfirmPassword_Enter(object sender, EventArgs e)
-        {
-            if (textConfirmPassword.Text == "Confirma contraseña")
-            {
-                textConfirmPassword.Text = "";
-                textConfirmPassword.ForeColor = RGBColors.negro;
-                textConfirmPassword.UseSystemPasswordChar = true;
-            }
-        }
-
-        private void textConfirmPassword_Leave(object sender, EventArgs e)
-        {
-            if (textConfirmPassword.Text == "")
-            {
-                textConfirmPassword.Text = "Confirma contraseña";
-                textConfirmPassword.ForeColor = RGBColors.gris;
-                textConfirmPassword.UseSystemPasswordChar = false;
-            }
-        }
     }
 }

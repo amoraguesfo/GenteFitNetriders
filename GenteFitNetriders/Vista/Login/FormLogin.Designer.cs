@@ -32,6 +32,9 @@
             this.textPassword = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textUser
@@ -42,9 +45,8 @@
             this.textUser.Name = "textUser";
             this.textUser.Size = new System.Drawing.Size(231, 27);
             this.textUser.TabIndex = 0;
-            this.textUser.Text = "Email";
+            this.textUser.Text = "email@example.com";
             this.textUser.Enter += new System.EventHandler(this.textUser_Enter);
-            this.textUser.Leave += new System.EventHandler(this.textUser_Leave);
             // 
             // textPassword
             // 
@@ -56,7 +58,6 @@
             this.textPassword.TabIndex = 1;
             this.textPassword.Text = "Contraseña";
             this.textPassword.Enter += new System.EventHandler(this.textPassword_Enter);
-            this.textPassword.Leave += new System.EventHandler(this.textPassword_Leave);
             // 
             // btnLogin
             // 
@@ -83,6 +84,37 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Inicia sessión";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(0, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(50, 20);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "label2";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(224, 216);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(46, 20);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Email";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(187, 278);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(83, 20);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Contraseña";
+            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -91,6 +123,9 @@
             this.BackgroundImage = global::GenteFitNetriders.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(784, 504);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.textPassword);
@@ -114,6 +149,9 @@
         private System.Windows.Forms.TextBox textPassword;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }
 

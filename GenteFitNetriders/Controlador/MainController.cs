@@ -79,7 +79,7 @@ namespace GenteFitNetriders.Controlador
                         sexo = sexo,
                         num_telefono = num_telf,
                         password = password,
-                        tipo = "cliente" //Solo puede darse de alta nuevos clientes, no 
+                        tipo = "cliente" //Solo puede darse de alta nuevos clientes, no admins
                     };
                     db.Usuarios.Add(user);
                     db.SaveChanges();

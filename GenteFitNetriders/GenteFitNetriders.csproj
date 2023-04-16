@@ -167,7 +167,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Vista\utils\UtilsVista.cs" />
+    <Compile Include="Vista\utils\UtilsValidateInputs.cs" />
+    <Compile Include="Vista\utils\UtilsColors.cs" />
     <EmbeddedResource Include="Vista\Admin\FormAdminClases.resx">
       <DependentUpon>FormAdminClases.cs</DependentUpon>
     </EmbeddedResource>
