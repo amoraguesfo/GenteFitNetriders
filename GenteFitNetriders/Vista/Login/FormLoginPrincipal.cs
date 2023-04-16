@@ -1,5 +1,6 @@
 ﻿using FontAwesome.Sharp;
 using GenteFitNetriders.Controlador;
+using GenteFitNetriders.Vista.utils;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,19 +17,14 @@ namespace GenteFitNetriders.Vista
     public partial class FormLoginPrincipal : Form
     {
         private IconButton currentButton;
-    
+        private Form formHijoActual;
         public FormLoginPrincipal()
         {
             InitializeComponent();
-            ActiveButton(btnLogin, RGBColors.color1);
+            ActiveButton(btnLogin, UtilsVista.RGBColors.verde1);
           
         }
-        private struct RGBColors
-        {
-            public static Color color1 = Color.FromArgb(154, 205, 50);
-            public static Color color2 = Color.FromArgb(0, 0, 0);
-            public static Color color3 = Color.FromArgb(255,0 , 0);
-        }
+
         private void ActiveButton(object senderBtn, Color color)
         {
             if(senderBtn != null) {
@@ -43,7 +39,7 @@ namespace GenteFitNetriders.Vista
             if (currentButton != null)
             {
                 //Estilo del botton
-                currentButton.BackColor = RGBColors.color2;
+                currentButton.BackColor = UtilsVista.RGBColors.negro;
             }
         }
 
@@ -51,38 +47,34 @@ namespace GenteFitNetriders.Vista
         {
             //TODO cada vez que se clica aumenta la memoria, porque?
 
-            abrirFormInPanel(new FormLogin());
+            AbrirFormHijo(new FormLogin());
         }
 
-        private void abrirFormInPanel(object formHijo)
+        private void AbrirFormHijo(Form formHijo)
         {
-            if(this.panelContenedor.Controls.Count > 0)
+
+            if(formHijoActual != null)
             {
-
-                   this.panelContenedor.Controls.RemoveAt(0);
-                   Debug.WriteLine(this.panelContenedor.Controls.Count);        
-
+                formHijoActual.Close();
             }
-            
-            Form fh = formHijo as Form;
-            
-            fh.TopLevel = false;
-            fh.Dock =DockStyle.Fill;
-            this.panelContenedor.Controls.Add(fh);
-            this.panelContenedor.Tag = fh;
-            fh.Show();  
+            formHijoActual = formHijo;
+            formHijoActual.TopLevel = false;
+            formHijoActual.Dock =DockStyle.Fill;
+            this.panelContenedor.Controls.Add(formHijoActual);
+            this.panelContenedor.Tag = formHijoActual;
+            formHijoActual.Show();  
         }
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            ActiveButton(sender, RGBColors.color1);
-            abrirFormInPanel(new FormLogin());
+            ActiveButton(sender, UtilsVista.RGBColors.verde1);
+            AbrirFormHijo(new FormLogin());
             
         }
 
         private void btnRegistro_Click(object sender, EventArgs e)
         {
-            ActiveButton(sender, RGBColors.color1);
-            abrirFormInPanel(new FormRegister());
+            ActiveButton(sender, UtilsVista.RGBColors.verde1);
+            AbrirFormHijo(new FormRegister());
         }
 
     }

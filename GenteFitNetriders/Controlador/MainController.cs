@@ -1,21 +1,15 @@
 ﻿using GenteFitNetriders.Modelo;
 using System;
 using System.Collections.Generic;
-using System.Data.Entity;
-using System.Diagnostics;
 using System.Linq;
-using System.Linq.Expressions;
-using System.Security.Cryptography;
-using System.Windows.Forms;
-using System.Xml;
-using System.Xml.Linq;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace GenteFitNetriders.Controlador
 {
     internal class MainController
     {
-
+        /*
+         * Login del usuario
+         */
         public bool UserLogin(String email, String password)
         {
 
@@ -35,6 +29,9 @@ namespace GenteFitNetriders.Controlador
 
         }
 
+        /********************
+         *     USUARIOS     *
+         ********************/
         public IEnumerable<Modelo.UserViewModel> getUsers()
         {
             using (Modelo.NetridersEntities db = new Modelo.NetridersEntities())
@@ -55,7 +52,6 @@ namespace GenteFitNetriders.Controlador
                 return usuarios;
             }
         }
-
         public Usuarios getUserById(int id)
         {
             using (Modelo.NetridersEntities db = new Modelo.NetridersEntities())
@@ -68,7 +64,6 @@ namespace GenteFitNetriders.Controlador
                 return user;
             }
         }
-
         public bool addUser(String nombre, String email, String sexo, int edad, String num_telf, String password)
         {
             try
@@ -99,7 +94,6 @@ namespace GenteFitNetriders.Controlador
             }
 
         }
-
         public bool editUser(int id, String nombre, String email, String sexo, int edad, String num_telf, String password)
         {
             try
@@ -127,7 +121,6 @@ namespace GenteFitNetriders.Controlador
                 return false;
             }
         }
-
         public bool deleteUser(int id)
         {
             //TODO checkear si el usuario que intenta elminiar a otro es admin
@@ -153,7 +146,9 @@ namespace GenteFitNetriders.Controlador
             }
         }
 
-
+        /********************
+         *     CLASES       *
+         ********************/
         public IEnumerable<Modelo.ClaseViewModel> getClases()
         {
             using (Modelo.NetridersEntities db = new Modelo.NetridersEntities())
@@ -174,7 +169,6 @@ namespace GenteFitNetriders.Controlador
                 return clases;
             }
         }
-
         public Clases getClaseById(int id)
         {
             using (Modelo.NetridersEntities db = new Modelo.NetridersEntities())
@@ -209,7 +203,6 @@ namespace GenteFitNetriders.Controlador
 
 
         }
-
         public bool editClase(int id, String nombreClase, String profesor, int plazas, DateTime fechaClase, TimeSpan horaClase, int duracion)
         {
             try
@@ -237,7 +230,6 @@ namespace GenteFitNetriders.Controlador
                 throw new Exception("Error al actualizar la clase " + ex.Message);
             }
         }
-
         public bool deleteClase(int id)
         {
             //TODO checkear si la clase que intenta elminiar a otro es admin
@@ -262,7 +254,9 @@ namespace GenteFitNetriders.Controlador
             }
         }
 
-
+        /********************
+         *     RESERVAS     *
+         ********************/
         public IEnumerable<Modelo.ReservaViewModel> getReservas()
         {
             using (Modelo.NetridersEntities db = new Modelo.NetridersEntities())
@@ -306,7 +300,6 @@ namespace GenteFitNetriders.Controlador
                 return reservas;
             }
         }
-
         public IEnumerable<Modelo.ReservaViewModel> getReservasByClass(int idClase)
         {
             using (Modelo.NetridersEntities db = new Modelo.NetridersEntities())
@@ -329,7 +322,6 @@ namespace GenteFitNetriders.Controlador
                 return reservas;
             }
         }
-
         public Reserva getReservaById(int id)
         {
             using (Modelo.NetridersEntities db = new Modelo.NetridersEntities())
@@ -361,7 +353,6 @@ namespace GenteFitNetriders.Controlador
 
 
         }
-
         public bool editReserva(int id, int idUsuario, int idClase, string estado)
         {
             try
@@ -385,7 +376,6 @@ namespace GenteFitNetriders.Controlador
                 throw new Exception("Error al actualizar la clase " + ex.Message);
             }
         }
-
         public bool deleteReserva(int id)
         {
 
@@ -399,7 +389,7 @@ namespace GenteFitNetriders.Controlador
 
                     db.Reserva.Remove(res);
                     db.SaveChanges();
-                    //Solo si es necesario mirar si hay esperas
+                  
 
                     //Buscar la primera en espera  y actualizar su reserva mejorar con transaccion?transaccion?
                     Reserva espera = (from r in db.Reserva
@@ -407,6 +397,7 @@ namespace GenteFitNetriders.Controlador
                                       orderby r.id
                                       select r).FirstOrDefault();
 
+                    //Solo si es necesario mirar si hay esperas
                     if (espera != null)
                     {
                         espera.estado = "reservada";

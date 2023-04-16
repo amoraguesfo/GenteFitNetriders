@@ -167,6 +167,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vista\utils\UtilsVista.cs" />
     <EmbeddedResource Include="Vista\Admin\FormAdminClases.resx">
       <DependentUpon>FormAdminClases.cs</DependentUpon>
     </EmbeddedResource>
@@ -251,6 +252,7 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\logo_gentefit.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

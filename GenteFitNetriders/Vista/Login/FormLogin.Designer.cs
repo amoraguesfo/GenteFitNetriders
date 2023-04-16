@@ -30,76 +30,75 @@
         {
             this.textUser = new System.Windows.Forms.TextBox();
             this.textPassword = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textUser
             // 
-            this.textUser.Location = new System.Drawing.Point(342, 122);
+            this.textUser.ForeColor = System.Drawing.Color.DimGray;
+            this.textUser.Location = new System.Drawing.Point(277, 213);
+            this.textUser.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textUser.Name = "textUser";
-            this.textUser.Size = new System.Drawing.Size(174, 20);
+            this.textUser.Size = new System.Drawing.Size(231, 27);
             this.textUser.TabIndex = 0;
-            this.textUser.Text = "admin@gentefit.com";
+            this.textUser.Text = "EMAIL";
+            this.textUser.Enter += new System.EventHandler(this.textUser_Enter);
+            this.textUser.Leave += new System.EventHandler(this.textUser_Leave);
             // 
             // textPassword
             // 
-            this.textPassword.Location = new System.Drawing.Point(342, 162);
+            this.textPassword.ForeColor = System.Drawing.Color.DimGray;
+            this.textPassword.Location = new System.Drawing.Point(277, 275);
+            this.textPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textPassword.Name = "textPassword";
-            this.textPassword.PasswordChar = '*';
-            this.textPassword.Size = new System.Drawing.Size(174, 20);
+            this.textPassword.Size = new System.Drawing.Size(231, 27);
             this.textPassword.TabIndex = 1;
-            this.textPassword.Text = "1234";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(262, 125);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(32, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Email";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(262, 165);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Contrasseña";
+            this.textPassword.Text = "CONTRASEÑA";
+            this.textPassword.Enter += new System.EventHandler(this.textPassword_Enter);
+            this.textPassword.Leave += new System.EventHandler(this.textPassword_Leave);
             // 
             // btnLogin
             // 
             this.btnLogin.BackColor = System.Drawing.Color.YellowGreen;
-            this.btnLogin.Location = new System.Drawing.Point(441, 200);
+            this.btnLogin.FlatAppearance.BorderSize = 0;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.Location = new System.Drawing.Point(408, 333);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(75, 23);
+            this.btnLogin.Size = new System.Drawing.Size(100, 35);
             this.btnLogin.TabIndex = 5;
-            this.btnLogin.Text = "Entrar";
+            this.btnLogin.Text = "ENTRAR";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.buttonLogin_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 22F);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(340, 137);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(105, 41);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "LOGIN";
+            // 
             // FormLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BackgroundImage = global::GenteFitNetriders.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 400);
-            this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.label2);
+            this.ClientSize = new System.Drawing.Size(784, 504);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.textPassword);
             this.Controls.Add(this.textUser);
             this.DoubleBuffered = true;
+            this.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GenteFit inicio de Sesión";
@@ -113,9 +112,8 @@
 
         private System.Windows.Forms.TextBox textUser;
         private System.Windows.Forms.TextBox textPassword;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Label label1;
     }
 }
 

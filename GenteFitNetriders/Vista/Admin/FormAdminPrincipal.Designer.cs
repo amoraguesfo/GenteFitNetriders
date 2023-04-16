@@ -40,11 +40,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 28F);
             this.label1.ForeColor = System.Drawing.Color.YellowGreen;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(16, 14);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 31);
+            this.label1.Size = new System.Drawing.Size(164, 51);
             this.label1.TabIndex = 0;
             this.label1.Text = "GenteFit";
             // 
@@ -58,15 +59,17 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(784, 50);
+            this.panel1.Size = new System.Drawing.Size(1008, 77);
             this.panel1.TabIndex = 1;
             // 
             // btnReservas
             // 
-            this.btnReservas.Location = new System.Drawing.Point(474, 12);
+            this.btnReservas.Location = new System.Drawing.Point(632, 18);
+            this.btnReservas.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnReservas.Name = "btnReservas";
-            this.btnReservas.Size = new System.Drawing.Size(85, 23);
+            this.btnReservas.Size = new System.Drawing.Size(113, 35);
             this.btnReservas.TabIndex = 3;
             this.btnReservas.Text = "Reservas";
             this.btnReservas.UseVisualStyleBackColor = true;
@@ -74,9 +77,10 @@
             // 
             // btnClases
             // 
-            this.btnClases.Location = new System.Drawing.Point(345, 12);
+            this.btnClases.Location = new System.Drawing.Point(460, 18);
+            this.btnClases.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnClases.Name = "btnClases";
-            this.btnClases.Size = new System.Drawing.Size(85, 23);
+            this.btnClases.Size = new System.Drawing.Size(113, 35);
             this.btnClases.TabIndex = 2;
             this.btnClases.Text = "Clases";
             this.btnClases.UseVisualStyleBackColor = true;
@@ -84,9 +88,10 @@
             // 
             // btnUsusarios
             // 
-            this.btnUsusarios.Location = new System.Drawing.Point(226, 12);
+            this.btnUsusarios.Location = new System.Drawing.Point(301, 18);
+            this.btnUsusarios.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnUsusarios.Name = "btnUsusarios";
-            this.btnUsusarios.Size = new System.Drawing.Size(75, 23);
+            this.btnUsusarios.Size = new System.Drawing.Size(100, 35);
             this.btnUsusarios.TabIndex = 1;
             this.btnUsusarios.Text = "Usuarios";
             this.btnUsusarios.UseVisualStyleBackColor = true;
@@ -98,18 +103,21 @@
             this.panelContenedor.BackgroundImage = global::GenteFitNetriders.Properties.Resources.background;
             this.panelContenedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContenedor.Location = new System.Drawing.Point(0, 50);
+            this.panelContenedor.Location = new System.Drawing.Point(0, 77);
+            this.panelContenedor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(784, 511);
+            this.panelContenedor.Size = new System.Drawing.Size(1008, 652);
             this.panelContenedor.TabIndex = 2;
             // 
             // FormAdminPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 561);
+            this.ClientSize = new System.Drawing.Size(1008, 729);
             this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.panel1);
+            this.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormAdminPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormAdminPrincipal";

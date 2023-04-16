@@ -1,6 +1,7 @@
 ﻿using GenteFitNetriders.Controlador;
 using GenteFitNetriders.Vista;
 using GenteFitNetriders.Vista.Admin;
+using GenteFitNetriders.Vista.utils;
 using System;
 using System.Windows.Forms;
 
@@ -53,6 +54,43 @@ namespace GenteFitNetriders
         private void FormLogin_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void textUser_Enter(object sender, EventArgs e)
+        {
+            if(textUser.Text == "EMAIL") {
+                textUser.Text = "";
+                textUser.ForeColor = UtilsVista.RGBColors.negro;
+            }
+        }
+
+        private void textUser_Leave(object sender, EventArgs e)
+        {
+            if (textUser.Text == "")
+            {
+                textUser.Text = "EMAIL";
+                textUser.ForeColor = UtilsVista.RGBColors.gris;
+            }
+        }
+
+        private void textPassword_Enter(object sender, EventArgs e)
+        {
+            if (textPassword.Text == "CONTRASEÑA")
+            {
+                textPassword.Text = "";
+                textPassword.ForeColor = UtilsVista.RGBColors.negro;
+                textPassword.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void textPassword_Leave(object sender, EventArgs e)
+        {
+            if (textPassword.Text == "")
+            {
+                textPassword.Text = "CONTRASEÑA";
+                textPassword.ForeColor = UtilsVista.RGBColors.gris;
+                textPassword.UseSystemPasswordChar = false;
+            }
         }
     }
 }
