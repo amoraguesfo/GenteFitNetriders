@@ -398,17 +398,20 @@ namespace GenteFitNetriders.Controlador
                                    select r).FirstOrDefault();
 
                     db.Reserva.Remove(res);
-                    //db.SaveChanges();
+                    db.SaveChanges();
                     //Solo si es necesario mirar si hay esperas
 
-                    //TODO buscar si hay alguien en espera por fecha y actualizar su reserva mejorar con transaccion?transaccion?
+                    //Buscar la primera en espera  y actualizar su reserva mejorar con transaccion?transaccion?
                     Reserva espera = (from r in db.Reserva
                                       where r.id_clase == res.id_clase && r.estado == "espera"
                                       orderby r.id
                                       select r).FirstOrDefault();
 
-                    espera.estado = "reservada";
-                    db.SaveChanges();
+                    if (espera != null)
+                    {
+                        espera.estado = "reservada";
+                        db.SaveChanges();
+                    }
                     return true;
                 }
             }
