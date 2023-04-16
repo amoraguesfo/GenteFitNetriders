@@ -37,7 +37,7 @@
             // 
             // textUser
             // 
-            this.textUser.Location = new System.Drawing.Point(353, 150);
+            this.textUser.Location = new System.Drawing.Point(342, 122);
             this.textUser.Name = "textUser";
             this.textUser.Size = new System.Drawing.Size(174, 20);
             this.textUser.TabIndex = 0;
@@ -45,7 +45,7 @@
             // 
             // textPassword
             // 
-            this.textPassword.Location = new System.Drawing.Point(353, 190);
+            this.textPassword.Location = new System.Drawing.Point(342, 162);
             this.textPassword.Name = "textPassword";
             this.textPassword.PasswordChar = '*';
             this.textPassword.Size = new System.Drawing.Size(174, 20);
@@ -57,7 +57,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(273, 153);
+            this.label1.Location = new System.Drawing.Point(262, 125);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(32, 13);
             this.label1.TabIndex = 2;
@@ -68,7 +68,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(273, 193);
+            this.label2.Location = new System.Drawing.Point(262, 165);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 13);
             this.label2.TabIndex = 3;
@@ -77,7 +77,7 @@
             // btnLogin
             // 
             this.btnLogin.BackColor = System.Drawing.Color.YellowGreen;
-            this.btnLogin.Location = new System.Drawing.Point(452, 228);
+            this.btnLogin.Location = new System.Drawing.Point(441, 200);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(75, 23);
             this.btnLogin.TabIndex = 5;

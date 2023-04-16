@@ -1,4 +1,5 @@
-﻿using GenteFitNetriders.Controlador;
+﻿using FontAwesome.Sharp;
+using GenteFitNetriders.Controlador;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,20 +15,42 @@ namespace GenteFitNetriders.Vista
 {
     public partial class FormLoginPrincipal : Form
     {
-        
+        private IconButton currentButton;
+    
         public FormLoginPrincipal()
         {
             InitializeComponent();
+            ActiveButton(btnLogin, RGBColors.color1);
           
         }
+        private struct RGBColors
+        {
+            public static Color color1 = Color.FromArgb(154, 205, 50);
+            public static Color color2 = Color.FromArgb(0, 0, 0);
+            public static Color color3 = Color.FromArgb(255,0 , 0);
+        }
+        private void ActiveButton(object senderBtn, Color color)
+        {
+            if(senderBtn != null) {
+                DisableButton();
+            //Estilo del botton
+            currentButton = (IconButton)senderBtn;
+                currentButton.BackColor = color;
+            }
+        }
+        private void DisableButton()
+        {
+            if (currentButton != null)
+            {
+                //Estilo del botton
+                currentButton.BackColor = RGBColors.color2;
+            }
+        }
 
-
-        
         private void FormLoginPrincipal_Load(object sender, EventArgs e)
         {
             //TODO cada vez que se clica aumenta la memoria, porque?
-            btnLogin.Enabled = false;
-            btnRegistro.Enabled = true;
+
             abrirFormInPanel(new FormLogin());
         }
 
@@ -50,18 +73,17 @@ namespace GenteFitNetriders.Vista
             fh.Show();  
         }
         private void btnLogin_Click(object sender, EventArgs e)
-        {   
-            btnLogin.Enabled = false;
-            btnRegistro.Enabled = true;
+        {
+            ActiveButton(sender, RGBColors.color1);
             abrirFormInPanel(new FormLogin());
             
         }
 
         private void btnRegistro_Click(object sender, EventArgs e)
         {
-            btnLogin.Enabled = true;
-            btnRegistro.Enabled = false;
+            ActiveButton(sender, RGBColors.color1);
             abrirFormInPanel(new FormRegister());
         }
+
     }
 }
