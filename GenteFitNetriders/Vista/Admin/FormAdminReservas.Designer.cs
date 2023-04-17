@@ -37,6 +37,7 @@
             // 
             // btnAnular
             // 
+            this.btnAnular.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAnular.Location = new System.Drawing.Point(895, 613);
             this.btnAnular.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAnular.Name = "btnAnular";
@@ -48,6 +49,10 @@
             // 
             // dataGridViewReservas
             // 
+            this.dataGridViewReservas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewReservas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewReservas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewReservas.Location = new System.Drawing.Point(13, 14);
             this.dataGridViewReservas.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);

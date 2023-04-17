@@ -45,7 +45,7 @@
             this.dataGridUsers.Location = new System.Drawing.Point(13, 14);
             this.dataGridUsers.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridUsers.Name = "dataGridUsers";
-            this.dataGridUsers.Size = new System.Drawing.Size(976, 584);
+            this.dataGridUsers.Size = new System.Drawing.Size(979, 584);
             this.dataGridUsers.TabIndex = 1;
             // 
             // btnExportarXML
@@ -75,7 +75,7 @@
             // btnDelUser
             // 
             this.btnDelUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDelUser.Location = new System.Drawing.Point(855, 608);
+            this.btnDelUser.Location = new System.Drawing.Point(858, 608);
             this.btnDelUser.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDelUser.Name = "btnDelUser";
             this.btnDelUser.Size = new System.Drawing.Size(137, 35);

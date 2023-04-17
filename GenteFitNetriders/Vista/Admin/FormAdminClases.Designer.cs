@@ -38,6 +38,10 @@
             // 
             // dataGridClases
             // 
+            this.dataGridClases.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridClases.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridClases.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridClases.Location = new System.Drawing.Point(13, 14);
             this.dataGridClases.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -86,7 +90,7 @@
             this.addClase.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.addClase.AutoSize = true;
             this.addClase.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.addClase.Location = new System.Drawing.Point(674, 608);
+            this.addClase.Location = new System.Drawing.Point(709, 608);
             this.addClase.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.addClase.Name = "addClase";
             this.addClase.Size = new System.Drawing.Size(137, 35);
