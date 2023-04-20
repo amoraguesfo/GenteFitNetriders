@@ -35,9 +35,11 @@
             // 
             // btnAnular
             // 
-            this.btnAnular.Location = new System.Drawing.Point(713, 365);
+            this.btnAnular.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAnular.Location = new System.Drawing.Point(895, 613);
+            this.btnAnular.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAnular.Name = "btnAnular";
-            this.btnAnular.Size = new System.Drawing.Size(75, 23);
+            this.btnAnular.Size = new System.Drawing.Size(100, 35);
             this.btnAnular.TabIndex = 3;
             this.btnAnular.Text = "Anular";
             this.btnAnular.UseVisualStyleBackColor = true;
@@ -45,24 +47,31 @@
             // 
             // dataGridViewReservas
             // 
+            this.dataGridViewReservas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewReservas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewReservas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewReservas.Location = new System.Drawing.Point(12, 12);
+            this.dataGridViewReservas.Location = new System.Drawing.Point(16, 18);
+            this.dataGridViewReservas.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridViewReservas.Name = "dataGridViewReservas";
-            this.dataGridViewReservas.Size = new System.Drawing.Size(776, 347);
+            this.dataGridViewReservas.Size = new System.Drawing.Size(979, 585);
             this.dataGridViewReservas.TabIndex = 2;
             // 
             // FormClientReservas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = global::GenteFitNetriders.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1008, 662);
             this.Controls.Add(this.btnAnular);
             this.Controls.Add(this.dataGridViewReservas);
             this.DoubleBuffered = true;
+            this.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormClientReservas";
             this.Text = "FormClientReservas";
             this.Load += new System.EventHandler(this.FormClientReservas_Load);

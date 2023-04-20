@@ -42,12 +42,13 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 28F);
             this.label1.ForeColor = System.Drawing.Color.YellowGreen;
-            this.label1.Location = new System.Drawing.Point(16, 14);
+            this.label1.Location = new System.Drawing.Point(13, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(164, 51);
             this.label1.TabIndex = 0;
             this.label1.Text = "GenteFit";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel1
             // 
@@ -76,7 +77,7 @@
             this.btnUsuarios.IconColor = System.Drawing.Color.White;
             this.btnUsuarios.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnUsuarios.IconSize = 32;
-            this.btnUsuarios.Location = new System.Drawing.Point(589, 14);
+            this.btnUsuarios.Location = new System.Drawing.Point(588, 14);
             this.btnUsuarios.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnUsuarios.Name = "btnUsuarios";
             this.btnUsuarios.Size = new System.Drawing.Size(130, 40);
@@ -99,7 +100,7 @@
             this.btnClases.IconColor = System.Drawing.Color.White;
             this.btnClases.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnClases.IconSize = 32;
-            this.btnClases.Location = new System.Drawing.Point(727, 14);
+            this.btnClases.Location = new System.Drawing.Point(726, 14);
             this.btnClases.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnClases.Name = "btnClases";
             this.btnClases.Size = new System.Drawing.Size(130, 40);
@@ -122,7 +123,7 @@
             this.btnReservas.IconColor = System.Drawing.Color.White;
             this.btnReservas.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnReservas.IconSize = 32;
-            this.btnReservas.Location = new System.Drawing.Point(865, 14);
+            this.btnReservas.Location = new System.Drawing.Point(864, 14);
             this.btnReservas.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnReservas.Name = "btnReservas";
             this.btnReservas.Size = new System.Drawing.Size(130, 40);
