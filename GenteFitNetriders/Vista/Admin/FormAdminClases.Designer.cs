@@ -33,6 +33,8 @@
             this.btnImportarXML = new System.Windows.Forms.Button();
             this.btnExportarXML = new System.Windows.Forms.Button();
             this.addClase = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textSearchClase = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridClases)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,10 +45,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridClases.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridClases.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridClases.Location = new System.Drawing.Point(13, 14);
+            this.dataGridClases.Location = new System.Drawing.Point(13, 78);
             this.dataGridClases.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridClases.Name = "dataGridClases";
-            this.dataGridClases.Size = new System.Drawing.Size(978, 584);
+            this.dataGridClases.Size = new System.Drawing.Size(978, 520);
             this.dataGridClases.TabIndex = 0;
             // 
             // btnDelClase
@@ -99,6 +101,27 @@
             this.addClase.UseVisualStyleBackColor = true;
             this.addClase.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(10, 44);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(107, 20);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Fitrar por clase";
+            // 
+            // textSearchClase
+            // 
+            this.textSearchClase.ForeColor = System.Drawing.Color.DimGray;
+            this.textSearchClase.Location = new System.Drawing.Point(139, 41);
+            this.textSearchClase.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textSearchClase.Name = "textSearchClase";
+            this.textSearchClase.Size = new System.Drawing.Size(116, 27);
+            this.textSearchClase.TabIndex = 11;
+            this.textSearchClase.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textSearchClase_KeyUp);
+            // 
             // FormAdminClases
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -107,6 +130,8 @@
             this.BackgroundImage = global::GenteFitNetriders.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1008, 662);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.textSearchClase);
             this.Controls.Add(this.addClase);
             this.Controls.Add(this.btnDelClase);
             this.Controls.Add(this.btnImportarXML);
@@ -131,5 +156,7 @@
         private System.Windows.Forms.Button btnImportarXML;
         private System.Windows.Forms.Button btnExportarXML;
         private System.Windows.Forms.Button addClase;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textSearchClase;
     }
 }

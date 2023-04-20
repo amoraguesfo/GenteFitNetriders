@@ -32,6 +32,8 @@
             this.btnExportarXML = new System.Windows.Forms.Button();
             this.btnImportarXML = new System.Windows.Forms.Button();
             this.btnDelUser = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textSearchUser = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridUsers)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,10 +44,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridUsers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridUsers.Location = new System.Drawing.Point(13, 14);
+            this.dataGridUsers.Location = new System.Drawing.Point(13, 78);
             this.dataGridUsers.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridUsers.Name = "dataGridUsers";
-            this.dataGridUsers.Size = new System.Drawing.Size(979, 584);
+            this.dataGridUsers.Size = new System.Drawing.Size(979, 520);
             this.dataGridUsers.TabIndex = 1;
             // 
             // btnExportarXML
@@ -84,6 +86,27 @@
             this.btnDelUser.UseVisualStyleBackColor = true;
             this.btnDelUser.Click += new System.EventHandler(this.btnDelUser_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(10, 44);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(122, 20);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Fitrar por usuario";
+            // 
+            // textSearchUser
+            // 
+            this.textSearchUser.ForeColor = System.Drawing.Color.DimGray;
+            this.textSearchUser.Location = new System.Drawing.Point(139, 41);
+            this.textSearchUser.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textSearchUser.Name = "textSearchUser";
+            this.textSearchUser.Size = new System.Drawing.Size(180, 27);
+            this.textSearchUser.TabIndex = 9;
+            this.textSearchUser.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textSearchUser_KeyUp);
+            // 
             // FormAdminUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -92,6 +115,8 @@
             this.BackgroundImage = global::GenteFitNetriders.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1008, 662);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.textSearchUser);
             this.Controls.Add(this.btnDelUser);
             this.Controls.Add(this.btnImportarXML);
             this.Controls.Add(this.btnExportarXML);
@@ -106,6 +131,7 @@
             this.Load += new System.EventHandler(this.FormAdminPanel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridUsers)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -114,5 +140,7 @@
         private System.Windows.Forms.Button btnExportarXML;
         private System.Windows.Forms.Button btnImportarXML;
         private System.Windows.Forms.Button btnDelUser;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textSearchUser;
     }
 }

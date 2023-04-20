@@ -24,14 +24,14 @@ namespace GenteFitNetriders.Vista.Admin
         private void FormAdminClases_Load(object sender, EventArgs e)
         {
 
-            fillDataGrid();
+            fillDataGrid(controller.getClases());
             dataGridClases.ColumnHeaderMouseClick += dataGridClases_ColumnHeaderMouseClick;
 
         }
 
-        private void fillDataGrid()
+        private void fillDataGrid(IEnumerable<Modelo.ClaseViewModel> classList)
         {
-            dataGridClases.DataSource = controller.getClases();
+            dataGridClases.DataSource = classList;
             dataGridClases.Columns["id"].Visible = false;
         }
         private void dataGridClases_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -77,7 +77,7 @@ namespace GenteFitNetriders.Vista.Admin
             FormAminAddClase formAdminAddClase =  new FormAminAddClase();
 
             formAdminAddClase.ShowDialog();
-            fillDataGrid();
+            fillDataGrid(controller.getClases());
 
         }
 
@@ -86,14 +86,14 @@ namespace GenteFitNetriders.Vista.Admin
             Modelo.ClaseViewModel clase = (Modelo.ClaseViewModel)dataGridClases.CurrentRow.DataBoundItem;
             controller.deleteClase(clase.id);
             MessageBox.Show("LA clase se ha eliminado correctamente");
-            fillDataGrid();
+            fillDataGrid(controller.getClases());
         }
 
         private void btnImportarXML_Click(object sender, EventArgs e)
         {
             ImportXML importXML = new ImportXML();  
             importXML.importClasesXML();
-            fillDataGrid();
+            fillDataGrid(controller.getClases());
         }
 
         private void btnExportarXML_Click(object sender, EventArgs e)
@@ -102,6 +102,10 @@ namespace GenteFitNetriders.Vista.Admin
             exportXML.exportClaseXML();
         }
 
-
+        private void textSearchClase_KeyUp(object sender, KeyEventArgs e)
+        {
+            
+            fillDataGrid(controller.getClasesByName(textSearchClase.Text));
+        }
     }
 }

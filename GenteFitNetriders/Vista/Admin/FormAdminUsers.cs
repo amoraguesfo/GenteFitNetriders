@@ -1,5 +1,6 @@
 ﻿using GenteFitNetriders.Controlador;
 using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 using System.Xml.Linq;
 
@@ -19,12 +20,12 @@ namespace GenteFitNetriders.Vista
         private void FormAdminPanel_Load(object sender, System.EventArgs e)
         {
 
-            fillDataGrid();
+            fillDataGrid(controller.getUsers());
 
         }
-        private void fillDataGrid()
+        private void fillDataGrid(IEnumerable<Modelo.UserViewModel> usersList)
         {
-            dataGridUsers.DataSource = controller.getUsers();
+            dataGridUsers.DataSource = usersList;
             dataGridUsers.Columns["password"].Visible = false;
             
         }
@@ -33,7 +34,7 @@ namespace GenteFitNetriders.Vista
             Modelo.UserViewModel user = (Modelo.UserViewModel)dataGridUsers.CurrentRow.DataBoundItem;
             controller.deleteUser(user.id);
             MessageBox.Show("El usuario se ha eliminado correctamente");
-            fillDataGrid();
+            fillDataGrid(controller.getUsers());
         }
 
         private void btnExportarXML_Click(object sender, EventArgs e)
@@ -47,7 +48,13 @@ namespace GenteFitNetriders.Vista
             
             ImportXML importXML = new ImportXML();
             importXML.importUsuariosXML();
-            fillDataGrid();
+            fillDataGrid(controller.getUsers());
+        }
+
+        private void textSearchUser_KeyUp(object sender, KeyEventArgs e)
+        {
+            String userName = textSearchUser.Text;
+            fillDataGrid(controller.getUsersByNombre(userName));
         }
 
 

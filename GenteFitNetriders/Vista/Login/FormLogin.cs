@@ -24,7 +24,7 @@ namespace GenteFitNetriders
             string pwd = textPassword.Text;
             
             //- Llamar al form correspondiente segun admin o cliente
-            if (controller.UserLogin(email, pwd))
+            if (controller.UserLogin(email, pwd) == 1)
             
             {
                 String userTipo = Common.userLogged.tipo;
@@ -45,9 +45,13 @@ namespace GenteFitNetriders
                 }
 
             }
-            else
+            else if(controller.UserLogin(email, pwd) == 0)
             {
                 MessageBox.Show("Ususario o contraseña incorrectos");
+            }
+            else
+            {
+                MessageBox.Show("Ha habido un problema al conectar con la Base de datos");
             }
         }
 

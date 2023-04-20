@@ -10,7 +10,7 @@ namespace GenteFitNetriders.Controlador
         /*
          * Login del usuario
          */
-        public bool UserLogin(String email, String password)
+        public int UserLogin(String email, String password)
         {
             try
             {
@@ -22,15 +22,15 @@ namespace GenteFitNetriders.Controlador
                                 select u).FirstOrDefault();
                     if (user == null)
                     {
-                        return false;
+                        return 0;
                     }
                     Common.userLogged = user;
-                    return true;
+                    return 1;
                 }
             }
             catch (Exception ex)
             {
-                return false;
+                return -1;
             }
 
 
@@ -69,6 +69,28 @@ namespace GenteFitNetriders.Controlador
                             select u).FirstOrDefault();
 
                 return user;
+            }
+        }
+        public IEnumerable<Modelo.UserViewModel> getUsersByNombre(String nombre)
+        {
+            using (Modelo.NetridersEntities db = new Modelo.NetridersEntities())
+            {
+                IEnumerable<Modelo.UserViewModel> users = (from u in db.Usuarios
+                            where u.nombre.ToLower().Contains(nombre)
+
+                            select new Modelo.UserViewModel
+                            {
+                                id = u.id,
+                                nombre = u.nombre,
+                                email = u.email,
+                                sexo = u.sexo,
+                                edad = u.edad,
+                                num_telefono = u.num_telefono,
+                                tipo = u.tipo,
+                                password = u.password
+                            }).ToList();
+
+                return users;
             }
         }
         public bool addUser(String nombre, String email, String sexo, int edad, String num_telf, String password)
@@ -185,6 +207,28 @@ namespace GenteFitNetriders.Controlador
                              select c).FirstOrDefault();
 
                 return clase;
+            }
+        }
+
+        public IEnumerable<Modelo.ClaseViewModel> getClasesByName(String nombreClase)
+        {
+            using (Modelo.NetridersEntities db = new Modelo.NetridersEntities())
+            {
+                IEnumerable<Modelo.ClaseViewModel> clases = (from c in db.Clases
+                                                             where c.nombre_clase.Contains(nombreClase)
+                                                             select new Modelo.ClaseViewModel
+                                                             {
+                                                                 id = c.id,
+                                                                 nombre_clase = c.nombre_clase,
+                                                                 profesor = c.nrofesor,
+                                                                 plazas = c.plazas,
+                                                                 reservas = c.Reserva.Count(),
+                                                                 fecha_clase = c.fecha_clase,
+                                                                 hora_clase = c.hora_clase,
+                                                                 duracion = c.duracion
+                                                             }
+                                                       ).ToList();
+                return clases;
             }
         }
         public bool addClase(String nombreClase, String profesor, int plazas, DateTime fechaClase, TimeSpan horaClase, int duracion)
