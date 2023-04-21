@@ -14,9 +14,9 @@ namespace GenteFitNetriders.Vista.utils
                 return false;
 
             // Opcional: verificar que el nombre solo tenga letras
-            var regex = new Regex(@"^[a-zA-Z]+$");
+            /*var regex = new Regex(@"^[a-zA-Z]+$");
             if (!regex.IsMatch(name))
-                return false;
+                return false;*/
 
             return true;
         }

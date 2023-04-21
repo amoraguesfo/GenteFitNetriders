@@ -76,22 +76,21 @@ namespace GenteFitNetriders
             // Si todos los campos son válidos, agregar el usuario
             if (isValid)
             {
-                if (controller.addUser(textNombre.Text,
-                                         textEmail.Text,
+                if (controller.addUser(nombre,
+                                         email,
                                          sexo,
-                                         int.Parse(textEdad.Text),
-                                         textTelefono.Text,
-                                         textPassword.Text))
+                                         edadVal,
+                                         telefono,
+                                         pwd1))//TODO encriptar contraseña antes de guardar
                 {
 
-                    // this.Parent.FindForm().Hide();
+                    this.Parent.FindForm().Hide();
                     FormClientPanel formClientPanel = new FormClientPanel();
-                    // formClientPanel.FormClosed += (s, args) => this.Parent.FindForm().Close();
                     formClientPanel.Show();
                 }
                 else
                 {
-                    MessageBox.Show("Error al crear el usuario");
+                    MessageBox.Show("El email ya esta registrado");
                 }
             }
             else

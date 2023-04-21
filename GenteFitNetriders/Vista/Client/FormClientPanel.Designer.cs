@@ -30,12 +30,12 @@
         {
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.labelNombre = new System.Windows.Forms.Label();
-            this.panelContenedor = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnVerClases = new FontAwesome.Sharp.IconButton();
             this.btnMisReservas = new FontAwesome.Sharp.IconButton();
             this.btnEditarPerfil = new FontAwesome.Sharp.IconButton();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelNombre = new System.Windows.Forms.Label();
+            this.panelContenedor = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,28 +64,18 @@
             this.panel1.Size = new System.Drawing.Size(1008, 67);
             this.panel1.TabIndex = 2;
             // 
-            // labelNombre
+            // label1
             // 
-            this.labelNombre.AutoSize = true;
-            this.labelNombre.ForeColor = System.Drawing.Color.White;
-            this.labelNombre.Location = new System.Drawing.Point(233, 37);
-            this.labelNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelNombre.Name = "labelNombre";
-            this.labelNombre.Size = new System.Drawing.Size(44, 13);
-            this.labelNombre.TabIndex = 5;
-            this.labelNombre.Text = "Nombre";
-            // 
-            // panelContenedor
-            // 
-            this.panelContenedor.BackColor = System.Drawing.Color.Black;
-            this.panelContenedor.BackgroundImage = global::GenteFitNetriders.Properties.Resources.background;
-            this.panelContenedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContenedor.Location = new System.Drawing.Point(0, 67);
-            this.panelContenedor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(1008, 662);
-            this.panelContenedor.TabIndex = 3;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 28F);
+            this.label1.ForeColor = System.Drawing.Color.YellowGreen;
+            this.label1.Location = new System.Drawing.Point(13, 9);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(164, 51);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "GenteFit";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnVerClases
             // 
@@ -95,7 +85,7 @@
             this.btnVerClases.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVerClases.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVerClases.ForeColor = System.Drawing.Color.White;
-            this.btnVerClases.IconChar = FontAwesome.Sharp.IconChar.Users;
+            this.btnVerClases.IconChar = FontAwesome.Sharp.IconChar.Dumbbell;
             this.btnVerClases.IconColor = System.Drawing.Color.White;
             this.btnVerClases.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnVerClases.IconSize = 32;
@@ -118,7 +108,7 @@
             this.btnMisReservas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMisReservas.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMisReservas.ForeColor = System.Drawing.Color.White;
-            this.btnMisReservas.IconChar = FontAwesome.Sharp.IconChar.Dumbbell;
+            this.btnMisReservas.IconChar = FontAwesome.Sharp.IconChar.CalendarDays;
             this.btnMisReservas.IconColor = System.Drawing.Color.White;
             this.btnMisReservas.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMisReservas.IconSize = 32;
@@ -141,7 +131,7 @@
             this.btnEditarPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditarPerfil.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditarPerfil.ForeColor = System.Drawing.Color.White;
-            this.btnEditarPerfil.IconChar = FontAwesome.Sharp.IconChar.CalendarDays;
+            this.btnEditarPerfil.IconChar = FontAwesome.Sharp.IconChar.UserEdit;
             this.btnEditarPerfil.IconColor = System.Drawing.Color.White;
             this.btnEditarPerfil.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEditarPerfil.IconSize = 32;
@@ -156,18 +146,29 @@
             this.btnEditarPerfil.UseVisualStyleBackColor = false;
             this.btnEditarPerfil.Click += new System.EventHandler(this.btnEditarPerfil_Click);
             // 
-            // label1
+            // labelNombre
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 28F);
-            this.label1.ForeColor = System.Drawing.Color.YellowGreen;
-            this.label1.Location = new System.Drawing.Point(13, 9);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(164, 51);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "GenteFit";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.labelNombre.AutoSize = true;
+            this.labelNombre.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.labelNombre.ForeColor = System.Drawing.Color.White;
+            this.labelNombre.Location = new System.Drawing.Point(249, 35);
+            this.labelNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelNombre.Name = "labelNombre";
+            this.labelNombre.Size = new System.Drawing.Size(57, 17);
+            this.labelNombre.TabIndex = 5;
+            this.labelNombre.Text = "Nombre";
+            // 
+            // panelContenedor
+            // 
+            this.panelContenedor.BackColor = System.Drawing.Color.Black;
+            this.panelContenedor.BackgroundImage = global::GenteFitNetriders.Properties.Resources.background;
+            this.panelContenedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContenedor.Location = new System.Drawing.Point(0, 67);
+            this.panelContenedor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panelContenedor.Name = "panelContenedor";
+            this.panelContenedor.Size = new System.Drawing.Size(1008, 662);
+            this.panelContenedor.TabIndex = 3;
             // 
             // FormClientPanel
             // 
@@ -181,7 +182,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormClientPanel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Panel Cliente";
             this.Load += new System.EventHandler(this.FormClientPanel_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
