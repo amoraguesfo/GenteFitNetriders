@@ -33,8 +33,11 @@
             this.btnImportarXML = new System.Windows.Forms.Button();
             this.btnExportarXML = new System.Windows.Forms.Button();
             this.addClase = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
             this.textSearchClase = new System.Windows.Forms.TextBox();
+            this.dateTimeSearch = new System.Windows.Forms.DateTimePicker();
+            this.ckFechaFilter = new System.Windows.Forms.CheckBox();
+            this.ckUserFilter = new System.Windows.Forms.CheckBox();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridClases)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,28 +102,62 @@
             this.addClase.TabIndex = 8;
             this.addClase.Text = "Añadir clase";
             this.addClase.UseVisualStyleBackColor = true;
-            this.addClase.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(10, 44);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(107, 20);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "Fitrar por clase";
+            this.addClase.Click += new System.EventHandler(this.addClase_Click);
             // 
             // textSearchClase
             // 
             this.textSearchClase.ForeColor = System.Drawing.Color.DimGray;
-            this.textSearchClase.Location = new System.Drawing.Point(139, 41);
+            this.textSearchClase.Location = new System.Drawing.Point(106, 33);
             this.textSearchClase.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textSearchClase.Name = "textSearchClase";
             this.textSearchClase.Size = new System.Drawing.Size(116, 27);
             this.textSearchClase.TabIndex = 11;
-            this.textSearchClase.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textSearchClase_KeyUp);
+
+            // 
+            // dateTimeSearch
+            // 
+            this.dateTimeSearch.Location = new System.Drawing.Point(340, 33);
+            this.dateTimeSearch.Name = "dateTimeSearch";
+            this.dateTimeSearch.Size = new System.Drawing.Size(200, 27);
+            this.dateTimeSearch.TabIndex = 15;
+
+            // 
+            // ckFechaFilter
+            // 
+            this.ckFechaFilter.AutoSize = true;
+            this.ckFechaFilter.ForeColor = System.Drawing.Color.White;
+            this.ckFechaFilter.Location = new System.Drawing.Point(268, 33);
+            this.ckFechaFilter.Name = "ckFechaFilter";
+            this.ckFechaFilter.Size = new System.Drawing.Size(66, 24);
+            this.ckFechaFilter.TabIndex = 27;
+            this.ckFechaFilter.Text = "Fecha";
+            this.ckFechaFilter.UseVisualStyleBackColor = true;
+            // 
+            // ckUserFilter
+            // 
+            this.ckUserFilter.AutoSize = true;
+            this.ckUserFilter.ForeColor = System.Drawing.Color.White;
+            this.ckUserFilter.Location = new System.Drawing.Point(36, 33);
+            this.ckUserFilter.Name = "ckUserFilter";
+            this.ckUserFilter.Size = new System.Drawing.Size(63, 24);
+            this.ckUserFilter.TabIndex = 26;
+            this.ckUserFilter.Text = "Clase";
+            this.ckUserFilter.UseVisualStyleBackColor = true;
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.BackColor = System.Drawing.Color.Transparent;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.iconButton1.IconColor = System.Drawing.Color.White;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 30;
+            this.iconButton1.Location = new System.Drawing.Point(562, 29);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(41, 34);
+            this.iconButton1.TabIndex = 29;
+            this.iconButton1.UseVisualStyleBackColor = false;
+            this.iconButton1.Click += new System.EventHandler(this.btnFilter_Click);
             // 
             // FormAdminClases
             // 
@@ -130,7 +167,10 @@
             this.BackgroundImage = global::GenteFitNetriders.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1008, 662);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.iconButton1);
+            this.Controls.Add(this.ckFechaFilter);
+            this.Controls.Add(this.ckUserFilter);
+            this.Controls.Add(this.dateTimeSearch);
             this.Controls.Add(this.textSearchClase);
             this.Controls.Add(this.addClase);
             this.Controls.Add(this.btnDelClase);
@@ -156,7 +196,10 @@
         private System.Windows.Forms.Button btnImportarXML;
         private System.Windows.Forms.Button btnExportarXML;
         private System.Windows.Forms.Button addClase;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textSearchClase;
+        private System.Windows.Forms.DateTimePicker dateTimeSearch;
+        private System.Windows.Forms.CheckBox ckFechaFilter;
+        private System.Windows.Forms.CheckBox ckUserFilter;
+        private FontAwesome.Sharp.IconButton iconButton1;
     }
 }

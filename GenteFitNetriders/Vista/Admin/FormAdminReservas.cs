@@ -23,16 +23,15 @@ namespace GenteFitNetriders.Vista.Admin
         private void FormAdminReservas_Load(object sender, EventArgs e)
         {
             
-            fillDataGrid();
+            fillDataGrid(controller.getReservas());
             dataGridViewReservas.ColumnHeaderMouseClick += dataGridViewReservas_ColumnHeaderMouseClick;
         }
 
-        private void fillDataGrid()
-        {
-            dataGridViewReservas.DataSource = controller.getReservas();
+        private void fillDataGrid(IEnumerable<Modelo.ReservaViewModel> reservasList) { 
+
+            dataGridViewReservas.DataSource = reservasList;
             dataGridViewReservas.Columns["id_usuario"].Visible = false;
             dataGridViewReservas.Columns["id_clase"].Visible = false;
-            
         }
         private void dataGridViewReservas_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
@@ -76,7 +75,7 @@ namespace GenteFitNetriders.Vista.Admin
             Modelo.ReservaViewModel reserva = (Modelo.ReservaViewModel)dataGridViewReservas.CurrentRow.DataBoundItem;
             controller.deleteReserva(reserva.id);
             MessageBox.Show("La reserva se ha eliminado correctamente");
-            fillDataGrid();
+            fillDataGrid(controller.getReservas());
         }
 
         private void btnExportarXML_Click(object sender, EventArgs e)
@@ -89,7 +88,44 @@ namespace GenteFitNetriders.Vista.Admin
         {
             ImportXML importXML = new ImportXML();
             importXML.importReservasXML();
-            fillDataGrid();
+            fillDataGrid(controller.getReservas());
+        }
+
+        private void dateTimeSearch_ValueChanged(object sender, EventArgs e)
+        {
+           // fillDataGrid(controller.getReservasByFecha(dateTimeSearch.Value));
+        }
+
+        private void btnFilter_Click(object sender, EventArgs e)
+        {
+            String usuario,clase, fecha;
+            if (ckUserFilter.Checked)
+            {
+                usuario = textSearchUser.Text;
+            }
+            else
+            {
+                usuario = null;
+            }
+            if (ckClaseFilter.Checked)
+            {
+                clase = textSearchClase.Text;
+            }
+            else
+            {
+                clase = null;
+            }
+            if (ckFechaFilter.Checked)
+            {
+                fecha = dateTimeSearch.Value.Date.ToString("yyyy-MM-dd");
+            }
+            else
+            {
+                fecha = null;
+            }
+
+
+            fillDataGrid(controller.getReservasByFilter(usuario,clase, fecha));
         }
     }
 }

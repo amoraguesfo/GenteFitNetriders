@@ -71,7 +71,7 @@ namespace GenteFitNetriders.Vista.Admin
                 headerCell.SortGlyphDirection = SortOrder.Descending;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void addClase_Click(object sender, EventArgs e)
         {
 
             FormAminAddClase formAdminAddClase =  new FormAminAddClase();
@@ -102,10 +102,28 @@ namespace GenteFitNetriders.Vista.Admin
             exportXML.exportClaseXML();
         }
 
-        private void textSearchClase_KeyUp(object sender, KeyEventArgs e)
+        private void btnFilter_Click(object sender, EventArgs e)
         {
-            
-            fillDataGrid(controller.getClasesByName(textSearchClase.Text));
+            String clase, fecha;
+            if(ckUserFilter.Checked)
+            {
+                clase = textSearchClase.Text;
+            }
+            else
+            {
+                clase = null;
+            }
+            if (ckFechaFilter.Checked)
+            {
+                fecha = dateTimeSearch.Value.Date.ToString("yyyy-MM-dd");
+            }
+            else
+            {
+                fecha = null;
+            }
+
+
+            fillDataGrid(controller.getClasesByFecha(clase, fecha));
         }
     }
 }

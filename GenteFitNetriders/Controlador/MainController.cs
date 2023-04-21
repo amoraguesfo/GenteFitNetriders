@@ -1,6 +1,7 @@
 ﻿using GenteFitNetriders.Modelo;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 
 namespace GenteFitNetriders.Controlador
@@ -210,10 +211,55 @@ namespace GenteFitNetriders.Controlador
             }
         }
 
-        public IEnumerable<Modelo.ClaseViewModel> getClasesByName(String nombreClase)
+
+        public IEnumerable<Modelo.ClaseViewModel> getClasesByFecha(String nombreClase, String fechaClaseStr)
         {
+
             using (Modelo.NetridersEntities db = new Modelo.NetridersEntities())
             {
+                IQueryable<Modelo.Clases> query = db.Clases;
+
+                if (!string.IsNullOrEmpty(nombreClase) && !string.IsNullOrEmpty(fechaClaseStr))
+                {
+                    DateTime fechaClaseDate = DateTime.Parse(fechaClaseStr);
+                    query = query.Where(c => c.nombre_clase.Contains(nombreClase) && c.fecha_clase == fechaClaseDate.Date);
+                }
+                else if (!string.IsNullOrEmpty(nombreClase))
+                {
+                    query = query.Where(c => c.nombre_clase.Contains(nombreClase));
+
+                }else if (!string.IsNullOrEmpty(fechaClaseStr))
+                {                  
+                   DateTime fechaClaseDate = DateTime.Parse(fechaClaseStr);
+                   query = query.Where(c => c.fecha_clase == fechaClaseDate.Date);
+               
+                }
+
+
+                IEnumerable<Modelo.ClaseViewModel> clases = (from c in query
+                                                             select new Modelo.ClaseViewModel
+                                                             {
+                                                                 id = c.id,
+                                                                 nombre_clase = c.nombre_clase,
+                                                                 profesor = c.nrofesor,
+                                                                 plazas = c.plazas,
+                                                                 reservas = c.Reserva.Count(),
+                                                                 fecha_clase = c.fecha_clase,
+                                                                 hora_clase = c.hora_clase,
+                                                                 duracion = c.duracion
+                                                             }
+                                                       ).ToList();
+                return clases;
+            }
+        }
+        public IEnumerable<Modelo.ClaseViewModel> getClasesByName(String nombreClase)
+        {
+
+            using (Modelo.NetridersEntities db = new Modelo.NetridersEntities())
+            {
+
+
+
                 IEnumerable<Modelo.ClaseViewModel> clases = (from c in db.Clases
                                                              where c.nombre_clase.Contains(nombreClase)
                                                              select new Modelo.ClaseViewModel
@@ -373,6 +419,112 @@ namespace GenteFitNetriders.Controlador
                 return reservas;
             }
         }
+        public IEnumerable<Modelo.ReservaViewModel> getReservasByFecha(DateTime fechaReserva)
+        {
+            using (Modelo.NetridersEntities db = new Modelo.NetridersEntities())
+            {
+                IEnumerable<Modelo.ReservaViewModel> reservas = (from r in db.Reserva
+                                                                 where r.Clases.fecha_clase == fechaReserva.Date
+                                                                 select new Modelo.ReservaViewModel
+                                                                 {
+                                                                     id = r.id,
+                                                                     id_usuario = r.id_usuario,
+                                                                     nombre_usuario = r.Usuarios.nombre,
+                                                                     email_usuario = r.Usuarios.email,
+                                                                     id_clase = r.id_clase,
+                                                                     nombre_clase = r.Clases.nombre_clase,
+                                                                     fecha_clase = r.Clases.fecha_clase,
+                                                                     hora_clase = r.Clases.hora_clase,
+                                                                     estado = r.estado
+                                                                 }
+                                            ).ToList();
+                return reservas;
+            }
+        }
+        public IEnumerable<Modelo.ReservaViewModel> getReservasByFilter(String nombreUsuario, String nombreClase, String fechaClaseStr)
+        {
+
+            using (Modelo.NetridersEntities db = new Modelo.NetridersEntities())
+            {
+                IQueryable<Modelo.Reserva> query = db.Reserva;
+
+                if (!string.IsNullOrEmpty(nombreUsuario) && !string.IsNullOrEmpty(nombreClase) && !string.IsNullOrEmpty(fechaClaseStr))
+                {
+                    DateTime fechaClaseDate = DateTime.Parse(fechaClaseStr);
+                    query = query.Where(c => c.Usuarios.nombre.Contains(nombreUsuario) && c.Clases.nombre_clase.Contains(nombreClase) && c.Clases.fecha_clase == fechaClaseDate.Date);
+                }
+                else if (!string.IsNullOrEmpty(nombreUsuario) && !string.IsNullOrEmpty(nombreClase))
+                {              
+                    query = query.Where(c => c.Usuarios.nombre.Contains(nombreUsuario) && c.Clases.nombre_clase.Contains(nombreClase));
+                }
+                else if (!string.IsNullOrEmpty(nombreClase) && !string.IsNullOrEmpty(fechaClaseStr))
+                {
+                    DateTime fechaClaseDate = DateTime.Parse(fechaClaseStr);
+                    query = query.Where(c => c.Clases.nombre_clase.Contains(nombreClase) && c.Clases.fecha_clase == fechaClaseDate.Date);
+                }
+                else if (!string.IsNullOrEmpty(nombreUsuario) && !string.IsNullOrEmpty(fechaClaseStr))
+                {
+                    DateTime fechaClaseDate = DateTime.Parse(fechaClaseStr);
+                    query = query.Where(c => c.Usuarios.nombre.Contains(nombreUsuario) && c.Clases.fecha_clase == fechaClaseDate.Date);
+                }
+                else if (!string.IsNullOrEmpty(nombreUsuario))
+                {
+                    query = query.Where(c => c.Usuarios.nombre.Contains(nombreUsuario));
+
+                }
+                else if (!string.IsNullOrEmpty(nombreClase))
+                {
+                    query = query.Where(c => c.Clases.nombre_clase.Contains(nombreClase));
+
+                }
+                else if (!string.IsNullOrEmpty(fechaClaseStr))
+                {
+                    DateTime fechaClaseDate = DateTime.Parse(fechaClaseStr);
+                    query = query.Where(c => c.Clases.fecha_clase == fechaClaseDate.Date);
+
+                }
+
+                    IEnumerable<Modelo.ReservaViewModel> reservas = (from r in query
+                                                                     select new Modelo.ReservaViewModel
+                                                                     {
+                                                                         id = r.id,
+                                                                         id_usuario = r.id_usuario,
+                                                                         nombre_usuario = r.Usuarios.nombre,
+                                                                         email_usuario = r.Usuarios.email,
+                                                                         id_clase = r.id_clase,
+                                                                         nombre_clase = r.Clases.nombre_clase,
+                                                                         fecha_clase = r.Clases.fecha_clase,
+                                                                         hora_clase = r.Clases.hora_clase,
+                                                                         estado = r.estado
+                                                                     }
+                                                ).ToList();
+                    return reservas;
+                
+            }
+        }
+        public IEnumerable<Modelo.ReservaViewModel> getReservasByNombreClase(String nombreClase)
+        {
+            using (Modelo.NetridersEntities db = new Modelo.NetridersEntities())
+            {
+                IEnumerable<Modelo.ReservaViewModel> reservas = (from r in db.Reserva
+                                                                 where r.Clases.nombre_clase == nombreClase
+                                                                 select new Modelo.ReservaViewModel
+                                                                 {
+                                                                     id = r.id,
+                                                                     id_usuario = r.id_usuario,
+                                                                     nombre_usuario = r.Usuarios.nombre,
+                                                                     email_usuario = r.Usuarios.email,
+                                                                     id_clase = r.id_clase,
+                                                                     nombre_clase = r.Clases.nombre_clase,
+                                                                     fecha_clase = r.Clases.fecha_clase,
+                                                                     hora_clase = r.Clases.hora_clase,
+                                                                     estado = r.estado
+                                                                 }
+                                            ).ToList();
+                return reservas;
+            }
+        }
+
         public Reserva getReservaById(int id)
         {
             using (Modelo.NetridersEntities db = new Modelo.NetridersEntities())
