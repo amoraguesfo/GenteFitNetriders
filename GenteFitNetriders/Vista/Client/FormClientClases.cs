@@ -23,19 +23,54 @@ namespace GenteFitNetriders.Vista.Client
 
         private void FormClientClases_Load(object sender, EventArgs e)
         {
-            fillDataGrid();
-
+            fillDataGrid(controller.getClases());
+            dataGridViewClases.ColumnHeaderMouseClick += dataGridClases_ColumnHeaderMouseClick;
         }
 
 
-        private void fillDataGrid()
+        private void fillDataGrid(IEnumerable<Modelo.ClaseViewModel> classList)
         {
-            dataGridViewClases.DataSource = controller.getClases();
+            dataGridViewClases.DataSource = classList;
             dataGridViewClases.Columns["id"].Visible = false;
-
         }
 
-        
+
+        private void dataGridClases_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            DataGridViewColumn clickedColumn = dataGridViewClases.Columns[e.ColumnIndex];
+
+            // Check if the clicked column is a sortable column
+            if (clickedColumn.SortMode != DataGridViewColumnSortMode.Automatic)
+                return;
+
+            // Determine the sort direction
+            ListSortDirection sortDirection;
+            if (clickedColumn.HeaderCell.SortGlyphDirection == SortOrder.Ascending)
+                sortDirection = ListSortDirection.Descending;
+            else
+                sortDirection = ListSortDirection.Ascending;
+
+            // Get the data source and column name
+            IEnumerable<Modelo.ClaseViewModel> dataSource = (IEnumerable<Modelo.ClaseViewModel>)dataGridViewClases.DataSource;
+            string columnName = clickedColumn.Name;
+
+            // Sort the data using LINQ
+            IEnumerable<Modelo.ClaseViewModel> sortedData;
+            if (sortDirection == ListSortDirection.Ascending)
+                sortedData = dataSource.OrderBy(d => d.GetType().GetProperty(columnName).GetValue(d, null));
+            else
+                sortedData = dataSource.OrderByDescending(d => d.GetType().GetProperty(columnName).GetValue(d, null));
+
+            // Set the sorted data as the DataGridView's data source
+            dataGridViewClases.DataSource = sortedData.ToList();
+
+            // Set the sort glyph
+            DataGridViewColumnHeaderCell headerCell = dataGridViewClases.Columns[e.ColumnIndex].HeaderCell;
+            if (sortDirection == ListSortDirection.Ascending)
+                headerCell.SortGlyphDirection = SortOrder.Ascending;
+            else
+                headerCell.SortGlyphDirection = SortOrder.Descending;
+        }
 
         private void btnReservar_Click(object sender, EventArgs e)
         {
@@ -54,11 +89,36 @@ namespace GenteFitNetriders.Vista.Client
                 string estado = controller.getReservasByClass(clase.id).Count() < clase.plazas ? "reservada" : "espera";
                 controller.addReserva(Common.userLogged.id, clase.id, estado);
                 MessageBox.Show("La reserva se ha realizado correctamente");
-                fillDataGrid();
+                fillDataGrid(controller.getClases());
 
 
         }
 
+        private void btnFilter_Click(object sender, EventArgs e)
+        {
+            String clase, fecha;
+            if (ckUserFilter.Checked)
+            {
+                clase = textSearchClase.Text;
+            }
+            else
+            {
+                clase = null;
+            }
+            if (ckFechaFilter.Checked)
+            {
+                fecha = dateTimeSearch.Value.Date.ToString("yyyy-MM-dd");
+            }
+            else
+            {
+                fecha = null;
+            }
 
+
+            fillDataGrid(controller.getClasesByFecha(clase, fecha));
+        }
     }
+
+
 }
+
