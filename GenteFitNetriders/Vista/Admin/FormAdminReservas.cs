@@ -13,11 +13,11 @@ namespace GenteFitNetriders.Vista.Admin
 {
     public partial class FormAdminReservas : Form
     {
-        MainController controller;
+        ReservasController controller;
         public FormAdminReservas()
         {
             InitializeComponent();
-            controller = new MainController();
+            controller = new ReservasController();
         }
 
         private void FormAdminReservas_Load(object sender, EventArgs e)
@@ -80,14 +80,14 @@ namespace GenteFitNetriders.Vista.Admin
 
         private void btnExportarXML_Click(object sender, EventArgs e)
         {
-            ExportXML exportXML = new ExportXML();
+            ReservasXML exportXML = new ReservasXML();
             exportXML.exportReservasXML();
         }
 
         private void btnImportarXML_Click(object sender, EventArgs e)
         {
-            ImportXML importXML = new ImportXML();
-            importXML.importReservasXML();
+            ReservasXML reservasXML = new ReservasXML();
+            reservasXML.importReservasXML();
             fillDataGrid(controller.getReservas());
         }
 

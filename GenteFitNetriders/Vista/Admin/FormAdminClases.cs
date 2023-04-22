@@ -1,4 +1,5 @@
 ﻿using GenteFitNetriders.Controlador;
+using GenteFitNetriders.Controlador.XML;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,11 +15,11 @@ namespace GenteFitNetriders.Vista.Admin
 {
     public partial class FormAdminClases : Form
     {
-        private MainController controller;
+        private ClaseController controller;
         public FormAdminClases()
         {
             InitializeComponent();
-            controller = new MainController();
+            controller = new ClaseController();
         }
 
         private void FormAdminClases_Load(object sender, EventArgs e)
@@ -91,15 +92,15 @@ namespace GenteFitNetriders.Vista.Admin
 
         private void btnImportarXML_Click(object sender, EventArgs e)
         {
-            ImportXML importXML = new ImportXML();  
-            importXML.importClasesXML();
+            ClasesXML clasesXML = new ClasesXML();
+            clasesXML.importClasesXML();
             fillDataGrid(controller.getClases());
         }
 
         private void btnExportarXML_Click(object sender, EventArgs e)
         {
-            ExportXML exportXML = new ExportXML();
-            exportXML.exportClaseXML();
+            ClasesXML clasesXML = new ClasesXML();
+            clasesXML.exportClaseXML();
         }
 
         private void btnFilter_Click(object sender, EventArgs e)

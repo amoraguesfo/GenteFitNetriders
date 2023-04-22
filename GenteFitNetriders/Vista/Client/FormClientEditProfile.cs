@@ -14,13 +14,13 @@ namespace GenteFitNetriders.Vista.Client
 {
     public partial class FormClientEditProfile : Form
     {   
-        MainController controller;
+        UserController controller;
         private FormClientPanel fparent;
         public FormClientEditProfile(FormClientPanel fp)
         {
             InitializeComponent();
             fparent = fp;
-            controller = new MainController();
+            controller = new UserController();
 
         }
 

@@ -8,11 +8,11 @@ namespace GenteFitNetriders.Vista.Admin
 {
     public partial class FormAminAddClase : Form
     {
-        MainController controller;
+        ClaseController controller;
         public FormAminAddClase()
         {
             InitializeComponent();
-            controller = new MainController();
+            controller = new ClaseController();
 
             dateTimePickerHora.ShowUpDown = true;
             dateTimePickerHora.CustomFormat = "HH:mm";

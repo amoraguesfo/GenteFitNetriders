@@ -13,11 +13,11 @@ namespace GenteFitNetriders.Vista.Client
 {
     public partial class FormClientReservas : Form
     {
-        MainController controller;
+        ReservasController controller;
         public FormClientReservas()
         {
             InitializeComponent();
-            controller = new MainController();
+            controller = new ReservasController();
         }
 
         private void FormClientReservas_Load(object sender, EventArgs e)

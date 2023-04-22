@@ -10,11 +10,11 @@ namespace GenteFitNetriders
 {
     public partial class FormRegister : Form
     {
-        private MainController controller;
+        private UserController controller;
         public FormRegister()
         {
             InitializeComponent();
-            controller = new MainController();
+            controller = new UserController();
 
         }
 

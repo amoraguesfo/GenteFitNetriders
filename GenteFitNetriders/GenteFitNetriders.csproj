@@ -62,10 +62,14 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controlador\ExportXML.cs" />
-    <Compile Include="Controlador\ImportXML.cs" />
+    <Compile Include="Controlador\ClaseController.cs" />
+    <Compile Include="Controlador\ReservasController.cs" />
+    <Compile Include="Controlador\XML\ClasesXML.cs" />
+    <Compile Include="Controlador\XML\ReservasXML.cs" />
     <Compile Include="Controlador\Common.cs" />
     <Compile Include="Controlador\MainController.cs" />
+    <Compile Include="Controlador\UserController.cs" />
+    <Compile Include="Controlador\XML\UserXML.cs" />
     <Compile Include="Modelo\Clases.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>

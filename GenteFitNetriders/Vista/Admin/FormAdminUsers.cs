@@ -1,4 +1,5 @@
 ﻿using GenteFitNetriders.Controlador;
+using GenteFitNetriders.Controlador.XML;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -8,11 +9,11 @@ namespace GenteFitNetriders.Vista
 {
     public partial class FormAdminUsers : Form
     {
-        private MainController controller;
+        private UserController controller;
         public FormAdminUsers()
         {
             InitializeComponent();
-            controller = new MainController();
+            controller = new UserController();
         }
 
 
@@ -39,15 +40,15 @@ namespace GenteFitNetriders.Vista
 
         private void btnExportarXML_Click(object sender, EventArgs e)
         {
-            ExportXML exportXML = new ExportXML();
-            exportXML.exportUsusariosXML();
+           UserXML userXML = new UserXML();
+            userXML.exportUsusariosXML();
         }
 
         private void btnImportarXML_Click(object sender, EventArgs e)
         {
-            
-            ImportXML importXML = new ImportXML();
-            importXML.importUsuariosXML();
+
+            UserXML userXML = new UserXML();
+            userXML.importUsuariosXML();
             fillDataGrid(controller.getUsers());
         }
 
