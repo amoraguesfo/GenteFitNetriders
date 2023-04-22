@@ -3,6 +3,7 @@ using GenteFitNetriders.Controlador.XML;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder;
 using System.Linq;
 using System.Windows.Forms;
 using System.Xml.Linq;
@@ -109,6 +110,7 @@ namespace GenteFitNetriders.Vista
             String userName = textSearchUser.Text;
             fillDataGrid(controller.getUsersByNombre(userName));
         }
+
 
     }
 }

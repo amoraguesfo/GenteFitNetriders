@@ -52,6 +52,7 @@
             this.dataGridUsers.ReadOnly = true;
             this.dataGridUsers.Size = new System.Drawing.Size(979, 520);
             this.dataGridUsers.TabIndex = 1;
+           
             // 
             // label3
             // 

@@ -53,6 +53,7 @@
             this.dataGridViewReservas.ReadOnly = true;
             this.dataGridViewReservas.Size = new System.Drawing.Size(979, 523);
             this.dataGridViewReservas.TabIndex = 2;
+            this.dataGridViewReservas.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridViewReservas_CellFormatting);
             // 
             // btnFilter
             // 

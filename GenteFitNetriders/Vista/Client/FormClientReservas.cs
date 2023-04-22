@@ -1,4 +1,5 @@
 ﻿using GenteFitNetriders.Controlador;
+using GenteFitNetriders.Vista.utils;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -116,6 +117,27 @@ namespace GenteFitNetriders.Vista.Client
 
 
             fillDataGrid(controller.getReservasByFilter(usuario, clase, fecha));
+        }
+
+        private void dataGridViewReservas_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+ 
+                foreach (DataGridViewRow row in dataGridViewReservas.Rows)
+                {
+                    // Get the value of the 'Estado' column
+                    string estado = row.Cells["estado"].Value.ToString();
+
+                    // Set the color of the cell based on the value
+                    if (estado == "reservada")
+                    {
+                        row.Cells["estado"].Style.BackColor = RGBColors.verde1;
+                    }
+                    else
+                    {
+                        row.Cells["estado"].Style.BackColor = RGBColors.amarillo;
+                    }
+                }
+
         }
     }
 }

@@ -57,6 +57,7 @@
             this.dataGridViewReservas.ReadOnly = true;
             this.dataGridViewReservas.Size = new System.Drawing.Size(982, 513);
             this.dataGridViewReservas.TabIndex = 4;
+            this.dataGridViewReservas.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridUsers_CellFormatting);
             // 
             // dateTimeSearch
             // 

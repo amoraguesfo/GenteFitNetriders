@@ -12,5 +12,7 @@ namespace GenteFitNetriders.Vista.utils
             public static Color verde1 = Color.YellowGreen;//#00BF63
             public static Color negro = Color.FromArgb(0, 0, 0);
             public static Color gris = Color.DimGray;
-        }
+            public static Color amarillo = Color.Yellow;
+
+    }
 }
