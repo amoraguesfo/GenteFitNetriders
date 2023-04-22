@@ -109,6 +109,7 @@
             this.btnReservar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnReservar.BackColor = System.Drawing.Color.Transparent;
             this.btnReservar.FlatAppearance.BorderSize = 0;
+            this.btnReservar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnReservar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReservar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReservar.ForeColor = System.Drawing.Color.White;

@@ -76,6 +76,7 @@
             this.btnExportarXML.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExportarXML.BackColor = System.Drawing.Color.Transparent;
             this.btnExportarXML.FlatAppearance.BorderSize = 0;
+            this.btnExportarXML.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnExportarXML.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExportarXML.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExportarXML.ForeColor = System.Drawing.Color.White;
@@ -99,6 +100,7 @@
             this.btnImportarXML.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnImportarXML.BackColor = System.Drawing.Color.Transparent;
             this.btnImportarXML.FlatAppearance.BorderSize = 0;
+            this.btnImportarXML.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnImportarXML.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnImportarXML.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImportarXML.ForeColor = System.Drawing.Color.White;
@@ -122,6 +124,7 @@
             this.btnDelUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDelUser.BackColor = System.Drawing.Color.Transparent;
             this.btnDelUser.FlatAppearance.BorderSize = 0;
+            this.btnDelUser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnDelUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelUser.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelUser.ForeColor = System.Drawing.Color.White;

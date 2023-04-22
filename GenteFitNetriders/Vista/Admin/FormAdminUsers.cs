@@ -32,6 +32,11 @@ namespace GenteFitNetriders.Vista
         }
         private void btnDelUser_Click(object sender, System.EventArgs e)
         {
+            //Fix no hacer nada si no hay registros
+            if (dataGridUsers.Rows.Count == 0)
+            {
+                return;
+            }
             DialogResult result = MessageBox.Show("Seguro que quieres borrar este usuario?", "Confirmar borrado", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (result == DialogResult.Yes)

@@ -73,6 +73,11 @@ namespace GenteFitNetriders.Vista.Client
         }
         private void btnAnular_Click(object sender, EventArgs e)
         {
+            //Fix no hacer nada si no hay filas
+            if (dataGridViewReservas.Rows.Count == 0)
+            {
+                return;
+            }
             DialogResult result = MessageBox.Show("Seguro que quieres anular la reserva?", "Confirmar Anulación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (result == DialogResult.Yes)

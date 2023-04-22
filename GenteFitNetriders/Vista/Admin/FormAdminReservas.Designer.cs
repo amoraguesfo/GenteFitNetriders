@@ -134,6 +134,7 @@
             this.btnAnular.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAnular.BackColor = System.Drawing.Color.Transparent;
             this.btnAnular.FlatAppearance.BorderSize = 0;
+            this.btnAnular.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnAnular.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAnular.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAnular.ForeColor = System.Drawing.Color.White;
@@ -157,6 +158,7 @@
             this.btnImportarXML.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnImportarXML.BackColor = System.Drawing.Color.Transparent;
             this.btnImportarXML.FlatAppearance.BorderSize = 0;
+            this.btnImportarXML.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnImportarXML.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnImportarXML.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImportarXML.ForeColor = System.Drawing.Color.White;
@@ -180,6 +182,7 @@
             this.btnExportarXML.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExportarXML.BackColor = System.Drawing.Color.Transparent;
             this.btnExportarXML.FlatAppearance.BorderSize = 0;
+            this.btnExportarXML.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnExportarXML.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExportarXML.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExportarXML.ForeColor = System.Drawing.Color.White;

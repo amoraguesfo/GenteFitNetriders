@@ -72,6 +72,11 @@ namespace GenteFitNetriders.Vista.Admin
 
         private void btnAnular_Click(object sender, EventArgs e)
         {
+            //Fix no hacer nada si no hay registros
+            if (dataGridViewReservas.Rows.Count == 0)
+            {
+                return;
+            }
             DialogResult result = MessageBox.Show("Seguro que quieres eliminar esta reserva?", "Confirmar borrado", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (result == DialogResult.Yes)

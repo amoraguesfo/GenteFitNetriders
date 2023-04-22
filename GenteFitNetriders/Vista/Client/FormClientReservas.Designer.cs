@@ -109,6 +109,7 @@
             this.btnAnular.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAnular.BackColor = System.Drawing.Color.Transparent;
             this.btnAnular.FlatAppearance.BorderSize = 0;
+            this.btnAnular.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnAnular.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAnular.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAnular.ForeColor = System.Drawing.Color.White;

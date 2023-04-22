@@ -84,6 +84,11 @@ namespace GenteFitNetriders.Vista.Admin
 
         private void btnDelClase_Click(object sender, EventArgs e)
         {
+            //Fix no hacer nada si no hay registros
+            if (dataGridClases.Rows.Count == 0)
+            {
+                return;
+            }
             DialogResult result = MessageBox.Show("Seguro que quieres borrar esta clase?", "Confirmar borrado", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (result == DialogResult.Yes)

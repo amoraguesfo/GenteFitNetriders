@@ -119,6 +119,8 @@ namespace GenteFitNetriders.Vista.Client
 
             fillDataGrid(controllerReservas.getClasesByFecha(clase, fecha));
         }
+
+
     }
 
 
