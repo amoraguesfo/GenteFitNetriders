@@ -23,6 +23,7 @@ namespace GenteFitNetriders.Vista.Client
         private void FormClientReservas_Load(object sender, EventArgs e)
         {
             fillDataGrid(controller.getReservasByUser(Common.userLogged.id));
+            dataGridViewReservas.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridViewReservas.ColumnHeaderMouseClick += dataGridViewReservas_ColumnHeaderMouseClick;
         }
 

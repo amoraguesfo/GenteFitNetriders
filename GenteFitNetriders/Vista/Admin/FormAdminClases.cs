@@ -26,6 +26,7 @@ namespace GenteFitNetriders.Vista.Admin
         {
 
             fillDataGrid(controller.getClases());
+            dataGridClases.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridClases.ColumnHeaderMouseClick += dataGridClases_ColumnHeaderMouseClick;
 
         }

@@ -43,6 +43,8 @@
             // 
             // dataGridClases
             // 
+            this.dataGridClases.AllowUserToAddRows = false;
+            this.dataGridClases.AllowUserToDeleteRows = false;
             this.dataGridClases.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -51,6 +53,7 @@
             this.dataGridClases.Location = new System.Drawing.Point(13, 78);
             this.dataGridClases.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridClases.Name = "dataGridClases";
+            this.dataGridClases.ReadOnly = true;
             this.dataGridClases.Size = new System.Drawing.Size(978, 520);
             this.dataGridClases.TabIndex = 0;
             // 

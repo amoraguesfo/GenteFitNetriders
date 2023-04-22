@@ -26,6 +26,7 @@ namespace GenteFitNetriders.Vista.Client
         private void FormClientClases_Load(object sender, EventArgs e)
         {
             fillDataGrid(controllerReservas.getClases());
+            dataGridViewClases.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridViewClases.ColumnHeaderMouseClick += dataGridClases_ColumnHeaderMouseClick;
         }
 

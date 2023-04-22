@@ -44,6 +44,8 @@
             // 
             // dataGridViewReservas
             // 
+            this.dataGridViewReservas.AllowUserToAddRows = false;
+            this.dataGridViewReservas.AllowUserToDeleteRows = false;
             this.dataGridViewReservas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -52,6 +54,7 @@
             this.dataGridViewReservas.Location = new System.Drawing.Point(13, 85);
             this.dataGridViewReservas.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridViewReservas.Name = "dataGridViewReservas";
+            this.dataGridViewReservas.ReadOnly = true;
             this.dataGridViewReservas.Size = new System.Drawing.Size(982, 513);
             this.dataGridViewReservas.TabIndex = 4;
             // 

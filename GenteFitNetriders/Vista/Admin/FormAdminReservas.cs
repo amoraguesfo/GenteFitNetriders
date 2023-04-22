@@ -24,6 +24,7 @@ namespace GenteFitNetriders.Vista.Admin
         {
             
             fillDataGrid(controller.getReservas());
+            dataGridViewReservas.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridViewReservas.ColumnHeaderMouseClick += dataGridViewReservas_ColumnHeaderMouseClick;
         }
 
@@ -32,6 +33,7 @@ namespace GenteFitNetriders.Vista.Admin
             dataGridViewReservas.DataSource = reservasList;
             dataGridViewReservas.Columns["id_usuario"].Visible = false;
             dataGridViewReservas.Columns["id_clase"].Visible = false;
+                        
         }
         private void dataGridViewReservas_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {

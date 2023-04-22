@@ -40,6 +40,8 @@
             // 
             // dataGridViewClases
             // 
+            this.dataGridViewClases.AllowUserToAddRows = false;
+            this.dataGridViewClases.AllowUserToDeleteRows = false;
             this.dataGridViewClases.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -48,6 +50,7 @@
             this.dataGridViewClases.Location = new System.Drawing.Point(16, 75);
             this.dataGridViewClases.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridViewClases.Name = "dataGridViewClases";
+            this.dataGridViewClases.ReadOnly = true;
             this.dataGridViewClases.Size = new System.Drawing.Size(979, 528);
             this.dataGridViewClases.TabIndex = 0;
             // 
