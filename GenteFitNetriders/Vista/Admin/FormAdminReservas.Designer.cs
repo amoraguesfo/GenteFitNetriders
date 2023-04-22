@@ -28,10 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnAnular = new System.Windows.Forms.Button();
             this.dataGridViewReservas = new System.Windows.Forms.DataGridView();
-            this.btnImportarXML = new System.Windows.Forms.Button();
-            this.btnExportarXML = new System.Windows.Forms.Button();
             this.dateTimeSearch = new System.Windows.Forms.DateTimePicker();
             this.textSearchUser = new System.Windows.Forms.TextBox();
             this.ckUserFilter = new System.Windows.Forms.CheckBox();
@@ -39,20 +36,11 @@
             this.textSearchClase = new System.Windows.Forms.TextBox();
             this.ckClaseFilter = new System.Windows.Forms.CheckBox();
             this.btnFilter = new FontAwesome.Sharp.IconButton();
+            this.btnAnular = new FontAwesome.Sharp.IconButton();
+            this.btnImportarXML = new FontAwesome.Sharp.IconButton();
+            this.btnExportarXML = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewReservas)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnAnular
-            // 
-            this.btnAnular.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAnular.Location = new System.Drawing.Point(895, 613);
-            this.btnAnular.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnAnular.Name = "btnAnular";
-            this.btnAnular.Size = new System.Drawing.Size(100, 35);
-            this.btnAnular.TabIndex = 5;
-            this.btnAnular.Text = "Eliminar";
-            this.btnAnular.UseVisualStyleBackColor = true;
-            this.btnAnular.Click += new System.EventHandler(this.btnAnular_Click);
             // 
             // dataGridViewReservas
             // 
@@ -66,30 +54,6 @@
             this.dataGridViewReservas.Name = "dataGridViewReservas";
             this.dataGridViewReservas.Size = new System.Drawing.Size(982, 513);
             this.dataGridViewReservas.TabIndex = 4;
-            // 
-            // btnImportarXML
-            // 
-            this.btnImportarXML.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnImportarXML.Location = new System.Drawing.Point(139, 608);
-            this.btnImportarXML.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnImportarXML.Name = "btnImportarXML";
-            this.btnImportarXML.Size = new System.Drawing.Size(116, 35);
-            this.btnImportarXML.TabIndex = 8;
-            this.btnImportarXML.Text = "Importar XML";
-            this.btnImportarXML.UseVisualStyleBackColor = true;
-            this.btnImportarXML.Click += new System.EventHandler(this.btnImportarXML_Click);
-            // 
-            // btnExportarXML
-            // 
-            this.btnExportarXML.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnExportarXML.Location = new System.Drawing.Point(16, 608);
-            this.btnExportarXML.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnExportarXML.Name = "btnExportarXML";
-            this.btnExportarXML.Size = new System.Drawing.Size(115, 35);
-            this.btnExportarXML.TabIndex = 7;
-            this.btnExportarXML.Text = "Exportar XML";
-            this.btnExportarXML.UseVisualStyleBackColor = true;
-            this.btnExportarXML.Click += new System.EventHandler(this.btnExportarXML_Click);
             // 
             // dateTimeSearch
             // 
@@ -165,6 +129,75 @@
             this.btnFilter.UseVisualStyleBackColor = false;
             this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
             // 
+            // btnAnular
+            // 
+            this.btnAnular.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAnular.BackColor = System.Drawing.Color.Transparent;
+            this.btnAnular.FlatAppearance.BorderSize = 0;
+            this.btnAnular.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAnular.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAnular.ForeColor = System.Drawing.Color.White;
+            this.btnAnular.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
+            this.btnAnular.IconColor = System.Drawing.Color.White;
+            this.btnAnular.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAnular.IconSize = 32;
+            this.btnAnular.Location = new System.Drawing.Point(837, 608);
+            this.btnAnular.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnAnular.Name = "btnAnular";
+            this.btnAnular.Size = new System.Drawing.Size(158, 40);
+            this.btnAnular.TabIndex = 33;
+            this.btnAnular.Text = "Eliminar Reserva";
+            this.btnAnular.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAnular.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAnular.UseVisualStyleBackColor = false;
+            this.btnAnular.Click += new System.EventHandler(this.btnAnular_Click);
+            // 
+            // btnImportarXML
+            // 
+            this.btnImportarXML.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnImportarXML.BackColor = System.Drawing.Color.Transparent;
+            this.btnImportarXML.FlatAppearance.BorderSize = 0;
+            this.btnImportarXML.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImportarXML.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImportarXML.ForeColor = System.Drawing.Color.White;
+            this.btnImportarXML.IconChar = FontAwesome.Sharp.IconChar.FileArrowUp;
+            this.btnImportarXML.IconColor = System.Drawing.Color.White;
+            this.btnImportarXML.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnImportarXML.IconSize = 32;
+            this.btnImportarXML.Location = new System.Drawing.Point(127, 608);
+            this.btnImportarXML.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnImportarXML.Name = "btnImportarXML";
+            this.btnImportarXML.Size = new System.Drawing.Size(102, 40);
+            this.btnImportarXML.TabIndex = 32;
+            this.btnImportarXML.Text = "Importar";
+            this.btnImportarXML.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnImportarXML.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnImportarXML.UseVisualStyleBackColor = false;
+            this.btnImportarXML.Click += new System.EventHandler(this.btnImportarXML_Click);
+            // 
+            // btnExportarXML
+            // 
+            this.btnExportarXML.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExportarXML.BackColor = System.Drawing.Color.Transparent;
+            this.btnExportarXML.FlatAppearance.BorderSize = 0;
+            this.btnExportarXML.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExportarXML.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExportarXML.ForeColor = System.Drawing.Color.White;
+            this.btnExportarXML.IconChar = FontAwesome.Sharp.IconChar.FileDownload;
+            this.btnExportarXML.IconColor = System.Drawing.Color.White;
+            this.btnExportarXML.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnExportarXML.IconSize = 32;
+            this.btnExportarXML.Location = new System.Drawing.Point(17, 608);
+            this.btnExportarXML.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnExportarXML.Name = "btnExportarXML";
+            this.btnExportarXML.Size = new System.Drawing.Size(102, 40);
+            this.btnExportarXML.TabIndex = 31;
+            this.btnExportarXML.Text = "Exportar";
+            this.btnExportarXML.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExportarXML.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnExportarXML.UseVisualStyleBackColor = false;
+            this.btnExportarXML.Click += new System.EventHandler(this.btnExportarXML_Click);
+            // 
             // FormAdminReservas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -173,6 +206,9 @@
             this.BackgroundImage = global::GenteFitNetriders.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1008, 662);
+            this.Controls.Add(this.btnAnular);
+            this.Controls.Add(this.btnImportarXML);
+            this.Controls.Add(this.btnExportarXML);
             this.Controls.Add(this.btnFilter);
             this.Controls.Add(this.ckFechaFilter);
             this.Controls.Add(this.ckClaseFilter);
@@ -180,9 +216,6 @@
             this.Controls.Add(this.textSearchUser);
             this.Controls.Add(this.dateTimeSearch);
             this.Controls.Add(this.textSearchClase);
-            this.Controls.Add(this.btnImportarXML);
-            this.Controls.Add(this.btnExportarXML);
-            this.Controls.Add(this.btnAnular);
             this.Controls.Add(this.dataGridViewReservas);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Segoe UI", 11.25F);
@@ -198,11 +231,7 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnAnular;
         private System.Windows.Forms.DataGridView dataGridViewReservas;
-        private System.Windows.Forms.Button btnImportarXML;
-        private System.Windows.Forms.Button btnExportarXML;
         private System.Windows.Forms.DateTimePicker dateTimeSearch;
         private System.Windows.Forms.TextBox textSearchUser;
         private System.Windows.Forms.CheckBox ckUserFilter;
@@ -210,5 +239,8 @@
         private System.Windows.Forms.TextBox textSearchClase;
         private System.Windows.Forms.CheckBox ckClaseFilter;
         private FontAwesome.Sharp.IconButton btnFilter;
+        private FontAwesome.Sharp.IconButton btnAnular;
+        private FontAwesome.Sharp.IconButton btnImportarXML;
+        private FontAwesome.Sharp.IconButton btnExportarXML;
     }
 }

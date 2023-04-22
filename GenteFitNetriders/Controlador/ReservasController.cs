@@ -79,28 +79,7 @@ namespace GenteFitNetriders.Controlador
                 return reservas;
             }
         }
-        public IEnumerable<Modelo.ReservaViewModel> getReservasByFecha(DateTime fechaReserva)
-        {
-            using (Modelo.NetridersEntities db = new Modelo.NetridersEntities())
-            {
-                IEnumerable<Modelo.ReservaViewModel> reservas = (from r in db.Reserva
-                                                                 where r.Clases.fecha_clase == fechaReserva.Date
-                                                                 select new Modelo.ReservaViewModel
-                                                                 {
-                                                                     id = r.id,
-                                                                     id_usuario = r.id_usuario,
-                                                                     nombre_usuario = r.Usuarios.nombre,
-                                                                     email_usuario = r.Usuarios.email,
-                                                                     id_clase = r.id_clase,
-                                                                     nombre_clase = r.Clases.nombre_clase,
-                                                                     fecha_clase = r.Clases.fecha_clase,
-                                                                     hora_clase = r.Clases.hora_clase,
-                                                                     estado = r.estado
-                                                                 }
-                                            ).ToList();
-                return reservas;
-            }
-        }
+
         public IEnumerable<Modelo.ReservaViewModel> getReservasByFilter(String nombreUsuario, String nombreClase, String fechaClaseStr)
         {
 
@@ -160,40 +139,6 @@ namespace GenteFitNetriders.Controlador
                                             ).ToList();
                 return reservas;
 
-            }
-        }
-        public IEnumerable<Modelo.ReservaViewModel> getReservasByNombreClase(String nombreClase)
-        {
-            using (Modelo.NetridersEntities db = new Modelo.NetridersEntities())
-            {
-                IEnumerable<Modelo.ReservaViewModel> reservas = (from r in db.Reserva
-                                                                 where r.Clases.nombre_clase == nombreClase
-                                                                 select new Modelo.ReservaViewModel
-                                                                 {
-                                                                     id = r.id,
-                                                                     id_usuario = r.id_usuario,
-                                                                     nombre_usuario = r.Usuarios.nombre,
-                                                                     email_usuario = r.Usuarios.email,
-                                                                     id_clase = r.id_clase,
-                                                                     nombre_clase = r.Clases.nombre_clase,
-                                                                     fecha_clase = r.Clases.fecha_clase,
-                                                                     hora_clase = r.Clases.hora_clase,
-                                                                     estado = r.estado
-                                                                 }
-                                            ).ToList();
-                return reservas;
-            }
-        }
-
-        public Reserva getReservaById(int id)
-        {
-            using (Modelo.NetridersEntities db = new Modelo.NetridersEntities())
-            {
-                var res = (from r in db.Reserva
-                           where r.id == id
-                           select r).FirstOrDefault();
-
-                return res;
             }
         }
         public bool addReserva(int idUsuario, int idClase, string estado)

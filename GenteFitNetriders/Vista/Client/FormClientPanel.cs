@@ -60,7 +60,7 @@ namespace GenteFitNetriders.Vista
 
         private void btnEditarPerfil_Click(object sender, System.EventArgs e)
         {
-
+            ActiveButton(sender, RGBColors.verde1);
             AbrirFormHijo(new FormClientEditProfile(this));
         }
         private void btnVerClases_Click(object sender, System.EventArgs e)

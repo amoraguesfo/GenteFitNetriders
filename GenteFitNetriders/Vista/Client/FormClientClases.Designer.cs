@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.dataGridViewClases = new System.Windows.Forms.DataGridView();
-            this.btnReservar = new System.Windows.Forms.Button();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.ckFechaFilter = new System.Windows.Forms.CheckBox();
             this.ckUserFilter = new System.Windows.Forms.CheckBox();
             this.dateTimeSearch = new System.Windows.Forms.DateTimePicker();
             this.textSearchClase = new System.Windows.Forms.TextBox();
+            this.btnReservar = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClases)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,18 +50,6 @@
             this.dataGridViewClases.Name = "dataGridViewClases";
             this.dataGridViewClases.Size = new System.Drawing.Size(979, 528);
             this.dataGridViewClases.TabIndex = 0;
-            // 
-            // btnReservar
-            // 
-            this.btnReservar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnReservar.Location = new System.Drawing.Point(895, 613);
-            this.btnReservar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnReservar.Name = "btnReservar";
-            this.btnReservar.Size = new System.Drawing.Size(100, 35);
-            this.btnReservar.TabIndex = 1;
-            this.btnReservar.Text = "Reservar";
-            this.btnReservar.UseVisualStyleBackColor = true;
-            this.btnReservar.Click += new System.EventHandler(this.btnReservar_Click);
             // 
             // iconButton1
             // 
@@ -116,6 +104,29 @@
             this.textSearchClase.Size = new System.Drawing.Size(116, 27);
             this.textSearchClase.TabIndex = 30;
             // 
+            // btnReservar
+            // 
+            this.btnReservar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnReservar.BackColor = System.Drawing.Color.Transparent;
+            this.btnReservar.FlatAppearance.BorderSize = 0;
+            this.btnReservar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReservar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReservar.ForeColor = System.Drawing.Color.White;
+            this.btnReservar.IconChar = FontAwesome.Sharp.IconChar.CalendarPlus;
+            this.btnReservar.IconColor = System.Drawing.Color.White;
+            this.btnReservar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnReservar.IconSize = 32;
+            this.btnReservar.Location = new System.Drawing.Point(837, 613);
+            this.btnReservar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnReservar.Name = "btnReservar";
+            this.btnReservar.Size = new System.Drawing.Size(158, 40);
+            this.btnReservar.TabIndex = 38;
+            this.btnReservar.Text = "Reservar";
+            this.btnReservar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReservar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnReservar.UseVisualStyleBackColor = false;
+            this.btnReservar.Click += new System.EventHandler(this.btnReservar_Click);
+            // 
             // FormClientClases
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -124,12 +135,12 @@
             this.BackgroundImage = global::GenteFitNetriders.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1008, 662);
+            this.Controls.Add(this.btnReservar);
             this.Controls.Add(this.iconButton1);
             this.Controls.Add(this.ckFechaFilter);
             this.Controls.Add(this.ckUserFilter);
             this.Controls.Add(this.dateTimeSearch);
             this.Controls.Add(this.textSearchClase);
-            this.Controls.Add(this.btnReservar);
             this.Controls.Add(this.dataGridViewClases);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Segoe UI", 11.25F);
@@ -148,11 +159,11 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridViewClases;
-        private System.Windows.Forms.Button btnReservar;
         private FontAwesome.Sharp.IconButton iconButton1;
         private System.Windows.Forms.CheckBox ckFechaFilter;
         private System.Windows.Forms.CheckBox ckUserFilter;
         private System.Windows.Forms.DateTimePicker dateTimeSearch;
         private System.Windows.Forms.TextBox textSearchClase;
+        private FontAwesome.Sharp.IconButton btnReservar;
     }
 }

@@ -79,6 +79,7 @@ namespace GenteFitNetriders.Vista.Client
             {
                 Modelo.ReservaViewModel reserva = (Modelo.ReservaViewModel)dataGridViewReservas.CurrentRow.DataBoundItem;
                 //TODO marcar la reserva como anulada, solo el admin puede borrar datos de la BBDD
+                //controller.editReserva(reserva.id,reserva.id_usuario, reserva.id_clase, "cancelada");
                 controller.deleteReserva(reserva.id);
                 MessageBox.Show("La reserva se ha anulado correctamente");
                 fillDataGrid(controller.getReservasByUser(Common.userLogged.id));

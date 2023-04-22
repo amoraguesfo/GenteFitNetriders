@@ -64,6 +64,5 @@ namespace GenteFitNetriders.Vista
             fillDataGrid(controller.getUsersByNombre(userName));
         }
 
-
     }
 }

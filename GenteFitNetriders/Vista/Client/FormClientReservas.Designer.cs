@@ -28,27 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnAnular = new System.Windows.Forms.Button();
             this.dataGridViewReservas = new System.Windows.Forms.DataGridView();
             this.btnFilter = new FontAwesome.Sharp.IconButton();
             this.ckFechaFilter = new System.Windows.Forms.CheckBox();
             this.ckClaseFilter = new System.Windows.Forms.CheckBox();
             this.dateTimeSearch = new System.Windows.Forms.DateTimePicker();
             this.textSearchClase = new System.Windows.Forms.TextBox();
+            this.btnAnular = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewReservas)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnAnular
-            // 
-            this.btnAnular.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAnular.Location = new System.Drawing.Point(895, 613);
-            this.btnAnular.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnAnular.Name = "btnAnular";
-            this.btnAnular.Size = new System.Drawing.Size(100, 35);
-            this.btnAnular.TabIndex = 3;
-            this.btnAnular.Text = "Anular";
-            this.btnAnular.UseVisualStyleBackColor = true;
-            this.btnAnular.Click += new System.EventHandler(this.btnAnular_Click);
             // 
             // dataGridViewReservas
             // 
@@ -116,6 +104,29 @@
             this.textSearchClase.Size = new System.Drawing.Size(116, 27);
             this.textSearchClase.TabIndex = 31;
             // 
+            // btnAnular
+            // 
+            this.btnAnular.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAnular.BackColor = System.Drawing.Color.Transparent;
+            this.btnAnular.FlatAppearance.BorderSize = 0;
+            this.btnAnular.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAnular.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAnular.ForeColor = System.Drawing.Color.White;
+            this.btnAnular.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
+            this.btnAnular.IconColor = System.Drawing.Color.White;
+            this.btnAnular.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAnular.IconSize = 32;
+            this.btnAnular.Location = new System.Drawing.Point(837, 608);
+            this.btnAnular.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnAnular.Name = "btnAnular";
+            this.btnAnular.Size = new System.Drawing.Size(158, 40);
+            this.btnAnular.TabIndex = 37;
+            this.btnAnular.Text = "Anular clase";
+            this.btnAnular.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAnular.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAnular.UseVisualStyleBackColor = false;
+            this.btnAnular.Click += new System.EventHandler(this.btnAnular_Click);
+            // 
             // FormClientReservas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -124,12 +135,12 @@
             this.BackgroundImage = global::GenteFitNetriders.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1008, 662);
+            this.Controls.Add(this.btnAnular);
             this.Controls.Add(this.btnFilter);
             this.Controls.Add(this.ckFechaFilter);
             this.Controls.Add(this.ckClaseFilter);
             this.Controls.Add(this.dateTimeSearch);
             this.Controls.Add(this.textSearchClase);
-            this.Controls.Add(this.btnAnular);
             this.Controls.Add(this.dataGridViewReservas);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Segoe UI", 11.25F);
@@ -145,13 +156,12 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnAnular;
         private System.Windows.Forms.DataGridView dataGridViewReservas;
         private FontAwesome.Sharp.IconButton btnFilter;
         private System.Windows.Forms.CheckBox ckFechaFilter;
         private System.Windows.Forms.CheckBox ckClaseFilter;
         private System.Windows.Forms.DateTimePicker dateTimeSearch;
         private System.Windows.Forms.TextBox textSearchClase;
+        private FontAwesome.Sharp.IconButton btnAnular;
     }
 }

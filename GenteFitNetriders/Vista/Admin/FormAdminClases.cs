@@ -82,7 +82,7 @@ namespace GenteFitNetriders.Vista.Admin
 
         }
 
-        private void btnDelUser_Click(object sender, EventArgs e)
+        private void btnDelClase_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Seguro que quieres borrar esta clase?", "Confirmar borrado", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
