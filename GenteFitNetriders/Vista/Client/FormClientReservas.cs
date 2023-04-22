@@ -73,11 +73,17 @@ namespace GenteFitNetriders.Vista.Client
         }
         private void btnAnular_Click(object sender, EventArgs e)
         {
-            Modelo.ReservaViewModel reserva = (Modelo.ReservaViewModel)dataGridViewReservas.CurrentRow.DataBoundItem;
-            //TODO marcar la reserva como anulada, solo el admin puede borrar datos de la BBDD
-            controller.deleteReserva(reserva.id);
-            MessageBox.Show("La reserva se ha anulado correctamente");
-            fillDataGrid(controller.getReservasByUser(Common.userLogged.id));
+            DialogResult result = MessageBox.Show("Seguro que quieres anular la reserva?", "Confirmar Anulación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                Modelo.ReservaViewModel reserva = (Modelo.ReservaViewModel)dataGridViewReservas.CurrentRow.DataBoundItem;
+                //TODO marcar la reserva como anulada, solo el admin puede borrar datos de la BBDD
+                controller.deleteReserva(reserva.id);
+                MessageBox.Show("La reserva se ha anulado correctamente");
+                fillDataGrid(controller.getReservasByUser(Common.userLogged.id));
+            }
+
         }
 
         private void btnFilter_Click(object sender, EventArgs e)

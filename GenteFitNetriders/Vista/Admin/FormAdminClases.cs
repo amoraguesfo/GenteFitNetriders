@@ -84,10 +84,16 @@ namespace GenteFitNetriders.Vista.Admin
 
         private void btnDelUser_Click(object sender, EventArgs e)
         {
-            Modelo.ClaseViewModel clase = (Modelo.ClaseViewModel)dataGridClases.CurrentRow.DataBoundItem;
-            controller.deleteClase(clase.id);
-            MessageBox.Show("LA clase se ha eliminado correctamente");
-            fillDataGrid(controller.getClases());
+            DialogResult result = MessageBox.Show("Seguro que quieres borrar esta clase?", "Confirmar borrado", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                Modelo.ClaseViewModel clase = (Modelo.ClaseViewModel)dataGridClases.CurrentRow.DataBoundItem;
+                controller.deleteClase(clase.id);
+                MessageBox.Show("La clase se ha eliminado correctamente");
+                fillDataGrid(controller.getClases());
+            }
+
         }
 
         private void btnImportarXML_Click(object sender, EventArgs e)

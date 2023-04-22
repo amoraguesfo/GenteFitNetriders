@@ -32,10 +32,16 @@ namespace GenteFitNetriders.Vista
         }
         private void btnDelUser_Click(object sender, System.EventArgs e)
         {
-            Modelo.UserViewModel user = (Modelo.UserViewModel)dataGridUsers.CurrentRow.DataBoundItem;
-            controller.deleteUser(user.id);
-            MessageBox.Show("El usuario se ha eliminado correctamente");
-            fillDataGrid(controller.getUsers());
+            DialogResult result = MessageBox.Show("Seguro que quieres borrar este usuario?", "Confirmar borrado", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                Modelo.UserViewModel user = (Modelo.UserViewModel)dataGridUsers.CurrentRow.DataBoundItem;
+                controller.deleteUser(user.id);
+                MessageBox.Show("El usuario se ha eliminado correctamente");
+                fillDataGrid(controller.getUsers());
+            }
+
         }
 
         private void btnExportarXML_Click(object sender, EventArgs e)

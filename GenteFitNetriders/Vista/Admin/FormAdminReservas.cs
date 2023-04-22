@@ -72,10 +72,17 @@ namespace GenteFitNetriders.Vista.Admin
 
         private void btnAnular_Click(object sender, EventArgs e)
         {
-            Modelo.ReservaViewModel reserva = (Modelo.ReservaViewModel)dataGridViewReservas.CurrentRow.DataBoundItem;
-            controller.deleteReserva(reserva.id);
-            MessageBox.Show("La reserva se ha eliminado correctamente");
-            fillDataGrid(controller.getReservas());
+            DialogResult result = MessageBox.Show("Seguro que quieres eliminar esta reserva?", "Confirmar borrado", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                Modelo.ReservaViewModel reserva = (Modelo.ReservaViewModel)dataGridViewReservas.CurrentRow.DataBoundItem;
+                controller.deleteReserva(reserva.id);
+                MessageBox.Show("La reserva se ha eliminado correctamente");
+                fillDataGrid(controller.getReservas());
+            }
+
+
         }
 
         private void btnExportarXML_Click(object sender, EventArgs e)
