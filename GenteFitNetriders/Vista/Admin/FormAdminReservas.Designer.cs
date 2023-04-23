@@ -82,9 +82,9 @@
             this.ckUserFilter.ForeColor = System.Drawing.Color.White;
             this.ckUserFilter.Location = new System.Drawing.Point(16, 49);
             this.ckUserFilter.Name = "ckUserFilter";
-            this.ckUserFilter.Size = new System.Drawing.Size(84, 24);
+            this.ckUserFilter.Size = new System.Drawing.Size(78, 24);
             this.ckUserFilter.TabIndex = 23;
-            this.ckUserFilter.Text = "Ususario";
+            this.ckUserFilter.Text = "Usuario";
             this.ckUserFilter.UseVisualStyleBackColor = true;
             // 
             // ckFechaFilter
