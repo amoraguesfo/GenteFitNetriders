@@ -5,6 +5,8 @@ VisualStudioVersion = 17.5.33502.453
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenteFitNetriders", "GenteFitNetriders\GenteFitNetriders.csproj", "{9B63A276-C118-431B-AC3B-849CA69E3817}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "GenteFit_Installer", "GenteFit_Installer\GenteFit_Installer.vdproj", "{3928DC20-AFD4-4A99-BCAC-DF93E27CD9A6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,8 @@ Global
 		{9B63A276-C118-431B-AC3B-849CA69E3817}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B63A276-C118-431B-AC3B-849CA69E3817}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B63A276-C118-431B-AC3B-849CA69E3817}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3928DC20-AFD4-4A99-BCAC-DF93E27CD9A6}.Debug|Any CPU.ActiveCfg = Debug
+		{3928DC20-AFD4-4A99-BCAC-DF93E27CD9A6}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
