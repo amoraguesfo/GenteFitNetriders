@@ -80,9 +80,9 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(297, 135);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(204, 41);
+            this.label1.Size = new System.Drawing.Size(191, 41);
             this.label1.TabIndex = 6;
-            this.label1.Text = "Iniciar Sessión";
+            this.label1.Text = "Iniciar Sesión";
             // 
             // label2
             // 
