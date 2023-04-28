@@ -25,9 +25,10 @@ namespace GenteFitNetriders.Vista.Client
 
         private void FormClientClases_Load(object sender, EventArgs e)
         {
-            fillDataGrid(controllerReservas.getClases());
+            //fillDataGrid(controllerReservas.getClases());
             dataGridViewClases.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridViewClases.ColumnHeaderMouseClick += dataGridClases_ColumnHeaderMouseClick;
+            filter();
         }
 
 
@@ -92,12 +93,17 @@ namespace GenteFitNetriders.Vista.Client
                 string estado = controller.getReservasByClass(clase.id).Count() < clase.plazas ? "reservada" : "espera";
                 controller.addReserva(Common.userLogged.id, clase.id, estado);
                 MessageBox.Show("La reserva se ha realizado correctamente");
-                fillDataGrid(controllerReservas.getClases());
+            filter();
+            //fillDataGrid(controllerReservas.getClases());
 
 
         }
 
         private void btnFilter_Click(object sender, EventArgs e)
+        {
+            filter();
+        }
+        private void filter()
         {
             String clase, fecha;
             if (ckUserFilter.Checked)
@@ -120,7 +126,6 @@ namespace GenteFitNetriders.Vista.Client
 
             fillDataGrid(controllerReservas.getClasesByFecha(clase, fecha));
         }
-
 
     }
 

@@ -72,24 +72,26 @@
             // ckFechaFilter
             // 
             this.ckFechaFilter.AutoSize = true;
+            this.ckFechaFilter.BackColor = System.Drawing.Color.Transparent;
             this.ckFechaFilter.ForeColor = System.Drawing.Color.White;
             this.ckFechaFilter.Location = new System.Drawing.Point(266, 38);
             this.ckFechaFilter.Name = "ckFechaFilter";
             this.ckFechaFilter.Size = new System.Drawing.Size(66, 24);
             this.ckFechaFilter.TabIndex = 33;
             this.ckFechaFilter.Text = "Fecha";
-            this.ckFechaFilter.UseVisualStyleBackColor = true;
+            this.ckFechaFilter.UseVisualStyleBackColor = false;
             // 
             // ckUserFilter
             // 
             this.ckUserFilter.AutoSize = true;
+            this.ckUserFilter.BackColor = System.Drawing.Color.Transparent;
             this.ckUserFilter.ForeColor = System.Drawing.Color.White;
             this.ckUserFilter.Location = new System.Drawing.Point(34, 38);
             this.ckUserFilter.Name = "ckUserFilter";
             this.ckUserFilter.Size = new System.Drawing.Size(63, 24);
             this.ckUserFilter.TabIndex = 32;
             this.ckUserFilter.Text = "Clase";
-            this.ckUserFilter.UseVisualStyleBackColor = true;
+            this.ckUserFilter.UseVisualStyleBackColor = false;
             // 
             // dateTimeSearch
             // 
@@ -109,7 +111,7 @@
             // 
             // btnReservar
             // 
-            this.btnReservar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnReservar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnReservar.BackColor = System.Drawing.Color.Transparent;
             this.btnReservar.FlatAppearance.BorderSize = 0;
             this.btnReservar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;

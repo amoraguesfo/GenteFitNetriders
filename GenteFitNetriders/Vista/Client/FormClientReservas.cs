@@ -23,7 +23,8 @@ namespace GenteFitNetriders.Vista.Client
 
         private void FormClientReservas_Load(object sender, EventArgs e)
         {
-            fillDataGrid(controller.getReservasByUser(Common.userLogged.id));
+            //fillDataGrid(controller.getReservasByUser(Common.userLogged.id));
+            filter();
             dataGridViewReservas.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridViewReservas.ColumnHeaderMouseClick += dataGridViewReservas_ColumnHeaderMouseClick;
         }
@@ -89,12 +90,18 @@ namespace GenteFitNetriders.Vista.Client
                 //controller.editReserva(reserva.id,reserva.id_usuario, reserva.id_clase, "cancelada");
                 controller.deleteReserva(reserva.id);
                 MessageBox.Show("La reserva se ha anulado correctamente");
-                fillDataGrid(controller.getReservasByUser(Common.userLogged.id));
+                //fillDataGrid(controller.getReservasByUser(Common.userLogged.id));
+                filter();
             }
 
         }
 
         private void btnFilter_Click(object sender, EventArgs e)
+        {
+            filter();
+        }
+
+        private void filter()
         {
             String usuario = Common.userLogged.nombre, clase, fecha;
 

@@ -79,24 +79,26 @@
             // ckUserFilter
             // 
             this.ckUserFilter.AutoSize = true;
+            this.ckUserFilter.BackColor = System.Drawing.Color.Transparent;
             this.ckUserFilter.ForeColor = System.Drawing.Color.White;
             this.ckUserFilter.Location = new System.Drawing.Point(16, 49);
             this.ckUserFilter.Name = "ckUserFilter";
             this.ckUserFilter.Size = new System.Drawing.Size(78, 24);
             this.ckUserFilter.TabIndex = 23;
             this.ckUserFilter.Text = "Usuario";
-            this.ckUserFilter.UseVisualStyleBackColor = true;
+            this.ckUserFilter.UseVisualStyleBackColor = false;
             // 
             // ckFechaFilter
             // 
             this.ckFechaFilter.AutoSize = true;
+            this.ckFechaFilter.BackColor = System.Drawing.Color.Transparent;
             this.ckFechaFilter.ForeColor = System.Drawing.Color.White;
             this.ckFechaFilter.Location = new System.Drawing.Point(512, 49);
             this.ckFechaFilter.Name = "ckFechaFilter";
             this.ckFechaFilter.Size = new System.Drawing.Size(66, 24);
             this.ckFechaFilter.TabIndex = 25;
             this.ckFechaFilter.Text = "Fecha";
-            this.ckFechaFilter.UseVisualStyleBackColor = true;
+            this.ckFechaFilter.UseVisualStyleBackColor = false;
             // 
             // textSearchClase
             // 
@@ -110,13 +112,14 @@
             // ckClaseFilter
             // 
             this.ckClaseFilter.AutoSize = true;
+            this.ckClaseFilter.BackColor = System.Drawing.Color.Transparent;
             this.ckClaseFilter.ForeColor = System.Drawing.Color.White;
             this.ckClaseFilter.Location = new System.Drawing.Point(291, 49);
             this.ckClaseFilter.Name = "ckClaseFilter";
             this.ckClaseFilter.Size = new System.Drawing.Size(63, 24);
             this.ckClaseFilter.TabIndex = 24;
             this.ckClaseFilter.Text = "Clase";
-            this.ckClaseFilter.UseVisualStyleBackColor = true;
+            this.ckClaseFilter.UseVisualStyleBackColor = false;
             // 
             // btnFilter
             // 
@@ -135,7 +138,7 @@
             // 
             // btnAnular
             // 
-            this.btnAnular.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAnular.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAnular.BackColor = System.Drawing.Color.Transparent;
             this.btnAnular.FlatAppearance.BorderSize = 0;
             this.btnAnular.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -159,7 +162,7 @@
             // 
             // btnImportarXML
             // 
-            this.btnImportarXML.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnImportarXML.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnImportarXML.BackColor = System.Drawing.Color.Transparent;
             this.btnImportarXML.FlatAppearance.BorderSize = 0;
             this.btnImportarXML.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -170,7 +173,7 @@
             this.btnImportarXML.IconColor = System.Drawing.Color.White;
             this.btnImportarXML.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnImportarXML.IconSize = 32;
-            this.btnImportarXML.Location = new System.Drawing.Point(127, 608);
+            this.btnImportarXML.Location = new System.Drawing.Point(123, 608);
             this.btnImportarXML.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnImportarXML.Name = "btnImportarXML";
             this.btnImportarXML.Size = new System.Drawing.Size(102, 40);
@@ -183,7 +186,7 @@
             // 
             // btnExportarXML
             // 
-            this.btnExportarXML.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExportarXML.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnExportarXML.BackColor = System.Drawing.Color.Transparent;
             this.btnExportarXML.FlatAppearance.BorderSize = 0;
             this.btnExportarXML.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -194,7 +197,7 @@
             this.btnExportarXML.IconColor = System.Drawing.Color.White;
             this.btnExportarXML.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnExportarXML.IconSize = 32;
-            this.btnExportarXML.Location = new System.Drawing.Point(17, 608);
+            this.btnExportarXML.Location = new System.Drawing.Point(13, 608);
             this.btnExportarXML.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnExportarXML.Name = "btnExportarXML";
             this.btnExportarXML.Size = new System.Drawing.Size(102, 40);

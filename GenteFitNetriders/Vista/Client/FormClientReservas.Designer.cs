@@ -73,24 +73,26 @@
             // ckFechaFilter
             // 
             this.ckFechaFilter.AutoSize = true;
+            this.ckFechaFilter.BackColor = System.Drawing.Color.Transparent;
             this.ckFechaFilter.ForeColor = System.Drawing.Color.White;
             this.ckFechaFilter.Location = new System.Drawing.Point(257, 43);
             this.ckFechaFilter.Name = "ckFechaFilter";
             this.ckFechaFilter.Size = new System.Drawing.Size(66, 24);
             this.ckFechaFilter.TabIndex = 34;
             this.ckFechaFilter.Text = "Fecha";
-            this.ckFechaFilter.UseVisualStyleBackColor = true;
+            this.ckFechaFilter.UseVisualStyleBackColor = false;
             // 
             // ckClaseFilter
             // 
             this.ckClaseFilter.AutoSize = true;
+            this.ckClaseFilter.BackColor = System.Drawing.Color.Transparent;
             this.ckClaseFilter.ForeColor = System.Drawing.Color.White;
             this.ckClaseFilter.Location = new System.Drawing.Point(36, 43);
             this.ckClaseFilter.Name = "ckClaseFilter";
             this.ckClaseFilter.Size = new System.Drawing.Size(63, 24);
             this.ckClaseFilter.TabIndex = 33;
             this.ckClaseFilter.Text = "Clase";
-            this.ckClaseFilter.UseVisualStyleBackColor = true;
+            this.ckClaseFilter.UseVisualStyleBackColor = false;
             // 
             // dateTimeSearch
             // 
@@ -110,7 +112,7 @@
             // 
             // btnAnular
             // 
-            this.btnAnular.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAnular.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAnular.BackColor = System.Drawing.Color.Transparent;
             this.btnAnular.FlatAppearance.BorderSize = 0;
             this.btnAnular.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -121,7 +123,7 @@
             this.btnAnular.IconColor = System.Drawing.Color.White;
             this.btnAnular.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAnular.IconSize = 32;
-            this.btnAnular.Location = new System.Drawing.Point(837, 608);
+            this.btnAnular.Location = new System.Drawing.Point(837, 613);
             this.btnAnular.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAnular.Name = "btnAnular";
             this.btnAnular.Size = new System.Drawing.Size(158, 40);

@@ -76,24 +76,26 @@
             // ckFechaFilter
             // 
             this.ckFechaFilter.AutoSize = true;
+            this.ckFechaFilter.BackColor = System.Drawing.Color.Transparent;
             this.ckFechaFilter.ForeColor = System.Drawing.Color.White;
             this.ckFechaFilter.Location = new System.Drawing.Point(268, 33);
             this.ckFechaFilter.Name = "ckFechaFilter";
             this.ckFechaFilter.Size = new System.Drawing.Size(66, 24);
             this.ckFechaFilter.TabIndex = 27;
             this.ckFechaFilter.Text = "Fecha";
-            this.ckFechaFilter.UseVisualStyleBackColor = true;
+            this.ckFechaFilter.UseVisualStyleBackColor = false;
             // 
             // ckUserFilter
             // 
             this.ckUserFilter.AutoSize = true;
+            this.ckUserFilter.BackColor = System.Drawing.Color.Transparent;
             this.ckUserFilter.ForeColor = System.Drawing.Color.White;
             this.ckUserFilter.Location = new System.Drawing.Point(36, 33);
             this.ckUserFilter.Name = "ckUserFilter";
             this.ckUserFilter.Size = new System.Drawing.Size(63, 24);
             this.ckUserFilter.TabIndex = 26;
             this.ckUserFilter.Text = "Clase";
-            this.ckUserFilter.UseVisualStyleBackColor = true;
+            this.ckUserFilter.UseVisualStyleBackColor = false;
             // 
             // iconButton1
             // 
@@ -112,7 +114,7 @@
             // 
             // btnDelClase
             // 
-            this.btnDelClase.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDelClase.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDelClase.BackColor = System.Drawing.Color.Transparent;
             this.btnDelClase.FlatAppearance.BorderSize = 0;
             this.btnDelClase.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -123,7 +125,7 @@
             this.btnDelClase.IconColor = System.Drawing.Color.White;
             this.btnDelClase.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDelClase.IconSize = 32;
-            this.btnDelClase.Location = new System.Drawing.Point(833, 608);
+            this.btnDelClase.Location = new System.Drawing.Point(837, 608);
             this.btnDelClase.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDelClase.Name = "btnDelClase";
             this.btnDelClase.Size = new System.Drawing.Size(158, 40);
@@ -136,7 +138,7 @@
             // 
             // btnImportarXML
             // 
-            this.btnImportarXML.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnImportarXML.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnImportarXML.BackColor = System.Drawing.Color.Transparent;
             this.btnImportarXML.FlatAppearance.BorderSize = 0;
             this.btnImportarXML.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -160,7 +162,7 @@
             // 
             // btnExportarXML
             // 
-            this.btnExportarXML.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExportarXML.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnExportarXML.BackColor = System.Drawing.Color.Transparent;
             this.btnExportarXML.FlatAppearance.BorderSize = 0;
             this.btnExportarXML.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -184,7 +186,7 @@
             // 
             // addClase
             // 
-            this.addClase.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.addClase.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.addClase.BackColor = System.Drawing.Color.Transparent;
             this.addClase.FlatAppearance.BorderSize = 0;
             this.addClase.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -195,7 +197,7 @@
             this.addClase.IconColor = System.Drawing.Color.White;
             this.addClase.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.addClase.IconSize = 32;
-            this.addClase.Location = new System.Drawing.Point(667, 608);
+            this.addClase.Location = new System.Drawing.Point(671, 608);
             this.addClase.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.addClase.Name = "addClase";
             this.addClase.Size = new System.Drawing.Size(158, 40);

@@ -25,10 +25,10 @@ namespace GenteFitNetriders.Vista.Admin
         private void FormAdminClases_Load(object sender, EventArgs e)
         {
 
-            fillDataGrid(controller.getClases());
+            //fillDataGrid(controller.getClases());
             dataGridClases.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridClases.ColumnHeaderMouseClick += dataGridClases_ColumnHeaderMouseClick;
-
+            filter();
         }
 
         private void fillDataGrid(IEnumerable<Modelo.ClaseViewModel> classList)
@@ -79,7 +79,8 @@ namespace GenteFitNetriders.Vista.Admin
             FormAminAddClase formAdminAddClase =  new FormAminAddClase();
 
             formAdminAddClase.ShowDialog();
-            fillDataGrid(controller.getClases());
+            // fillDataGrid(controller.getClases());
+            filter();
 
         }
 
@@ -97,7 +98,8 @@ namespace GenteFitNetriders.Vista.Admin
                 Modelo.ClaseViewModel clase = (Modelo.ClaseViewModel)dataGridClases.CurrentRow.DataBoundItem;
                 controller.deleteClase(clase.id);
                 MessageBox.Show("La clase se ha eliminado correctamente");
-                fillDataGrid(controller.getClases());
+                //fillDataGrid(controller.getClases());
+                filter();
             }
 
         }
@@ -117,8 +119,13 @@ namespace GenteFitNetriders.Vista.Admin
 
         private void btnFilter_Click(object sender, EventArgs e)
         {
+            filter();
+        }
+
+        private void filter()
+        {
             String clase, fecha;
-            if(ckUserFilter.Checked)
+            if (ckUserFilter.Checked)
             {
                 clase = textSearchClase.Text;
             }

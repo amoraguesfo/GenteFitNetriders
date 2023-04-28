@@ -71,6 +71,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(338, 265);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -143,6 +144,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(338, 196);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -154,6 +156,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(338, 134);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -165,6 +168,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(29, 265);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -176,6 +180,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(29, 196);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -187,6 +192,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(29, 134);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);

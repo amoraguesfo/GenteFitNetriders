@@ -23,8 +23,9 @@ namespace GenteFitNetriders.Vista.Admin
 
         private void FormAdminReservas_Load(object sender, EventArgs e)
         {
-            
-            fillDataGrid(controller.getReservas());
+
+            //fillDataGrid(controller.getReservas());
+            filter();
             dataGridViewReservas.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridViewReservas.ColumnHeaderMouseClick += dataGridViewReservas_ColumnHeaderMouseClick;
         }
@@ -87,7 +88,8 @@ namespace GenteFitNetriders.Vista.Admin
                 Modelo.ReservaViewModel reserva = (Modelo.ReservaViewModel)dataGridViewReservas.CurrentRow.DataBoundItem;
                 controller.deleteReserva(reserva.id);
                 MessageBox.Show("La reserva se ha eliminado correctamente");
-                fillDataGrid(controller.getReservas());
+                //fillDataGrid(controller.getReservas());
+                filter();
             }
 
 
@@ -113,7 +115,12 @@ namespace GenteFitNetriders.Vista.Admin
 
         private void btnFilter_Click(object sender, EventArgs e)
         {
-            String usuario,clase, fecha;
+            filter();
+        }
+
+        private void filter()
+        {
+            String usuario, clase, fecha;
             if (ckUserFilter.Checked)
             {
                 usuario = textSearchUser.Text;
@@ -140,8 +147,9 @@ namespace GenteFitNetriders.Vista.Admin
             }
 
 
-            fillDataGrid(controller.getReservasByFilter(usuario,clase, fecha));
+            fillDataGrid(controller.getReservasByFilter(usuario, clase, fecha));
         }
+
         private void dataGridUsers_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             foreach (DataGridViewRow row in dataGridViewReservas.Rows)

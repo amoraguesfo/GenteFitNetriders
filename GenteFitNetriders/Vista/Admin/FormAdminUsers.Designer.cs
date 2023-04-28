@@ -52,7 +52,6 @@
             this.dataGridUsers.ReadOnly = true;
             this.dataGridUsers.Size = new System.Drawing.Size(979, 520);
             this.dataGridUsers.TabIndex = 1;
-           
             // 
             // label3
             // 
@@ -77,7 +76,7 @@
             // 
             // btnExportarXML
             // 
-            this.btnExportarXML.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExportarXML.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnExportarXML.BackColor = System.Drawing.Color.Transparent;
             this.btnExportarXML.FlatAppearance.BorderSize = 0;
             this.btnExportarXML.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -88,7 +87,7 @@
             this.btnExportarXML.IconColor = System.Drawing.Color.White;
             this.btnExportarXML.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnExportarXML.IconSize = 32;
-            this.btnExportarXML.Location = new System.Drawing.Point(14, 605);
+            this.btnExportarXML.Location = new System.Drawing.Point(13, 608);
             this.btnExportarXML.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnExportarXML.Name = "btnExportarXML";
             this.btnExportarXML.Size = new System.Drawing.Size(102, 40);
@@ -101,7 +100,7 @@
             // 
             // btnImportarXML
             // 
-            this.btnImportarXML.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnImportarXML.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnImportarXML.BackColor = System.Drawing.Color.Transparent;
             this.btnImportarXML.FlatAppearance.BorderSize = 0;
             this.btnImportarXML.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -112,7 +111,7 @@
             this.btnImportarXML.IconColor = System.Drawing.Color.White;
             this.btnImportarXML.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnImportarXML.IconSize = 32;
-            this.btnImportarXML.Location = new System.Drawing.Point(124, 605);
+            this.btnImportarXML.Location = new System.Drawing.Point(123, 608);
             this.btnImportarXML.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnImportarXML.Name = "btnImportarXML";
             this.btnImportarXML.Size = new System.Drawing.Size(102, 40);
@@ -125,7 +124,7 @@
             // 
             // btnDelUser
             // 
-            this.btnDelUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDelUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDelUser.BackColor = System.Drawing.Color.Transparent;
             this.btnDelUser.FlatAppearance.BorderSize = 0;
             this.btnDelUser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -136,7 +135,7 @@
             this.btnDelUser.IconColor = System.Drawing.Color.White;
             this.btnDelUser.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDelUser.IconSize = 32;
-            this.btnDelUser.Location = new System.Drawing.Point(834, 605);
+            this.btnDelUser.Location = new System.Drawing.Point(834, 608);
             this.btnDelUser.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDelUser.Name = "btnDelUser";
             this.btnDelUser.Size = new System.Drawing.Size(158, 40);
