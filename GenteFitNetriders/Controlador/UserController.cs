@@ -1,9 +1,11 @@
 ﻿using GenteFitNetriders.Modelo;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace GenteFitNetriders.Controlador
 {
@@ -146,6 +148,29 @@ namespace GenteFitNetriders.Controlador
             {
                 throw new Exception("Error an actualizar el ussuario " + ex.Message);
             }
+        }
+        public void runPythonScript()
+        {
+            var psi = new ProcessStartInfo();
+            psi.FileName = @"python.exe";
+            var script = @"conectorOdooUser.py";
+            psi.Arguments = $"\"{script}\"";
+            Process process = new Process();
+            process.StartInfo = psi;
+            process.StartInfo.UseShellExecute = false;
+            process.StartInfo.RedirectStandardInput = true;
+            process.StartInfo.RedirectStandardOutput = true;
+
+            process.Start();
+
+            process.StartInfo.RedirectStandardOutput = true;
+
+            while (!process.StandardOutput.EndOfStream)
+            {
+                string line = process.StandardOutput.ReadLine();
+                MessageBox.Show(line);
+            }
+            process.WaitForExit();
         }
     }
 }

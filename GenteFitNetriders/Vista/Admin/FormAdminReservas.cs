@@ -168,5 +168,12 @@ namespace GenteFitNetriders.Vista.Admin
                 }
             }
         }
-    }
+
+		private void btnTransferODOO_Click(object sender, EventArgs e)
+		{
+            ReservasXML exportXML = new ReservasXML();
+            exportXML.exportReservasXML();
+            this.controller.runPythonScript();
+        }
+	}
 }

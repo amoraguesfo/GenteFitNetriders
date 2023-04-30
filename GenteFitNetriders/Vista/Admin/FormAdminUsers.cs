@@ -111,6 +111,11 @@ namespace GenteFitNetriders.Vista
             fillDataGrid(controller.getUsersByNombre(userName));
         }
 
-
-    }
+		private void btnTransferODOO_Click(object sender, EventArgs e)
+		{
+            UserXML userXML = new UserXML();
+            userXML.exportUsusariosXML();
+            this.controller.runPythonScript();
+        }
+	}
 }

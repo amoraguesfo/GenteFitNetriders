@@ -145,5 +145,12 @@ namespace GenteFitNetriders.Vista.Admin
 
             fillDataGrid(controller.getClasesByFecha(clase, fecha));
         }
-    }
+
+		private void btnTranferODOO_Click(object sender, EventArgs e)
+		{
+            ClasesXML clasesXML = new ClasesXML();
+            clasesXML.exportClaseXML();
+            this.controller.runPythonScript();
+        }
+	}
 }
