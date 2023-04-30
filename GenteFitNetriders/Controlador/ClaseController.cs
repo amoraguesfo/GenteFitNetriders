@@ -188,8 +188,8 @@ namespace GenteFitNetriders.Controlador
         public void runPythonScript()
         {
             var psi = new ProcessStartInfo();
-            psi.FileName = @"C:\Users\laura\AppData\Local\Programs\Python\Python311\python.exe";
-            var script = @"/Flota/python/conectorOdooClases.py"; ;
+            psi.FileName = @"python.exe";
+            var script = @"C:\Users\laura\OneDrive\Documentos\GitHub\GenteFitNetriders\GenteFitNetriders\bin\Debug\conectorOdooClases.py";
             psi.Arguments = $"\"{script}\"";
             Process process = new Process();
             process.StartInfo = psi;
